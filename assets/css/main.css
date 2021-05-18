@@ -1299,6 +1299,7 @@ input[type=submit] {
 }
 .header-top-area .header-top-area-inner .logo img {
   max-width: 215px;
+  /* max-width: 100px; */
 }
 .header-top-area .header-top-area-inner .right-area {
   display: -webkit-box;
