@@ -204,6 +204,36 @@ h3 {
   }
 }
 /* ======== Global CSS Starts Hear =========== */
+:root {
+  --gab-primary-color: #001485;
+  --gab-secondary-color: #ffd800;
+  --gab-accent-color: #00528b;
+}
+
+.bg-gab-primary-color {
+  background-color: var(--gab-primary-color);
+}
+
+.bg-gab-secondary-color {
+  background-color: var(--gab-secondary-color);
+}
+
+.bg-gab-accent-color {
+  background-color: var(--gab-accent-color);
+}
+
+.text-gab-primary-color {
+  color: var(--gab-primary-color);
+}
+
+.text-gab-secondary-color {
+  color: var(--gab-secondary-color);
+}
+
+.text-gab-accent-color {
+  color: var(--gab-accent-color);
+}
+
 html {
   line-height: 1.15;
 }
@@ -1730,9 +1760,6 @@ input[type=submit] {
 }
 
 /* Draw-Section Starts Here*/
-.draw-section {
-  margin-top: -130px;
-}
 .draw-section .draw-slider {
   position: relative;
 }
@@ -4761,7 +4788,7 @@ header nav.nav-primary .nav-right > ul > li > span > a.btn {
     background-color: #00528b !important;
 }
 #navbar1{
-  max-height: 410px !important;
+  min-height: 410px !important;
 }
 
 .game-card.long {
