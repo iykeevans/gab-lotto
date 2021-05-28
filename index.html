@@ -60,6 +60,15 @@
         margin-bottom: 10px;
       }
 
+      .nav-collapse-menu__item--extras {
+        /* box-shadow: 0px 3px 30px 0px rgba(30, 75, 203, 0.22); */
+        border: 1px solid #001485;
+      }
+      .nav-collapse-menu__item--small {
+        height: 145px;
+        border-radius: 20px;
+      }
+
       .nav-collapse-menu__item-image {
         height: 80px;
       }
@@ -116,6 +125,12 @@
         font-size: 1rem;
       }
 
+      .ball {
+        background-color: #eee;
+        height: 46px;
+        width: 46px;
+      }
+
       .result-list__ball {
         width: 36px;
         height: 36px;
@@ -158,8 +173,10 @@
         }
 
         .main-nav {
-          height: 27vh;
           padding-left: 100px;
+          height: 180px;
+          max-width: 1388px;
+          margin: 0 auto;
         }
 
         .banner {
@@ -219,680 +236,567 @@
     <!-- ==========Overlay========== -->
     <div class="collapse" id="nav-collapse-menu">
       <div class="bg-gab-secondary-color p-3">
-        <button
-          class="
-            navbar-toggler
-            close close-top-drawer
-            d-flex
-            align-items-center
-          "
-          type="button"
-          data-toggle="collapse"
-          data-target="#nav-collapse-menu"
-          aria-label="Close"
-        >
-          <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
-            <path
-              fill="currentColor"
-              d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"
-            />
-          </svg>
-        </button>
-
-        <h4 class="mb-3">Latest Winning Numbers</h4>
-
-        <div class="d-grid nav-collapse-menu">
-          <!-- gab lotto 5 /90 start here -->
-          <div
+        <div class="container">
+          <button
             class="
-              nav-collapse-menu__item
-              bg-white
+              navbar-toggler
+              close close-top-drawer
               d-flex
-              flex-column
               align-items-center
-              justify-content-center
-              py-3
             "
+            type="button"
+            data-toggle="collapse"
+            data-target="#nav-collapse-menu"
+            aria-label="Close"
           >
-            <img
-              src="assets/css/images/padi.png"
-              alt="gab padi"
-              class="nav-collapse-menu__item-image mb-3"
-            />
+            <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"
+              />
+            </svg>
+          </button>
 
-            <div class="d-flex mb-2">
-              <div class="nav-collapse-menu__item-type font-weight-bold">
-                WIN
-              </div>
+          <h4 class="mb-3">Latest Winning Numbers</h4>
 
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                81
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                40
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                32
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                24
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                15
-              </div>
-            </div>
-
-            <div class="d-flex align-items-center mb-3">
-              <div
-                class="font-weight-bold"
-                style="font-size: 13px; width: 40px"
-              >
-                MAC
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                10
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                29
-              </div>
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                73
-              </div>
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                49
-              </div>
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                50
-              </div>
-            </div>
-            <a href="single-lottery.html" class="custom-button1">₦10: Play</a>
-          </div>
-
-          <div
-            class="
-              nav-collapse-menu__item
-              bg-white
-              d-flex
-              flex-column
-              align-items-center
-              justify-content-center
-              py-3
-            "
-          >
-            <img
-              src="assets/css/images/wazobia.png"
-              alt="gab padi"
-              class="nav-collapse-menu__item-image mb-3"
-            />
-
-            <div class="d-flex mb-2">
-              <div class="nav-collapse-menu__item-type font-weight-bold">
-                WIN
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                21
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                12
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                4
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                18
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                10
-              </div>
-            </div>
-
-            <div class="d-flex align-items-center mb-3">
-              <div
-                class="font-weight-bold"
-                style="font-size: 13px; width: 40px"
-              >
-                MAC
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                13
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                20
-              </div>
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                32
-              </div>
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                14
-              </div>
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                5
-              </div>
-            </div>
-            <a href="single-lottery.html" class="custom-button1">₦10: Play</a>
-          </div>
-
-          <div
-            class="
-              nav-collapse-menu__item
-              bg-white
-              d-flex
-              flex-column
-              align-items-center
-              justify-content-center
-              py-3
-            "
-          >
-            <img
-              src="assets/css/images/awoof.png"
-              alt="gab padi"
-              class="nav-collapse-menu__item-image mb-3"
-            />
-
-            <div class="d-flex mb-2">
-              <div class="nav-collapse-menu__item-type font-weight-bold">
-                WIN
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                15
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                29
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                32
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                48
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                52
-              </div>
-            </div>
-
-            <div class="d-flex align-items-center mb-3">
-              <div
-                class="font-weight-bold"
-                style="font-size: 13px; width: 40px"
-              >
-                MAC
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                16
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                22
-              </div>
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                33
-              </div>
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                74
-              </div>
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                59
-              </div>
-            </div>
-            <a href="single-lottery.html" class="custom-button1">₦10: Play</a>
-          </div>
-          <!-- gab lotto 5 /90 end's here -->
-
-          <!-- gab lotto jackpot start here -->
-          <div
-            class="
-              nav-collapse-menu__item
-              bg-gab-accent-color
-              text-white
-              d-flex
-              flex-column
-              align-items-center
-              justify-content-center
-              py-3
-            "
-          >
-            <img
-              src="assets/css/images/padi.png"
-              alt="gab padi"
-              class="nav-collapse-menu__item-image mb-2"
-              style="height: 70px"
-            />
-
-            <div
-              class="font-weight-bold text-center mt-1 text-sm"
-              style="font-size: 13px"
-            >
-              Current Jackpot:
-            </div>
-
-            <div class="font-weight-bold mb-2">$220,000,000</div>
-
-            <div class="d-flex mb-3">
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                10
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                7
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                8
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-2
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                6
-              </div>
-
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                8
-              </div>
-            </div>
-
-            <div class="d-flex align-items-center mb-3">
-              <div
-                class="
-                  nav-collapse-menu__item-ball
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  font-weight-bold
-                  text-xs
-                "
-              >
-                20
-              </div>
-            </div>
-            <a
-              href="single-lottery.html"
-              class="custom-button1 bg-white text-gab-accent-color"
-              style="border: none; background: #fff; color: #00528b"
-              >₦100: Play</a
-            >
-          </div>
-          <!-- gab lotto jackpot end's here -->
-
-          <!-- pick 3 & spin the wheel -->
-          <div class="nav-collapse-menu__item">
-            <!-- pick 3 start -->
+          <div class="d-grid nav-collapse-menu">
+            <!-- gab lotto 5 /90 start here -->
             <div
               class="
+                nav-collapse-menu__item nav-collapse-menu__item--extras
                 bg-white
                 d-flex
                 flex-column
                 align-items-center
                 justify-content-center
+                py-3
               "
-              style="height: 145px; margin-bottom: 10px; border-radius: 20px"
+            >
+              <img
+                src="assets/css/images/padi.png"
+                alt="gab padi"
+                class="nav-collapse-menu__item-image mb-3"
+              />
+
+              <div class="d-flex mb-2">
+                <div class="nav-collapse-menu__item-type font-weight-bold">
+                  WIN
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  81
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  40
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  32
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  24
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  15
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center mb-3">
+                <div
+                  class="font-weight-bold"
+                  style="font-size: 13px; width: 40px"
+                >
+                  MAC
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  10
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  29
+                </div>
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  73
+                </div>
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  49
+                </div>
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  50
+                </div>
+              </div>
+              <a href="single-lottery.html" class="custom-button1">₦10: Play</a>
+            </div>
+
+            <div
+              class="
+                nav-collapse-menu__item nav-collapse-menu__item--extras
+                bg-white
+                d-flex
+                flex-column
+                align-items-center
+                justify-content-center
+                py-3
+              "
+            >
+              <img
+                src="assets/css/images/wazobia.png"
+                alt="gab padi"
+                class="nav-collapse-menu__item-image mb-3"
+              />
+
+              <div class="d-flex mb-2">
+                <div class="nav-collapse-menu__item-type font-weight-bold">
+                  WIN
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  21
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  12
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  4
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  18
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  10
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center mb-3">
+                <div
+                  class="font-weight-bold"
+                  style="font-size: 13px; width: 40px"
+                >
+                  MAC
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  13
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  20
+                </div>
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  32
+                </div>
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  14
+                </div>
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  5
+                </div>
+              </div>
+              <a href="single-lottery.html" class="custom-button1">₦10: Play</a>
+            </div>
+
+            <div
+              class="
+                nav-collapse-menu__item nav-collapse-menu__item--extras
+                bg-white
+                d-flex
+                flex-column
+                align-items-center
+                justify-content-center
+                py-3
+              "
+            >
+              <img
+                src="assets/css/images/awoof.png"
+                alt="gab padi"
+                class="nav-collapse-menu__item-image mb-3"
+              />
+
+              <div class="d-flex mb-2">
+                <div class="nav-collapse-menu__item-type font-weight-bold">
+                  WIN
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  15
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  29
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  32
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  48
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  52
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center mb-3">
+                <div
+                  class="font-weight-bold"
+                  style="font-size: 13px; width: 40px"
+                >
+                  MAC
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  16
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  22
+                </div>
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  33
+                </div>
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  74
+                </div>
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  59
+                </div>
+              </div>
+              <a href="single-lottery.html" class="custom-button1">₦10: Play</a>
+            </div>
+            <!-- gab lotto 5 /90 end's here -->
+
+            <!-- gab lotto jackpot start here -->
+            <div
+              class="
+                nav-collapse-menu__item nav-collapse-menu__item--extras
+                bg-gab-accent-color
+                text-white
+                d-flex
+                flex-column
+                align-items-center
+                justify-content-center
+                py-3
+              "
             >
               <img
                 src="assets/css/images/padi.png"
                 alt="gab padi"
                 class="nav-collapse-menu__item-image mb-2"
-                style="height: 36px"
+                style="height: 70px"
               />
+
+              <div
+                class="font-weight-bold text-center mt-1 text-sm"
+                style="font-size: 13px"
+              >
+                Current Jackpot:
+              </div>
+
+              <div class="font-weight-bold mb-2">$220,000,000</div>
 
               <div class="d-flex mb-3">
                 <div
@@ -929,129 +833,223 @@
                     d-flex
                     align-items-center
                     justify-content-center
+                    mr-2
                     font-weight-bold
                     text-xs
                   "
                 >
                   8
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    mr-2
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  6
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    font-weight-bold
+                    text-xs
+                    mr-2
+                  "
+                >
+                  8
+                </div>
+
+                <div
+                  class="
+                    nav-collapse-menu__item-ball
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    font-weight-bold
+                    text-xs
+                  "
+                >
+                  20
                 </div>
               </div>
 
-              <a href="single-lottery.html" class="custom-button1">₦10: Play</a>
+              <a
+                href="single-lottery.html"
+                class="custom-button1 bg-white text-gab-accent-color"
+                style="border: none; background: #fff; color: #00528b"
+                >₦100: Play</a
+              >
             </div>
-            <!-- pick 3 end -->
+            <!-- gab lotto jackpot end's here -->
 
-            <!-- spin the wheel start -->
-            <div
-              class="
-                bg-white
-                d-flex
-                flex-column
-                align-items-center
-                justify-content-center
-              "
-              style="height: 145px; border-radius: 20px"
-            >
-              <img
-                src="assets/css/images/padi.png"
-                alt="gab padi"
-                class="nav-collapse-menu__item-image mb-2"
-                style="height: 64px"
-              />
+            <!-- pick 3 & spin the wheel -->
+            <div class="nav-collapse-menu__item">
+              <!-- pick 3 start -->
+              <div
+                class="
+                  bg-white
+                  d-flex
+                  flex-column
+                  align-items-center
+                  justify-content-center
+                  nav-collapse-menu__item--extras nav-collapse-menu__item--small
+                  mb-10
+                "
+              >
+                <img
+                  src="assets/css/images/padi.png"
+                  alt="gab padi"
+                  class="nav-collapse-menu__item-image mb-2"
+                  style="height: 36px"
+                />
 
-              <a href="single-lottery.html" class="custom-button1">₦10: Play</a>
-            </div>
-            <!-- spin the wheel end -->
-          </div>
+                <div class="d-flex mb-3">
+                  <div
+                    class="
+                      nav-collapse-menu__item-ball
+                      d-flex
+                      align-items-center
+                      justify-content-center
+                      mr-2
+                      font-weight-bold
+                      text-xs
+                    "
+                  >
+                    10
+                  </div>
 
-          <!-- keno  -->
-          <div class="nav-collapse-menu__item">
-            <!-- pick 3 start -->
-            <div
-              class="
-                bg-white
-                d-flex
-                flex-column
-                align-items-center
-                justify-content-center
-              "
-              style="height: 145px; margin-bottom: 10px; border-radius: 20px"
-            >
-              <img
-                src="assets/css/images/padi.png"
-                alt="gab padi"
-                class="nav-collapse-menu__item-image mb-2"
-                style="height: 64px"
-              />
+                  <div
+                    class="
+                      nav-collapse-menu__item-ball
+                      d-flex
+                      align-items-center
+                      justify-content-center
+                      mr-2
+                      font-weight-bold
+                      text-xs
+                    "
+                  >
+                    7
+                  </div>
 
-              <!-- <div class="d-flex mb-3">
-                <div
-                  class="
-                    nav-collapse-menu__item-ball
-                    d-flex
-                    align-items-center
-                    justify-content-center
-                    mr-2
-                    font-weight-bold
-                    text-xs
-                  "
-                >
-                  10
+                  <div
+                    class="
+                      nav-collapse-menu__item-ball
+                      d-flex
+                      align-items-center
+                      justify-content-center
+                      font-weight-bold
+                      text-xs
+                    "
+                  >
+                    8
+                  </div>
                 </div>
 
-                <div
-                  class="
-                    nav-collapse-menu__item-ball
-                    d-flex
-                    align-items-center
-                    justify-content-center
-                    mr-2
-                    font-weight-bold
-                    text-xs
-                  "
+                <a
+                  href="single-lottery.html"
+                  class="custom-button1"
+                  style="padding: 2px 4px; font-size: 14px"
+                  >₦10: Play</a
                 >
-                  7
-                </div>
+              </div>
+              <!-- pick 3 end -->
 
-                <div
-                  class="
-                    nav-collapse-menu__item-ball
-                    d-flex
-                    align-items-center
-                    justify-content-center
-                    font-weight-bold
-                    text-xs
-                  "
+              <!-- spin the wheel start -->
+              <div
+                class="
+                  bg-white
+                  d-flex
+                  flex-column
+                  align-items-center
+                  justify-content-center
+                  nav-collapse-menu__item--extras nav-collapse-menu__item--small
+                "
+              >
+                <img
+                  src="assets/css/images/padi.png"
+                  alt="gab padi"
+                  class="nav-collapse-menu__item-image mb-2"
+                  style="height: 64px"
+                />
+
+                <a
+                  href="single-lottery.html"
+                  class="custom-button1"
+                  style="padding: 2px 4px; font-size: 14px"
+                  >₦10: Play</a
                 >
-                  8
-                </div>
-              </div> -->
-
-              <a href="single-lottery.html" class="custom-button1">₦10: Play</a>
+              </div>
+              <!-- spin the wheel end -->
             </div>
-            <!-- pick 3 end -->
 
-            <!-- keno start -->
-            <div
-              class="
-                bg-white
-                d-flex
-                flex-column
-                align-items-center
-                justify-content-center
-              "
-              style="height: 145px; border-radius: 20px"
-            >
-              <img
-                src="assets/css/images/padi.png"
-                alt="gab padi"
-                class="nav-collapse-menu__item-image mb-2"
-                style="height: 64px"
-              />
+            <!-- keno  -->
+            <div class="nav-collapse-menu__item">
+              <!-- pick 3 start -->
+              <div
+                class="
+                  bg-white
+                  d-flex
+                  flex-column
+                  align-items-center
+                  justify-content-center
+                  nav-collapse-menu__item--extras nav-collapse-menu__item--small
+                  mb-10
+                "
+              >
+                <img
+                  src="assets/css/images/padi.png"
+                  alt="gab padi"
+                  class="nav-collapse-menu__item-image mb-2"
+                  style="height: 64px"
+                />
 
-              <a href="single-lottery.html" class="custom-button1">₦10: Play</a>
+                <a
+                  href="single-lottery.html"
+                  class="custom-button1"
+                  style="padding: 2px 4px; font-size: 14px"
+                  >₦10: Play</a
+                >
+              </div>
+              <!-- pick 3 end -->
+
+              <!-- keno start -->
+              <div
+                class="
+                  bg-white
+                  d-flex
+                  flex-column
+                  align-items-center
+                  justify-content-center
+                  nav-collapse-menu__item--extras nav-collapse-menu__item--small
+                "
+              >
+                <img
+                  src="assets/css/images/padi.png"
+                  alt="gab padi"
+                  class="nav-collapse-menu__item-image mb-2"
+                  style="height: 64px"
+                />
+
+                <a
+                  href="single-lottery.html"
+                  class="custom-button1"
+                  style="padding: 2px 4px; font-size: 14px"
+                  >₦10: Play</a
+                >
+              </div>
+              <!-- keno end -->
             </div>
-            <!-- keno end -->
           </div>
         </div>
       </div>
@@ -1060,7 +1058,7 @@
     <!-- ==========Header-Section========== -->
     <header class="top-header">
       <div class="header-section">
-        <nav id="nav-secondary">
+        <nav id="nav-secondary" style="max-width: 1388px; margin: 0 auto">
           <div class="nav-left">
             <div class="nav-item yellow with-border">
               <a
@@ -1081,7 +1079,7 @@
             </div>
 
             <div class="nav-item sapphire with-border">
-              <a href="ticket.html"
+              <a href="#" data-toggle="modal" data-target="#ticketModal"
                 ><img
                   src="assets/images/enter%20tickets6e47.png?h=11&amp;w=14&amp;la=en&amp;hash=87213C90AC2FDE1C6B6A3C2587A0DF557778DA4A"
                   class="hidden-xs hidden-sm"
@@ -1305,7 +1303,7 @@
     </div>
     <!-- Register Area -->
 
-    <!-- Login Area -->
+    <!-- Login Modal Start -->
     <div
       class="modal fade log-reg-modal-wrapper log"
       id="loginModal"
@@ -1373,191 +1371,264 @@
         </div>
       </div>
     </div>
-    <!-- Login Area -->
+    <!-- Login Modal End -->
+
+    <!-- Ticket Modal Start -->
+    <div
+      class="modal fade log-reg-modal-wrapper log"
+      id="ticketModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+              role="button"
+            >
+              <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"
+                />
+              </svg>
+            </div>
+
+            <div class="log-reg-inner">
+              <h2 class="title">Welcome to Gab Lotto</h2>
+              <div class="main-content">
+                <form action="#" class="d-flex flex-column">
+                  <div class="form-group">
+                    <label>Ticket Number</label>
+                    <input
+                      type="email"
+                      class="my-form-control w-100"
+                      placeholder="Enter Your Ticket No"
+                    />
+                  </div>
+                  <button class="custom-button1">Check</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Ticket Modal End -->
 
     <!-- ==========Header-Section End========== -->
 
     <!-- =========Carousel Banner Section======= -->
-    <section class="row" style="height: 600px">
-      <div class="col-md-8 col-sm-12" style="padding-right: 0">
-        <div
-          id="carouselExampleControls"
-          class="carousel slide"
-          data-ride="carousel"
-          style="height: 100%"
-        >
-          <div class="carousel-inner" style="height: 100%">
-            <div class="carousel-item active banner banner--one">
-              <div
-                class="
-                  d-flex
-                  align-items-center
-                  justify-content-center justify-content-md-start
-                "
-                style="height: 100%"
-              >
+    <section style="max-width: 1388px; margin: 0 auto">
+      <div class="row">
+        <!-- main banner -->
+        <div class="col-md-8 col-sm-12" style="padding-right: 0; height: 600px">
+          <div
+            id="carouselExampleControls"
+            class="carousel slide"
+            data-ride="carousel"
+            style="height: 100%"
+          >
+            <div class="carousel-inner" style="height: 100%">
+              <div class="carousel-item active banner banner--one">
                 <div
                   class="
                     d-flex
-                    flex-column
-                    justify-content-center
-                    align-items-center align-items-md-start
+                    align-items-center
+                    justify-content-center justify-content-md-start
                   "
+                  style="height: 100%"
                 >
-                  <h2 class="banner__title text-white text-uppercase mb-4">
-                    Gab Million draw is
-                  </h2>
-                  <h1
+                  <div
                     class="
-                      banner__cta
-                      text-white text-uppercase
-                      font-weight-bold
-                      mb-4
-                      mt-0
+                      d-flex
+                      flex-column
+                      justify-content-center
+                      align-items-center align-items-md-start
                     "
                   >
-                    N20 Million
-                  </h1>
+                    <h2 class="banner__title text-white text-uppercase mb-4">
+                      Gab Million draw is
+                    </h2>
+                    <h1
+                      class="
+                        banner__cta
+                        text-white text-uppercase
+                        font-weight-bold
+                        mb-4
+                        mt-0
+                      "
+                    >
+                      N20 Million
+                    </h1>
 
-                  <p class="banner__info text-white mb-3" style="margin: 0">
-                    Next Draw: Tuesday 2 March
-                  </p>
+                    <p class="banner__info text-white mb-3" style="margin: 0">
+                      Next Draw: Tuesday 2 March
+                    </p>
 
-                  <div
-                    class="d-flex mb-3"
-                    style="margin: 0; align-items: center"
-                  >
-                    <img
-                      src="assets/images/time.png"
-                      alt="time"
-                      style="height: 30px; width: auto"
-                    />
-                    <h6
-                      class="text-white ml-2"
-                      data-countdown="05/06/2021"
-                    ></h6>
+                    <div
+                      class="d-flex mb-3"
+                      style="margin: 0; align-items: center"
+                    >
+                      <img
+                        src="assets/images/time.png"
+                        alt="time"
+                        style="height: 30px; width: auto"
+                      />
+                      <h6
+                        class="text-white ml-2"
+                        data-countdown="05/06/2021"
+                      ></h6>
+                    </div>
+
+                    <a
+                      href="#"
+                      class="custom-button2 align-self-md-start py-2 px-4"
+                      >Start Playing Now</a
+                    >
                   </div>
+                </div>
+              </div>
 
-                  <a
-                    href="#"
-                    class="custom-button2 align-self-md-start py-2 px-4"
-                    >Start Playing Now</a
+              <div class="carousel-item banner banner--two">
+                <div
+                  class="
+                    d-flex
+                    align-items-center
+                    justify-content-center justify-content-md-start
+                  "
+                  style="height: 100%"
+                >
+                  <div
+                    class="
+                      d-flex
+                      flex-column
+                      justify-content-center
+                      align-items-center align-items-md-start
+                    "
                   >
+                    <h2 class="banner__title text-white text-uppercase mb-4">
+                      Gab Million draw is
+                    </h2>
+                    <h1
+                      class="
+                        banner__cta
+                        text-white text-uppercase
+                        font-weight-bold
+                        mb-4
+                        mt-0
+                      "
+                    >
+                      N20 Million
+                    </h1>
+
+                    <p class="banner__info text-white mb-3" style="margin: 0">
+                      Next Draw: Tuesday 2 March
+                    </p>
+
+                    <div
+                      class="d-flex mb-3"
+                      style="margin: 0; align-items: center"
+                    >
+                      <img
+                        src="assets/images/time.png"
+                        alt="time"
+                        style="height: 30px; width: auto"
+                      />
+                      <h6
+                        class="text-white ml-2"
+                        data-countdown="05/06/2021"
+                      ></h6>
+                    </div>
+
+                    <a
+                      href="#"
+                      class="
+                        custom-button2
+                        text-center
+                        align-self-md-start
+                        py-2
+                        px-4
+                      "
+                      >Start Playing Now</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="carousel-item banner banner--two">
-              <div
-                class="
-                  d-flex
-                  align-items-center
-                  justify-content-center justify-content-md-start
-                "
-                style="height: 100%"
-              >
-                <div
-                  class="
-                    d-flex
-                    flex-column
-                    justify-content-center
-                    align-items-center align-items-md-start
-                  "
-                >
-                  <h2 class="banner__title text-white text-uppercase mb-4">
-                    Gab Million draw is
-                  </h2>
-                  <h1
-                    class="
-                      banner__cta
-                      text-white text-uppercase
-                      font-weight-bold
-                      mb-4
-                      mt-0
-                    "
-                  >
-                    N20 Million
-                  </h1>
+            <!-- carousel controls -->
+            <a
+              class="carousel-control-prev"
+              href="#carouselExampleControls"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
 
-                  <p class="banner__info text-white mb-3" style="margin: 0">
-                    Next Draw: Tuesday 2 March
-                  </p>
-
-                  <div
-                    class="d-flex mb-3"
-                    style="margin: 0; align-items: center"
-                  >
-                    <img
-                      src="assets/images/time.png"
-                      alt="time"
-                      style="height: 30px; width: auto"
-                    />
-                    <h6
-                      class="text-white ml-2"
-                      data-countdown="05/06/2021"
-                    ></h6>
-                  </div>
-
-                  <a
-                    href="#"
-                    class="custom-button2 align-self-md-start py-2 px-4"
-                    >Start Playing Now</a
-                  >
-                </div>
-              </div>
-            </div>
+            <a
+              class="carousel-control-next"
+              href="#carouselExampleControls"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
-
-          <!-- carousel controls -->
-          <a
-            class="carousel-control-prev"
-            href="#carouselExampleControls"
-            role="button"
-            data-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-
-          <a
-            class="carousel-control-next"
-            href="#carouselExampleControls"
-            role="button"
-            data-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
         </div>
-      </div>
 
-      <!-- banner second section -->
-      <div
-        class="
-          col-md-4 col-sm-12
-          bg-gab-secondary-color
-          d-flex
-          align-items-center
-          px-4
-        "
-      >
-        <div>
-          <h1 class="banner-title mb-3 font-weight-bold">Promo!! Promo!!!</h1>
-          <p class="banner-subtitle mb-5">
-            Get a chance to win (x250) on all our In-House Games
-          </p>
-          <a
-            id="link_button-1283-25"
-            class="
-              ct-link-button
-              banner-alt-btn
-              text-white
-              px-4
-              bg-gab-primary-color
-            "
-            target="_self"
-            >Only for DIRECT 2 and PERM 2
-          </a>
+        <!-- banner second section -->
+        <div
+          class="
+            col-md-4 col-sm-12
+            bg-gab-tetiary-color
+            d-flex
+            flex-column
+            align-items-center
+            justify-content-center
+            px-4
+          "
+        >
+          <!-- <h1 class="banner-title mb-3 font-weight-bold">Promo!! Promo!!!</h1>
+            <p class="banner-subtitle mb-5">
+              Get a chance to win (x250) on all our In-House Games
+            </p>
+            <a
+              id="link_button-1283-25"
+              class="
+                ct-link-button
+                banner-alt-btn
+                text-white
+                px-4
+                bg-gab-primary-color
+              "
+              target="_self"
+              >Only for DIRECT 2 and PERM 2
+            </a> -->
+          <div>This Friday</div>
+          <h2 class="font-weight-bold">EURO MILLIONS</h2>
+          <h1 class="font-weight-bold">$22 M <sup>*</sup></h1>
+          <div>JACKPOT</div>
+          <div>DREAM COME TRUE MONEY</div>
+
+          <button
+            class="bg-gab-secondary-color px-3 py-3"
+            style="border: 0; height: unset"
+          >
+            Play For $2
+          </button>
         </div>
       </div>
     </section>
@@ -1579,22 +1650,83 @@
                   <div class="icon">
                     <img src="assets/images/d1.png" alt="" />
                   </div>
-                  <h4>&#8358;116 Million</h4>
-                  <a href="single-lottery.html" class="custom-button1"
-                    >Play Now</a
-                  >
-                  <div class="next-draw">
-                    <span class="text">Next Draw :</span>
-                    <div class="time">
-                      <img src="assets/images/time.png" alt="" />
-                      <h6
-                        class="time-countdown"
-                        data-countdown="04/23/2021"
-                      ></h6>
+
+                  <div class="font-weight-bold mb-3" style="font-size: 15px">
+                    Next Draw In:
+                  </div>
+
+                  <div class="d-flex justify-content-center mb-3">
+                    <div class="d-flex flex-column align-items-center">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        00
+                      </div>
+
+                      <div class="text-xs">Days</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        23
+                      </div>
+
+                      <div class="text-xs">Hours</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        46
+                      </div>
+
+                      <div class="text-xs">Mins</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        30
+                      </div>
+
+                      <div class="text-xs">Secs</div>
                     </div>
                   </div>
+
+                  <a href="single-lottery.html" class="custom-button1">
+                    Play Now
+                  </a>
                 </div>
               </div>
+
               <div class="item">
                 <div class="single-draw">
                   <img
@@ -1602,25 +1734,87 @@
                     src="assets/images/overlaymask.png"
                     alt=""
                   />
+
                   <div class="icon">
                     <img src="assets/images/d2.png" alt="" />
                   </div>
-                  <h4>&#8358;106 Million</h4>
-                  <a href="single-lottery.html" class="custom-button2"
-                    >Play Now</a
-                  >
-                  <div class="next-draw">
-                    <span class="text">Next Draw :</span>
-                    <div class="time">
-                      <img src="assets/images/time.png" alt="" />
-                      <h6
-                        class="time-countdown"
-                        data-countdown="05/06/2021"
-                      ></h6>
+
+                  <div class="font-weight-bold mb-3" style="font-size: 15px">
+                    Next Draw In:
+                  </div>
+
+                  <div class="d-flex justify-content-center mb-3">
+                    <div class="d-flex flex-column align-items-center">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        00
+                      </div>
+
+                      <div class="text-xs">Days</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        23
+                      </div>
+
+                      <div class="text-xs">Hours</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        46
+                      </div>
+
+                      <div class="text-xs">Mins</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        30
+                      </div>
+
+                      <div class="text-xs">Secs</div>
                     </div>
                   </div>
+
+                  <a href="single-lottery.html" class="custom-button1">
+                    Play Now
+                  </a>
                 </div>
               </div>
+
               <div class="item">
                 <div class="single-draw">
                   <img
@@ -1628,25 +1822,87 @@
                     src="assets/images/overlaymask3.png"
                     alt=""
                   />
+
                   <div class="icon">
                     <img src="assets/images/d3.png" alt="" />
                   </div>
-                  <h4>&#8358;145 Million</h4>
-                  <a href="single-lottery.html" class="custom-button1"
-                    >Play Now</a
-                  >
-                  <div class="next-draw">
-                    <span class="text">Next Draw :</span>
-                    <div class="time">
-                      <img src="assets/images/time.png" alt="" />
-                      <h6
-                        class="time-countdown"
-                        data-countdown="04/17/2021"
-                      ></h6>
+
+                  <div class="font-weight-bold mb-3" style="font-size: 15px">
+                    Next Draw In:
+                  </div>
+
+                  <div class="d-flex justify-content-center mb-3">
+                    <div class="d-flex flex-column align-items-center">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        00
+                      </div>
+
+                      <div class="text-xs">Days</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        23
+                      </div>
+
+                      <div class="text-xs">Hours</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        46
+                      </div>
+
+                      <div class="text-xs">Mins</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        30
+                      </div>
+
+                      <div class="text-xs">Secs</div>
                     </div>
                   </div>
+
+                  <a href="single-lottery.html" class="custom-button1">
+                    Play Now
+                  </a>
                 </div>
               </div>
+
               <div class="item">
                 <div class="single-draw">
                   <img
@@ -1657,22 +1913,698 @@
                   <div class="icon">
                     <img src="assets/images/d4.png" alt="" />
                   </div>
-                  <h4>&#8358;187 Million</h4>
-                  <a href="single-lottery.html" class="custom-button2"
-                    >Play Now</a
-                  >
-                  <div class="next-draw">
-                    <span class="text">Next Draw :</span>
-                    <div class="time">
-                      <img src="assets/images/time.png" alt="" />
-                      <h6
-                        class="time-countdown"
-                        data-countdown="04/15/2021"
-                      ></h6>
+                  <div class="font-weight-bold mb-3" style="font-size: 15px">
+                    Next Draw In:
+                  </div>
+
+                  <div class="d-flex justify-content-center mb-3">
+                    <div class="d-flex flex-column align-items-center">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        00
+                      </div>
+
+                      <div class="text-xs">Days</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        23
+                      </div>
+
+                      <div class="text-xs">Hours</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        46
+                      </div>
+
+                      <div class="text-xs">Mins</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        30
+                      </div>
+
+                      <div class="text-xs">Secs</div>
                     </div>
                   </div>
+
+                  <a href="single-lottery.html" class="custom-button1">
+                    Play Now
+                  </a>
                 </div>
               </div>
+
+              <div class="item">
+                <div class="single-draw">
+                  <img
+                    class="overlay"
+                    src="assets/images/overlaymask3.png"
+                    alt=""
+                  />
+
+                  <div class="icon">
+                    <img src="assets/images/d3.png" alt="" />
+                  </div>
+
+                  <div class="font-weight-bold mb-3" style="font-size: 15px">
+                    Next Draw In:
+                  </div>
+
+                  <div class="d-flex justify-content-center mb-3">
+                    <div class="d-flex flex-column align-items-center">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        00
+                      </div>
+
+                      <div class="text-xs">Days</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        23
+                      </div>
+
+                      <div class="text-xs">Hours</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        46
+                      </div>
+
+                      <div class="text-xs">Mins</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        30
+                      </div>
+
+                      <div class="text-xs">Secs</div>
+                    </div>
+                  </div>
+
+                  <a href="single-lottery.html" class="custom-button1">
+                    Play Now
+                  </a>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="single-draw">
+                  <img
+                    class="overlay"
+                    src="assets/images/overlaymask3.png"
+                    alt=""
+                  />
+
+                  <div class="icon">
+                    <img src="assets/images/d3.png" alt="" />
+                  </div>
+
+                  <div class="font-weight-bold mb-3" style="font-size: 15px">
+                    Next Draw In:
+                  </div>
+
+                  <div class="d-flex justify-content-center mb-3">
+                    <div class="d-flex flex-column align-items-center">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        00
+                      </div>
+
+                      <div class="text-xs">Days</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        23
+                      </div>
+
+                      <div class="text-xs">Hours</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        46
+                      </div>
+
+                      <div class="text-xs">Mins</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        30
+                      </div>
+
+                      <div class="text-xs">Secs</div>
+                    </div>
+                  </div>
+
+                  <a href="single-lottery.html" class="custom-button1">
+                    Play Now
+                  </a>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="single-draw">
+                  <img
+                    class="overlay"
+                    src="assets/images/overlaymask.png"
+                    alt=""
+                  />
+
+                  <div class="icon">
+                    <img src="assets/images/d4.png" alt="" />
+                  </div>
+
+                  <div class="font-weight-bold mb-3" style="font-size: 15px">
+                    Next Draw In:
+                  </div>
+
+                  <div class="d-flex justify-content-center mb-3">
+                    <div class="d-flex flex-column align-items-center">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        00
+                      </div>
+
+                      <div class="text-xs">Days</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        23
+                      </div>
+
+                      <div class="text-xs">Hours</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        46
+                      </div>
+
+                      <div class="text-xs">Mins</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        30
+                      </div>
+
+                      <div class="text-xs">Secs</div>
+                    </div>
+                  </div>
+
+                  <a href="single-lottery.html" class="custom-button1">
+                    Play Now
+                  </a>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="single-draw">
+                  <img
+                    class="overlay"
+                    src="assets/images/overlaymask3.png"
+                    alt=""
+                  />
+
+                  <div class="icon">
+                    <img src="assets/images/d3.png" alt="" />
+                  </div>
+
+                  <div class="font-weight-bold mb-3" style="font-size: 15px">
+                    Next Draw In:
+                  </div>
+
+                  <div class="d-flex justify-content-center mb-3">
+                    <div class="d-flex flex-column align-items-center">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        00
+                      </div>
+
+                      <div class="text-xs">Days</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        23
+                      </div>
+
+                      <div class="text-xs">Hours</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        46
+                      </div>
+
+                      <div class="text-xs">Mins</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        30
+                      </div>
+
+                      <div class="text-xs">Secs</div>
+                    </div>
+                  </div>
+
+                  <a href="single-lottery.html" class="custom-button1">
+                    Play Now
+                  </a>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="single-draw">
+                  <img
+                    class="overlay"
+                    src="assets/images/overlaymask3.png"
+                    alt=""
+                  />
+
+                  <div class="icon">
+                    <img src="assets/images/d3.png" alt="" />
+                  </div>
+
+                  <div class="font-weight-bold mb-3" style="font-size: 15px">
+                    Next Draw In:
+                  </div>
+
+                  <div class="d-flex justify-content-center mb-3">
+                    <div class="d-flex flex-column align-items-center">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        00
+                      </div>
+
+                      <div class="text-xs">Days</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        23
+                      </div>
+
+                      <div class="text-xs">Hours</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        46
+                      </div>
+
+                      <div class="text-xs">Mins</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        30
+                      </div>
+
+                      <div class="text-xs">Secs</div>
+                    </div>
+                  </div>
+
+                  <a href="single-lottery.html" class="custom-button1">
+                    Play Now
+                  </a>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="single-draw">
+                  <img
+                    class="overlay"
+                    src="assets/images/overlaymask.png"
+                    alt=""
+                  />
+
+                  <div class="icon">
+                    <img src="assets/images/d4.png" alt="" />
+                  </div>
+
+                  <div class="font-weight-bold mb-3" style="font-size: 15px">
+                    Next Draw In:
+                  </div>
+
+                  <div class="d-flex justify-content-center mb-3">
+                    <div class="d-flex flex-column align-items-center">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        00
+                      </div>
+
+                      <div class="text-xs">Days</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        23
+                      </div>
+
+                      <div class="text-xs">Hours</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        46
+                      </div>
+
+                      <div class="text-xs">Mins</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        30
+                      </div>
+
+                      <div class="text-xs">Secs</div>
+                    </div>
+                  </div>
+
+                  <a href="single-lottery.html" class="custom-button1">
+                    Play Now
+                  </a>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="single-draw">
+                  <img
+                    class="overlay"
+                    src="assets/images/overlaymask3.png"
+                    alt=""
+                  />
+
+                  <div class="icon">
+                    <img src="assets/images/d3.png" alt="" />
+                  </div>
+
+                  <div class="font-weight-bold mb-3" style="font-size: 15px">
+                    Next Draw In:
+                  </div>
+
+                  <div class="d-flex justify-content-center mb-3">
+                    <div class="d-flex flex-column align-items-center">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        00
+                      </div>
+
+                      <div class="text-xs">Days</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        23
+                      </div>
+
+                      <div class="text-xs">Hours</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        46
+                      </div>
+
+                      <div class="text-xs">Mins</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        30
+                      </div>
+
+                      <div class="text-xs">Secs</div>
+                    </div>
+                  </div>
+
+                  <a href="single-lottery.html" class="custom-button1">
+                    Play Now
+                  </a>
+                </div>
+              </div>
+
               <div class="item">
                 <div class="single-draw">
                   <img
@@ -1683,48 +2615,83 @@
                   <div class="icon">
                     <img src="assets/images/d3.png" alt="" />
                   </div>
-                  <h4>&#8358;211 Million</h4>
-                  <a href="single-lottery.html" class="custom-button1"
-                    >Play Now</a
-                  >
-                  <div class="next-draw">
-                    <span class="text">Next Draw :</span>
-                    <div class="time">
-                      <img src="assets/images/time.png" alt="" />
-                      <h6
-                        class="time-countdown"
-                        data-countdown="04/27/2021"
-                      ></h6>
+
+                  <div class="font-weight-bold mb-3" style="font-size: 15px">
+                    Next Draw In:
+                  </div>
+
+                  <div class="d-flex justify-content-center mb-3">
+                    <div class="d-flex flex-column align-items-center">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        00
+                      </div>
+
+                      <div class="text-xs">Days</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        23
+                      </div>
+
+                      <div class="text-xs">Hours</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        46
+                      </div>
+
+                      <div class="text-xs">Mins</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        30
+                      </div>
+
+                      <div class="text-xs">Secs</div>
                     </div>
                   </div>
+
+                  <a href="single-lottery.html" class="custom-button1">
+                    Play Now
+                  </a>
                 </div>
               </div>
-              <div class="item">
-                <div class="single-draw">
-                  <img
-                    class="overlay"
-                    src="assets/images/overlaymask3.png"
-                    alt=""
-                  />
-                  <div class="icon">
-                    <img src="assets/images/d3.png" alt="" />
-                  </div>
-                  <h4>&#8358;145 Million</h4>
-                  <a href="single-lottery.html" class="custom-button1"
-                    >Play Now</a
-                  >
-                  <div class="next-draw">
-                    <span class="text">Next Draw :</span>
-                    <div class="time">
-                      <img src="assets/images/time.png" alt="" />
-                      <h6
-                        class="time-countdown"
-                        data-countdown="04/17/2021"
-                      ></h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
               <div class="item">
                 <div class="single-draw">
                   <img
@@ -1735,22 +2702,83 @@
                   <div class="icon">
                     <img src="assets/images/d4.png" alt="" />
                   </div>
-                  <h4>&#8358;187 Million</h4>
-                  <a href="single-lottery.html" class="custom-button2"
-                    >Play Now</a
-                  >
-                  <div class="next-draw">
-                    <span class="text">Next Draw :</span>
-                    <div class="time">
-                      <img src="assets/images/time.png" alt="" />
-                      <h6
-                        class="time-countdown"
-                        data-countdown="04/15/2021"
-                      ></h6>
+
+                  <div class="font-weight-bold mb-3" style="font-size: 15px">
+                    Next Draw In:
+                  </div>
+
+                  <div class="d-flex justify-content-center mb-3">
+                    <div class="d-flex flex-column align-items-center">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        00
+                      </div>
+
+                      <div class="text-xs">Days</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        23
+                      </div>
+
+                      <div class="text-xs">Hours</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        46
+                      </div>
+
+                      <div class="text-xs">Mins</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        30
+                      </div>
+
+                      <div class="text-xs">Secs</div>
                     </div>
                   </div>
+
+                  <a href="single-lottery.html" class="custom-button1">
+                    Play Now
+                  </a>
                 </div>
               </div>
+
               <div class="item">
                 <div class="single-draw">
                   <img
@@ -1758,179 +2786,84 @@
                     src="assets/images/overlaymask3.png"
                     alt=""
                   />
+
                   <div class="icon">
                     <img src="assets/images/d3.png" alt="" />
                   </div>
-                  <h4>&#8358;211 Million</h4>
-                  <a href="single-lottery.html" class="custom-button1"
-                    >Play Now</a
-                  >
-                  <div class="next-draw">
-                    <span class="text">Next Draw :</span>
-                    <div class="time">
-                      <img src="assets/images/time.png" alt="" />
-                      <h6
-                        class="time-countdown"
-                        data-countdown="04/27/2021"
-                      ></h6>
+
+                  <div class="font-weight-bold mb-3" style="font-size: 15px">
+                    Next Draw In:
+                  </div>
+
+                  <div class="d-flex justify-content-center mb-3">
+                    <div class="d-flex flex-column align-items-center">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        00
+                      </div>
+
+                      <div class="text-xs">Days</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        23
+                      </div>
+
+                      <div class="text-xs">Hours</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        46
+                      </div>
+
+                      <div class="text-xs">Mins</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center ml-2">
+                      <div
+                        class="
+                          ball
+                          d-flex
+                          align-items-center
+                          justify-content-center
+                          rounded-circle
+                        "
+                      >
+                        30
+                      </div>
+
+                      <div class="text-xs">Secs</div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="single-draw">
-                  <img
-                    class="overlay"
-                    src="assets/images/overlaymask3.png"
-                    alt=""
-                  />
-                  <div class="icon">
-                    <img src="assets/images/d3.png" alt="" />
-                  </div>
-                  <h4>&#8358;145 Million</h4>
-                  <a href="single-lottery.html" class="custom-button1"
-                    >Play Now</a
-                  >
-                  <div class="next-draw">
-                    <span class="text">Next Draw :</span>
-                    <div class="time">
-                      <img src="assets/images/time.png" alt="" />
-                      <h6
-                        class="time-countdown"
-                        data-countdown="04/17/2021"
-                      ></h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="single-draw">
-                  <img
-                    class="overlay"
-                    src="assets/images/overlaymask.png"
-                    alt=""
-                  />
-                  <div class="icon">
-                    <img src="assets/images/d4.png" alt="" />
-                  </div>
-                  <h4>&#8358;187 Million</h4>
-                  <a href="single-lottery.html" class="custom-button2"
-                    >Play Now</a
-                  >
-                  <div class="next-draw">
-                    <span class="text">Next Draw :</span>
-                    <div class="time">
-                      <img src="assets/images/time.png" alt="" />
-                      <h6
-                        class="time-countdown"
-                        data-countdown="04/15/2021"
-                      ></h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="single-draw">
-                  <img
-                    class="overlay"
-                    src="assets/images/overlaymask3.png"
-                    alt=""
-                  />
-                  <div class="icon">
-                    <img src="assets/images/d3.png" alt="" />
-                  </div>
-                  <h4>&#8358;211 Million</h4>
-                  <a href="single-lottery.html" class="custom-button1"
-                    >Play Now</a
-                  >
-                  <div class="next-draw">
-                    <span class="text">Next Draw :</span>
-                    <div class="time">
-                      <img src="assets/images/time.png" alt="" />
-                      <h6
-                        class="time-countdown"
-                        data-countdown="04/27/2021"
-                      ></h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="single-draw">
-                  <img
-                    class="overlay"
-                    src="assets/images/overlaymask3.png"
-                    alt=""
-                  />
-                  <div class="icon">
-                    <img src="assets/images/d3.png" alt="" />
-                  </div>
-                  <h4>&#8358;145 Million</h4>
-                  <a href="single-lottery.html" class="custom-button1"
-                    >Play Now</a
-                  >
-                  <div class="next-draw">
-                    <span class="text">Next Draw :</span>
-                    <div class="time">
-                      <img src="assets/images/time.png" alt="" />
-                      <h6
-                        class="time-countdown"
-                        data-countdown="04/17/2021"
-                      ></h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="single-draw">
-                  <img
-                    class="overlay"
-                    src="assets/images/overlaymask.png"
-                    alt=""
-                  />
-                  <div class="icon">
-                    <img src="assets/images/d4.png" alt="" />
-                  </div>
-                  <h4>&#8358;187 Million</h4>
-                  <a href="single-lottery.html" class="custom-button2"
-                    >Play Now</a
-                  >
-                  <div class="next-draw">
-                    <span class="text">Next Draw :</span>
-                    <div class="time">
-                      <img src="assets/images/time.png" alt="" />
-                      <h6
-                        class="time-countdown"
-                        data-countdown="04/15/2021"
-                      ></h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="single-draw">
-                  <img
-                    class="overlay"
-                    src="assets/images/overlaymask3.png"
-                    alt=""
-                  />
-                  <div class="icon">
-                    <img src="assets/images/d3.png" alt="" />
-                  </div>
-                  <h4>&#8358;211 Million</h4>
-                  <a href="single-lottery.html" class="custom-button1"
-                    >Play Now</a
-                  >
-                  <div class="next-draw">
-                    <span class="text">Next Draw :</span>
-                    <div class="time">
-                      <img src="assets/images/time.png" alt="" />
-                      <h6
-                        class="time-countdown"
-                        data-countdown="04/27/2021"
-                      ></h6>
-                    </div>
-                  </div>
+
+                  <a href="single-lottery.html" class="custom-button1">
+                    Play Now
+                  </a>
                 </div>
               </div>
             </div>
@@ -2018,6 +2951,8 @@
 
       <section class="draw-section mt-0">
         <div class="container">
+          <h2 class="text-center font-weight-bold">RAPID GAMES</h2>
+
           <div class="row">
             <div class="col-lg-12">
               <div
@@ -2029,8 +2964,10 @@
         </div>
       </section>
 
-      <section class="draw-section mt-0">
+      <section class="draw-section mt-5">
         <div class="container">
+          <h2 class="text-center font-weight-bold">MORE GAMES</h2>
+
           <div class="row">
             <div class="col-lg-12">
               <div
@@ -2060,6 +2997,7 @@
             </div>
           </div>
         </div>
+
         <div class="row">
           <div class="col-lg-12">
             <div class="result-box">
@@ -2227,11 +3165,12 @@
                           <span class="result-list__ball mr-2">88</span>
                           <span class="result-list__ball mr-2">23</span>
                           <span class="result-list__ball mr-2">9</span>
-                          <span class="result-list__ball">19</span>
+                          <span class="result-list__ball mr-2">19</span>
+                          <span class="result-list__ball">90</span>
                         </div>
                       </div>
 
-                      <div
+                      <!-- <div
                         class="
                           d-flex
                           flex-column
@@ -2253,7 +3192,7 @@
                         <div class="d-flex align-items-center">
                           <span class="result-list__ball mr-2">11</span>
                         </div>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
 

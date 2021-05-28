@@ -208,6 +208,7 @@ h3 {
   --gab-primary-color: #001485;
   --gab-secondary-color: #ffd800;
   --gab-accent-color: #00528b;
+  --gab-tetiary-color: #00D5D9;
 }
 
 .bg-gab-primary-color {
@@ -220,6 +221,10 @@ h3 {
 
 .bg-gab-accent-color {
   background-color: var(--gab-accent-color);
+}
+
+.bg-gab-tetiary-color {
+  background: var(--gab-tetiary-color);
 }
 
 .text-gab-primary-color {
@@ -4152,7 +4157,6 @@ header {
 }
 
     header nav {
-        border-top: 1px solid #efefef;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
