@@ -239,6 +239,138 @@ h3 {
   color: var(--gab-accent-color);
 }
 
+.text-sm {
+  font-size: 14px;
+}
+
+.text-xs {
+  font-size: 12px;
+}
+
+.d-grid {
+  display: grid;
+}
+
+/* HOME PAGE STYLES */
+.nav-collapse-menu {
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 10px;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.nav-collapse-menu__item {
+  grid-column: span 1;
+  height: 300px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.nav-collapse-menu__item--extras {
+  /* box-shadow: 0px 3px 30px 0px rgba(30, 75, 203, 0.22); */
+  border: 1px solid #001485;
+}
+.nav-collapse-menu__item--small {
+  height: 145px;
+  border-radius: 20px;
+}
+
+.nav-collapse-menu__item-image {
+  height: 80px;
+}
+
+.nav-collapse-menu__item-type {
+  font-size: 13px;
+  width: 40px;
+}
+
+.nav-collapse-menu__item-ball {
+  border: 2px solid;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+}
+
+.main-nav {
+  height: 10vh;
+  padding-left: 24px;
+}
+
+.main-nav__logo {
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-nav__links {
+  margin-left: 150px;
+}
+
+.main-nav__link:hover {
+  color: var(--gab-accent-color);
+}
+
+/* .ball {
+  background-color: #eee;
+  height: 46px;
+  width: 46px;
+} */
+
+.result-list__ball {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  background-image: -o-linear-gradient(
+    4deg,
+    #ec038b 0%,
+    #fb6468 44%,
+    #fbb936 100%
+  );
+  background-image: linear-gradient(
+    86deg,
+    #ec038b 0%,
+    #fb6468 44%,
+    #fbb936 100%
+  );
+  -webkit-box-shadow: 0px 7px 7px 0px rgba(243, 42, 126, 0.23);
+  box-shadow: 0px 7px 7px 0px rgba(243, 42, 126, 0.23);
+}
+
+@media screen and (min-width: 768px) {
+  .nav-collapse-menu {
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 10px;
+    height: unset;
+  }
+
+  .main-nav__logo {
+    height: 100px;
+    width: auto;
+    position: unset;
+    left: unset;
+    transform: translateX(0);
+  }
+
+  .main-nav {
+    padding-left: 100px;
+    height: 180px;
+    max-width: 1388px;
+    margin: 0 auto;
+  }
+
+  .draw-section {
+    margin-top: -80px;
+  }
+}
+
+
 html {
   line-height: 1.15;
 }
@@ -2943,9 +3075,9 @@ input[type=submit] {
   display: inline-block;
 }
 .pick-number-area .single-pick .body-area ul li span {
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   font-weight: 600;
   background: #ededff;
   color: #595192;

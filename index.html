@@ -34,77 +34,6 @@
         background-color: #2fccdcad !important;
       }
 
-      .text-sm {
-        font-size: 14px;
-      }
-
-      .text-xs {
-        font-size: 12px;
-      }
-
-      .d-grid {
-        display: grid;
-      }
-
-      .nav-collapse-menu {
-        grid-template-columns: repeat(1, 1fr);
-        column-gap: 10px;
-        height: 400px;
-        overflow-y: auto;
-      }
-
-      .nav-collapse-menu__item {
-        grid-column: span 1;
-        height: 300px;
-        border-radius: 20px;
-        margin-bottom: 10px;
-      }
-
-      .nav-collapse-menu__item--extras {
-        /* box-shadow: 0px 3px 30px 0px rgba(30, 75, 203, 0.22); */
-        border: 1px solid #001485;
-      }
-      .nav-collapse-menu__item--small {
-        height: 145px;
-        border-radius: 20px;
-      }
-
-      .nav-collapse-menu__item-image {
-        height: 80px;
-      }
-
-      .nav-collapse-menu__item-type {
-        font-size: 13px;
-        width: 40px;
-      }
-
-      .nav-collapse-menu__item-ball {
-        border: 2px solid;
-        width: 24px;
-        height: 24px;
-        border-radius: 100%;
-      }
-
-      .main-nav {
-        height: 10vh;
-        padding-left: 24px;
-      }
-
-      .main-nav__logo {
-        height: 50px;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      .main-nav__links {
-        margin-left: 150px;
-      }
-
-      .main-nav__link:hover {
-        color: var(--gab-accent-color);
-      }
-
       .banner {
         height: 100%;
       }
@@ -123,38 +52,6 @@
 
       .banner__cta {
         font-size: 1rem;
-      }
-
-      .ball {
-        background-color: #eee;
-        height: 46px;
-        width: 46px;
-      }
-
-      .result-list__ball {
-        width: 36px;
-        height: 36px;
-        line-height: 36px;
-        text-align: center;
-        border-radius: 50%;
-        color: #fff;
-        display: inline-block;
-        font-size: 18px;
-        font-weight: 600;
-        background-image: -o-linear-gradient(
-          4deg,
-          #ec038b 0%,
-          #fb6468 44%,
-          #fbb936 100%
-        );
-        background-image: linear-gradient(
-          86deg,
-          #ec038b 0%,
-          #fb6468 44%,
-          #fbb936 100%
-        );
-        -webkit-box-shadow: 0px 7px 7px 0px rgba(243, 42, 126, 0.23);
-        box-shadow: 0px 7px 7px 0px rgba(243, 42, 126, 0.23);
       }
 
       @media screen and (min-width: 768px) {
@@ -1136,7 +1033,7 @@
           style="font-size: 16px"
         >
           <a
-            href="single-lottery1.html"
+            href="single-lottery3.html"
             class="main-nav__link text-gab-primary-color mr-5 font-weight-bold"
             >play now</a
           >
@@ -1227,37 +1124,50 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-body">
-            <div class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+            <div
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+              role="button"
+            >
+              <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"
+                />
+              </svg>
             </div>
             <div class="log-reg-inner">
               <h2 class="title">Create an Account</h2>
               <div class="main-content">
-                <form action="#">
-                  <div class="form-group">
-                    <label>Your Email</label>
-                    <input
-                      type="email"
-                      class="my-form-control"
-                      placeholder="Enter Your Email"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label>User Id</label>
-                    <input
-                      type="text"
-                      class="my-form-control"
-                      placeholder="Enter Your User Id"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label>Phone Number</label>
+                <form action="/dashboard/">
+                  <div class="form-group d-flex flex-column">
+                    <label class="mb-1">Phone Number</label>
                     <input
                       type="text"
                       class="my-form-control"
                       placeholder="Phone Number"
                     />
                   </div>
+
+                  <div class="form-group d-flex flex-column">
+                    <label class="mb-1">User Id</label>
+                    <input
+                      type="text"
+                      class="my-form-control"
+                      placeholder="Enter Your User Id"
+                    />
+                  </div>
+
+                  <div class="form-group d-flex flex-column">
+                    <label class="mb-1">Your Email (Optional)</label>
+                    <input
+                      type="email"
+                      class="my-form-control"
+                      placeholder="Enter Your Email"
+                    />
+                  </div>
+
                   <div class="custom-control custom-checkbox">
                     <input
                       type="checkbox"
@@ -1269,11 +1179,13 @@
                       <a href="#">Terms, Privacy Policy and Fees</a>
                     </label>
                   </div>
+
                   <div class="button-wrapper">
                     <button type="submit" class="custom-button2">
                       Register Now
                     </button>
-                    <p class="or-signup">
+
+                    <p class="or-signup mt-4">
                       Already have an account?
                       <a href="#" data-toggle="modal" data-target="#loginModal">
                         Login
@@ -1313,32 +1225,46 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-body">
-            <div class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+            <div
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+              role="button"
+            >
+              <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"
+                />
+              </svg>
             </div>
+
             <div class="log-reg-inner">
               <h2 class="title">Welcome to Gab Lotto</h2>
               <div class="main-content">
-                <form action="#">
-                  <div class="form-group">
-                    <label>Phone Number</label>
+                <form action="/dashboard/">
+                  <div class="form-group d-flex flex-column">
+                    <label class="mb-1">Phone Number</label>
                     <input
                       type="email"
                       class="my-form-control"
                       placeholder="Enter Your Phone Number"
                     />
                   </div>
-                  <div class="form-group">
-                    <label>Pin Code</label>
+
+                  <div class="form-group d-flex flex-column">
+                    <label class="mb-1">Pin Code</label>
                     <input
                       type="text"
                       class="my-form-control"
                       placeholder="4 Digit Pin Code"
                     />
                   </div>
-                  <p class="f-pass">
+
+                  <p class="f-pass text-center">
                     Forgot your pin code? <a href="#">recover pin code</a>
                   </p>
+
                   <div class="button-wrapper">
                     <button type="submit" class="custom-button2">
                       Sign In
@@ -1601,34 +1527,16 @@
             px-4
           "
         >
-          <!-- <h1 class="banner-title mb-3 font-weight-bold">Promo!! Promo!!!</h1>
-            <p class="banner-subtitle mb-5">
-              Get a chance to win (x250) on all our In-House Games
-            </p>
-            <a
-              id="link_button-1283-25"
-              class="
-                ct-link-button
-                banner-alt-btn
-                text-white
-                px-4
-                bg-gab-primary-color
-              "
-              target="_self"
-              >Only for DIRECT 2 and PERM 2
-            </a> -->
           <div>This Friday</div>
-          <h2 class="font-weight-bold">EURO MILLIONS</h2>
-          <h1 class="font-weight-bold">$22 M <sup>*</sup></h1>
-          <div>JACKPOT</div>
-          <div>DREAM COME TRUE MONEY</div>
+          <h2 class="font-weight-bold">GAB MILLIONS</h2>
 
-          <button
-            class="bg-gab-secondary-color px-3 py-3"
-            style="border: 0; height: unset"
-          >
-            Play For $2
-          </button>
+          <img
+            src="./assets/images/jackpot.svg"
+            alt="jackpot"
+            style="height: 200px"
+          />
+
+          <button class="custom-button1">Play For $2</button>
         </div>
       </div>
     </section>
