@@ -216,7 +216,7 @@ h3 {
 }
 
 .bg-gab-secondary-color {
-  background-color: var(--gab-secondary-color);
+  background-color: var(--gab-secondary-color) !important;
 }
 
 .bg-gab-accent-color {
