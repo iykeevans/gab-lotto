@@ -12,43 +12,45 @@
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="assets/css/nice-select.css" />
     <link rel="stylesheet" href="assets/css/bootstrap-popover-x.min.css" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link rel="stylesheet" href="assets/css/cssb356.css" />
-    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
     <link rel="shortcut icon" href="assets/images/fg" type="image/x-icon" />
 
     <style>
-      .draw-section__ball {
-        background-color: #eee;
-        height: 46px;
-        width: 46px;
-      }
-
-      .isActive {
-        background-image: -o-linear-gradient(
-          4deg,
-          #ec038b 0%,
-          #fb6468 44%,
-          #fbb936 100%
-        );
-        background-image: linear-gradient(
-          86deg,
-          #ec038b 0%,
-          #fb6468 44%,
-          #fbb936 100%
-        );
-      }
-
       .bet-type {
+        height: unset;
+        border-radius: 40px;
+        font-size: 14px;
+        background-color: #a1a1cc;
         color: #595192;
-        background-color: #ededff;
+      }
+
+      .bet-type:hover {
+        background-color: var(--gab-secondary-color);
+        font-weight: bold;
+      }
+
+      .bet-sub-type {
+        border-bottom: 0;
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+        background-color: transparent;
+        border-radius: 0;
+        height: unset;
+        font-size: 14px;
+      }
+
+      .is-active {
+        background-color: var(--gab-secondary-color);
+        font-weight: bold;
+      }
+
+      .is-active--underline {
+        border-bottom: 2px solid var(--gab-secondary-color);
+        font-weight: bold;
       }
     </style>
-
-    <script type="text/javascript"></script>
-
-    <script src="assets/js/jsb670?v=Z0HVNenAW0jsvXmK2jBsrjsEceRGpra9kqpb97M5Z401"></script>
     <title>Gab lotto - Online Lotto</title>
   </head>
 
@@ -65,12 +67,39 @@
     <!-- ==========Preloader========== -->
 
     <!-- ==========Overlay========== -->
-    <div class="overlay"></div>
     <a href="#" class="scrollToTop">
       <i class="fas fa-angle-up"></i>
     </a>
 
     <!-- ==========Overlay========== -->
+    <div class="collapse" id="navbar1">
+      <div class="bg-dark p-2">
+        <div class="container">
+          <button
+            class="navbar-toggler close close-top-drawer"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbar1"
+            aria-label="Close"
+          >
+            <small>Close&nbsp;</small><span aria-hidden="true">×</span>
+          </button>
+          <h4>Latest Winning Numbers</h4>
+          <div id="outer">
+            <div class="div"></div>
+            <div class="div"></div>
+            <div class="div big"></div>
+            <div class="div"></div>
+            <div class="div"></div>
+            <div class="div"></div>
+            <div class="div"></div>
+            <div class="div"></div>
+            <div class="div"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="collapse" id="nav-collapse-menu">
       <div class="bg-gab-secondary-color p-3">
         <div class="container">
@@ -1064,37 +1093,50 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-body">
-            <div class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+            <div
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+              role="button"
+            >
+              <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"
+                />
+              </svg>
             </div>
             <div class="log-reg-inner">
               <h2 class="title">Create an Account</h2>
               <div class="main-content">
                 <form action="#">
-                  <div class="form-group">
-                    <label>Your Email</label>
+                  <div class="form-group d-flex flex-column">
+                    <label class="mb-1">Your Email</label>
                     <input
                       type="email"
                       class="my-form-control"
                       placeholder="Enter Your Email"
                     />
                   </div>
-                  <div class="form-group">
-                    <label>User Id</label>
+
+                  <div class="form-group d-flex flex-column">
+                    <label class="mb-1">User Id</label>
                     <input
                       type="text"
                       class="my-form-control"
                       placeholder="Enter Your User Id"
                     />
                   </div>
-                  <div class="form-group">
-                    <label>Phone Number</label>
+
+                  <div class="form-group d-flex flex-column">
+                    <label class="mb-1">Phone Number</label>
                     <input
                       type="text"
                       class="my-form-control"
                       placeholder="Phone Number"
                     />
                   </div>
+
                   <div class="custom-control custom-checkbox">
                     <input
                       type="checkbox"
@@ -1106,11 +1148,13 @@
                       <a href="#">Terms, Privacy Policy and Fees</a>
                     </label>
                   </div>
+
                   <div class="button-wrapper">
                     <button type="submit" class="custom-button2">
                       Register Now
                     </button>
-                    <p class="or-signup">
+
+                    <p class="or-signup mt-4">
                       Already have an account?
                       <a href="#" data-toggle="modal" data-target="#loginModal">
                         Login
@@ -1150,32 +1194,46 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-body">
-            <div class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+            <div
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+              role="button"
+            >
+              <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"
+                />
+              </svg>
             </div>
+
             <div class="log-reg-inner">
               <h2 class="title">Welcome to Gab Lotto</h2>
               <div class="main-content">
                 <form action="#">
-                  <div class="form-group">
-                    <label>Phone Number</label>
+                  <div class="form-group d-flex flex-column">
+                    <label class="mb-1">Phone Number</label>
                     <input
                       type="email"
                       class="my-form-control"
                       placeholder="Enter Your Phone Number"
                     />
                   </div>
-                  <div class="form-group">
-                    <label>Pin Code</label>
+
+                  <div class="form-group d-flex flex-column">
+                    <label class="mb-1">Pin Code</label>
                     <input
                       type="text"
                       class="my-form-control"
                       placeholder="4 Digit Pin Code"
                     />
                   </div>
-                  <p class="f-pass">
+
+                  <p class="f-pass text-center">
                     Forgot your pin code? <a href="#">recover pin code</a>
                   </p>
+
                   <div class="button-wrapper">
                     <button type="submit" class="custom-button2">
                       Sign In
@@ -1255,174 +1313,7 @@
       </div>
     </div>
     <!-- Ticket Modal End -->
-
-    <!-- Game Modal Start -->
-    <div
-      class="modal fade log-reg-modal-wrapper log"
-      id="gameModal"
-      tabindex="-1"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered" style="max-width: 800px">
-        <div class="modal-content" style="height: 400px; overflow-y: auto">
-          <div class="modal-body">
-            <div
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-              role="button"
-            >
-              <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
-                <path
-                  fill="currentColor"
-                  d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"
-                />
-              </svg>
-            </div>
-
-            <div class="log-reg-inner">
-              <h2 class="title">Make your selection</h2>
-
-              <!-- bet types -->
-              <div
-                class="d-flex justify-content-center"
-                id="bet-type-container"
-              >
-                <button
-                  class="py-1 px-3 font-weight-bold bet-type"
-                  style="height: unset; border-radius: 40px"
-                >
-                  Direct
-                </button>
-
-                <button
-                  class="ml-2"
-                  style="background: #eee; height: unset; border-radius: 40px"
-                >
-                  Permutation
-                </button>
-
-                <button
-                  class="ml-2"
-                  style="background: #eee; height: unset; border-radius: 40px"
-                >
-                  Banker
-                </button>
-
-                <button
-                  class="ml-2"
-                  style="background: #eee; height: unset; border-radius: 40px"
-                >
-                  Against
-                </button>
-              </div>
-
-              <!-- bet sub types -->
-              <div
-                class="d-flex align-items-center justify-content-center mt-4"
-              >
-                <button
-                  class="pb-1 mr-2"
-                  style="
-                    border-bottom: 2px solid;
-                    border-radius: 0;
-                    height: unset;
-                  "
-                >
-                  Pick Drop 1
-                </button>
-
-                <button class="pb-1 mr-2" style="height: unset">
-                  Direct 2
-                </button>
-
-                <button class="pb-1 mr-2" style="height: unset">
-                  Direct 3
-                </button>
-
-                <button class="pb-1" style="height: unset">Direct 4</button>
-              </div>
-
-              <!-- balls -->
-              <div
-                class="mt-4"
-                style="
-                  display: grid;
-                  grid-template-columns: repeat(15, 1fr);
-                  gap: 10px;
-                "
-                id="balls-container"
-              ></div>
-
-              <div class="d-flex justify-content-center mt-4">
-                <button
-                  class="py-1 px-3 font-weight-bold mt-4"
-                  style="background: #eee; height: unset; border-radius: 40px"
-                >
-                  Add To Slip
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Game Modal End -->
-
-    <!-- cart start -->
-    <div
-      class="
-        position-fixed
-        d-none
-        flex-column
-        align-items-center
-        justify-content-center
-        font-weight-bold
-        py-3
-      "
-      style="
-        border: 2px solid #eee;
-        border-radius: 5px;
-        /* height: 80px; */
-        background-color: white;
-        /* top: 85vh; */
-        left: 50%;
-        transform: translateX(-50%);
-        width: 500px;
-        z-index: 9999;
-      "
-    >
-      <div class="mb-md-3">2 Games Selected</div>
-
-      <div class="container px-4">
-        <!-- games -->
-
-        <!-- game 1 -->
-        <div
-          class="row py-3 mb-2"
-          style="background-color: #eee; border-radius: 5px"
-        >
-          <div class="col-md-8 d-flex flex-column">
-            <div class="mb-0">Gab Padi</div>
-            <div class="my-0" style="font-size: 14px">First Drop</div>
-            <div>balls</div>
-          </div>
-
-          <div class="col-md-4 d-flex flex-column">
-            <select name="" id="" class="w-100 mr-0 mb-2">
-              <option value="">Machine</option>
-            </select>
-
-            <input type="text" name="" id="" placeholder="Stake" />
-
-            <div class="mt-2" style="font-size: 16px">Amount: $200</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- cart end -->
-
-    <!-- ==========Header-Section End========== -->
+    <!-- ==========Header-Section========== -->
 
     <!-- ==========Breadcrumb-Section========== -->
     <section class="breadcrumb-area">
@@ -1442,8 +1333,6 @@
       </div>
     </section>
     <!-- ==========Breadcrumb-Section========== -->
-
-    <!-- ==========Singlelottery-Section========== -->
 
     <section class="draw-section" style="margin-top: -200px">
       <div class="container">
@@ -1531,15 +1420,14 @@
                     </div>
                   </div>
 
-                  <a
-                    href="#"
+                  <button
                     class="custom-button1"
                     data-toggle="modal"
                     data-target="#gameModal"
                     role="button"
                   >
                     Play Now
-                  </a>
+                  </button>
                 </div>
               </div>
 
@@ -1625,9 +1513,12 @@
                     </div>
                   </div>
 
-                  <a href="single-lottery.html" class="custom-button1">
+                  <button
+                    class="custom-button1"
+                    onclick="singleLottery.populateBalls(49)"
+                  >
                     Play Now
-                  </a>
+                  </button>
                 </div>
               </div>
 
@@ -1713,9 +1604,7 @@
                     </div>
                   </div>
 
-                  <a href="single-lottery.html" class="custom-button1">
-                    Play Now
-                  </a>
+                  <button class="custom-button1">Play Now</button>
                 </div>
               </div>
 
@@ -1799,9 +1688,7 @@
                     </div>
                   </div>
 
-                  <a href="single-lottery.html" class="custom-button1">
-                    Play Now
-                  </a>
+                  <button class="custom-button1">Play Now</button>
                 </div>
               </div>
 
@@ -1887,799 +1774,7 @@
                     </div>
                   </div>
 
-                  <a href="single-lottery.html" class="custom-button1">
-                    Play Now
-                  </a>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="single-draw">
-                  <img
-                    class="overlay"
-                    src="assets/images/overlaymask3.png"
-                    alt=""
-                  />
-
-                  <div class="icon">
-                    <img src="assets/images/d3.png" alt="" />
-                  </div>
-
-                  <div class="font-weight-bold mb-3" style="font-size: 15px">
-                    Next Draw In:
-                  </div>
-
-                  <div class="d-flex justify-content-center mb-3">
-                    <div class="d-flex flex-column align-items-center">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        00
-                      </div>
-
-                      <div class="text-xs">Days</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        23
-                      </div>
-
-                      <div class="text-xs">Hours</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        46
-                      </div>
-
-                      <div class="text-xs">Mins</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        30
-                      </div>
-
-                      <div class="text-xs">Secs</div>
-                    </div>
-                  </div>
-
-                  <a href="single-lottery.html" class="custom-button1">
-                    Play Now
-                  </a>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="single-draw">
-                  <img
-                    class="overlay"
-                    src="assets/images/overlaymask.png"
-                    alt=""
-                  />
-
-                  <div class="icon">
-                    <img src="assets/images/d4.png" alt="" />
-                  </div>
-
-                  <div class="font-weight-bold mb-3" style="font-size: 15px">
-                    Next Draw In:
-                  </div>
-
-                  <div class="d-flex justify-content-center mb-3">
-                    <div class="d-flex flex-column align-items-center">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        00
-                      </div>
-
-                      <div class="text-xs">Days</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        23
-                      </div>
-
-                      <div class="text-xs">Hours</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        46
-                      </div>
-
-                      <div class="text-xs">Mins</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        30
-                      </div>
-
-                      <div class="text-xs">Secs</div>
-                    </div>
-                  </div>
-
-                  <a href="single-lottery.html" class="custom-button1">
-                    Play Now
-                  </a>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="single-draw">
-                  <img
-                    class="overlay"
-                    src="assets/images/overlaymask3.png"
-                    alt=""
-                  />
-
-                  <div class="icon">
-                    <img src="assets/images/d3.png" alt="" />
-                  </div>
-
-                  <div class="font-weight-bold mb-3" style="font-size: 15px">
-                    Next Draw In:
-                  </div>
-
-                  <div class="d-flex justify-content-center mb-3">
-                    <div class="d-flex flex-column align-items-center">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        00
-                      </div>
-
-                      <div class="text-xs">Days</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        23
-                      </div>
-
-                      <div class="text-xs">Hours</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        46
-                      </div>
-
-                      <div class="text-xs">Mins</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        30
-                      </div>
-
-                      <div class="text-xs">Secs</div>
-                    </div>
-                  </div>
-
-                  <a href="single-lottery.html" class="custom-button1">
-                    Play Now
-                  </a>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="single-draw">
-                  <img
-                    class="overlay"
-                    src="assets/images/overlaymask3.png"
-                    alt=""
-                  />
-
-                  <div class="icon">
-                    <img src="assets/images/d3.png" alt="" />
-                  </div>
-
-                  <div class="font-weight-bold mb-3" style="font-size: 15px">
-                    Next Draw In:
-                  </div>
-
-                  <div class="d-flex justify-content-center mb-3">
-                    <div class="d-flex flex-column align-items-center">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        00
-                      </div>
-
-                      <div class="text-xs">Days</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        23
-                      </div>
-
-                      <div class="text-xs">Hours</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        46
-                      </div>
-
-                      <div class="text-xs">Mins</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        30
-                      </div>
-
-                      <div class="text-xs">Secs</div>
-                    </div>
-                  </div>
-
-                  <a href="single-lottery.html" class="custom-button1">
-                    Play Now
-                  </a>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="single-draw">
-                  <img
-                    class="overlay"
-                    src="assets/images/overlaymask.png"
-                    alt=""
-                  />
-
-                  <div class="icon">
-                    <img src="assets/images/d4.png" alt="" />
-                  </div>
-
-                  <div class="font-weight-bold mb-3" style="font-size: 15px">
-                    Next Draw In:
-                  </div>
-
-                  <div class="d-flex justify-content-center mb-3">
-                    <div class="d-flex flex-column align-items-center">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        00
-                      </div>
-
-                      <div class="text-xs">Days</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        23
-                      </div>
-
-                      <div class="text-xs">Hours</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        46
-                      </div>
-
-                      <div class="text-xs">Mins</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        30
-                      </div>
-
-                      <div class="text-xs">Secs</div>
-                    </div>
-                  </div>
-
-                  <a href="single-lottery.html" class="custom-button1">
-                    Play Now
-                  </a>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="single-draw">
-                  <img
-                    class="overlay"
-                    src="assets/images/overlaymask3.png"
-                    alt=""
-                  />
-
-                  <div class="icon">
-                    <img src="assets/images/d3.png" alt="" />
-                  </div>
-
-                  <div class="font-weight-bold mb-3" style="font-size: 15px">
-                    Next Draw In:
-                  </div>
-
-                  <div class="d-flex justify-content-center mb-3">
-                    <div class="d-flex flex-column align-items-center">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        00
-                      </div>
-
-                      <div class="text-xs">Days</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        23
-                      </div>
-
-                      <div class="text-xs">Hours</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        46
-                      </div>
-
-                      <div class="text-xs">Mins</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        30
-                      </div>
-
-                      <div class="text-xs">Secs</div>
-                    </div>
-                  </div>
-
-                  <a href="single-lottery.html" class="custom-button1">
-                    Play Now
-                  </a>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="single-draw">
-                  <img
-                    class="overlay"
-                    src="assets/images/overlaymask3.png"
-                    alt=""
-                  />
-                  <div class="icon">
-                    <img src="assets/images/d3.png" alt="" />
-                  </div>
-
-                  <div class="font-weight-bold mb-3" style="font-size: 15px">
-                    Next Draw In:
-                  </div>
-
-                  <div class="d-flex justify-content-center mb-3">
-                    <div class="d-flex flex-column align-items-center">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        00
-                      </div>
-
-                      <div class="text-xs">Days</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        23
-                      </div>
-
-                      <div class="text-xs">Hours</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        46
-                      </div>
-
-                      <div class="text-xs">Mins</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        30
-                      </div>
-
-                      <div class="text-xs">Secs</div>
-                    </div>
-                  </div>
-
-                  <a href="single-lottery.html" class="custom-button1">
-                    Play Now
-                  </a>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="single-draw">
-                  <img
-                    class="overlay"
-                    src="assets/images/overlaymask.png"
-                    alt=""
-                  />
-                  <div class="icon">
-                    <img src="assets/images/d4.png" alt="" />
-                  </div>
-
-                  <div class="font-weight-bold mb-3" style="font-size: 15px">
-                    Next Draw In:
-                  </div>
-
-                  <div class="d-flex justify-content-center mb-3">
-                    <div class="d-flex flex-column align-items-center">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        00
-                      </div>
-
-                      <div class="text-xs">Days</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        23
-                      </div>
-
-                      <div class="text-xs">Hours</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        46
-                      </div>
-
-                      <div class="text-xs">Mins</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        30
-                      </div>
-
-                      <div class="text-xs">Secs</div>
-                    </div>
-                  </div>
-
-                  <a href="single-lottery.html" class="custom-button1">
-                    Play Now
-                  </a>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="single-draw">
-                  <img
-                    class="overlay"
-                    src="assets/images/overlaymask3.png"
-                    alt=""
-                  />
-
-                  <div class="icon">
-                    <img src="assets/images/d3.png" alt="" />
-                  </div>
-
-                  <div class="font-weight-bold mb-3" style="font-size: 15px">
-                    Next Draw In:
-                  </div>
-
-                  <div class="d-flex justify-content-center mb-3">
-                    <div class="d-flex flex-column align-items-center">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        00
-                      </div>
-
-                      <div class="text-xs">Days</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        23
-                      </div>
-
-                      <div class="text-xs">Hours</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        46
-                      </div>
-
-                      <div class="text-xs">Mins</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center ml-2">
-                      <div
-                        class="
-                          draw-section__ball
-                          d-flex
-                          align-items-center
-                          justify-content-center
-                          rounded-circle
-                        "
-                      >
-                        30
-                      </div>
-
-                      <div class="text-xs">Secs</div>
-                    </div>
-                  </div>
-
-                  <a href="single-lottery.html" class="custom-button1">
-                    Play Now
-                  </a>
+                  <button class="custom-button1">Play Now</button>
                 </div>
               </div>
             </div>
@@ -2688,266 +1783,309 @@
       </div>
     </section>
 
-    <section class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="result-box">
-            <h4 class="box-header">Lottery Winning Numbers</h4>
-            <div class="result-list">
-              <div class="single-list">
-                <div class="light-area">
-                  <div
-                    class="
-                      light-area-top
-                      d-flex
-                      flex-column flex-md-row
-                      justify-content-md-between
-                    "
-                  >
+    <!-- ==========Singlelottery-Section========== -->
+    <section class="singlelottery">
+      <div class="pick-number-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-9">
+              <div class="d-flex justify-content-center">
+                <div class="single-pick w-100">
+                  <div class="header-area py-4">
+                    <!-- <div class="font-weight-bold mb-4" style="font-size: 24px">
+                      Make your selection
+                    </div> -->
+
+                    <!-- bet types -->
+                    <div class="d-flex justify-content-center" id="bet-types">
+                      <button class="py-2 px-3 border-0 bet-type is-active">
+                        Direct
+                      </button>
+
+                      <button class="ml-2 py-2 px-3 border-0 bet-type">
+                        Permutation
+                      </button>
+
+                      <button class="ml-2 px-3 border-0 bet-type">
+                        Banker
+                      </button>
+
+                      <button class="ml-2 px-3 border-0 bet-type">
+                        Against
+                      </button>
+                    </div>
+
+                    <!-- bet sub types -->
                     <div
                       class="
-                        left
                         d-flex
-                        flex-column flex-md-row
-                        align-items-md-center
+                        align-items-center
+                        justify-content-center
+                        mt-4
                       "
                     >
-                      <img src="assets/images/d1.png" alt="" />
-                      <h4>Powerball</h4>
-                    </div>
+                      <button
+                        class="bet-sub-type pb-2 px-1 mr-3 is-active--underline"
+                      >
+                        Pick Drop 1
+                      </button>
 
-                    <div
-                      class="
-                        right
-                        d-flex
-                        flex-column
-                        align-items-center align-items-md-end
+                      <button class="bet-sub-type pb-2 px-1 mr-3">
+                        Direct 2
+                      </button>
+
+                      <button class="bet-sub-type pb-2 px-1 mr-3">
+                        Direct 3
+                      </button>
+
+                      <button class="bet-sub-type pb-2 px-1">Direct 4</button>
+                    </div>
+                  </div>
+
+                  <div class="body-area py-4">
+                    <ul
+                      id="normal-ball-wrapper"
+                      style="
+                        width: 80%;
+                        margin: 0 auto;
+                        display: grid;
+                        grid-template-columns: repeat(15, 1fr);
                       "
-                    >
-                      <span>Draw took place on</span>
-                      <h6>Saturday April 20, 2021</h6>
-                    </div>
-                  </div>
+                    ></ul>
 
-                  <div
-                    class="
-                      d-flex
-                      flex-column flex-md-row
-                      align-items-center
-                      justify-content-md-between
-                    "
-                  >
-                    <div>
-                      <p
-                        class="
-                          font-weight-bold
-                          mt-3
-                          mb-1
-                          text-center text-md-left
-                        "
-                        style="font-size: 15px"
-                      >
-                        Winning Numbers:
-                      </p>
-                      <div class="d-flex align-items-center">
-                        <span class="result-list__ball mr-2">11</span>
-                        <span class="result-list__ball mr-2">88</span>
-                        <span class="result-list__ball mr-2">23</span>
-                        <span class="result-list__ball mr-2">9</span>
-                        <span class="result-list__ball">19</span>
-                        <span class="result-list__ball">26</span>
-                        <span class="result-list__ball">87</span>
-                      </div>
+                    <div class="separator d-none">
+                      <p>Pick 1 Power Ball</p>
                     </div>
 
-                    <div class="d-flex flex-column align-items-md-end">
-                      <p
-                        class="
-                          font-weight-bold
-                          mt-3
-                          mb-1
-                          text-center text-md-right
-                        "
-                        style="font-size: 15px"
-                      >
-                        Machine Numbers:
-                      </p>
-                      <div class="d-flex align-items-center">
-                        <span class="result-list__ball mr-2">11</span>
-                        <span class="result-list__ball mr-2">88</span>
-                        <span class="result-list__ball mr-2">23</span>
-                        <span class="result-list__ball mr-2">9</span>
-                        <span class="result-list__ball">19</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="color-area d-none d-md-flex">
-                  <div class="top">
-                    <span>Next Draw</span>
-                    <h6>Wed, Oct 28, 2021</h6>
-                  </div>
-                  <div class="bottom">
-                    <span>Est. Jackpot </span>
-                    <h6>&#8358;116 M Win</h6>
+                    <ul class="d-none" id="against-ball-wrapper"></ul>
                   </div>
                 </div>
               </div>
 
-              <div class="single-list">
-                <div class="light-area">
-                  <div
-                    class="
-                      light-area-top
-                      d-flex
-                      flex-column flex-md-row
-                      justify-content-md-between justify-content-center
-                    "
+              <div class="row">
+                <div class="col-lg-12 text-center">
+                  <a href="#" class="add-ticket-btn"
+                    ><i class="fas fa-plus"></i> Add Tickets</a
                   >
-                    <div
-                      class="
-                        left
-                        d-flex
-                        flex-column flex-md-row
-                        align-items-center
-                      "
-                    >
-                      <img src="assets/images/d2.png" alt="" />
-                      <h4>Megamillions</h4>
-                    </div>
-
-                    <div
-                      class="
-                        right
-                        d-flex
-                        flex-column
-                        align-items-center align-items-md-end
-                      "
-                    >
-                      <span>Draw took place on</span>
-                      <h6>Saturday April 20, 2021</h6>
-                    </div>
-                  </div>
-
-                  <div
-                    class="
-                      d-flex
-                      flex-column flex-md-row
-                      align-items-center
-                      justify-content-md-between
-                    "
-                  >
-                    <div>
-                      <p
-                        class="
-                          font-weight-bold
-                          mt-3
-                          mb-1
-                          text-center text-md-left
-                        "
-                        style="font-size: 15px"
-                      >
-                        Winning Numbers:
-                      </p>
-
-                      <div class="d-flex align-items-center">
-                        <span class="result-list__ball mr-2">11</span>
-                        <span class="result-list__ball mr-2">88</span>
-                        <span class="result-list__ball mr-2">23</span>
-                        <span class="result-list__ball mr-2">9</span>
-                        <span class="result-list__ball mr-2">19</span>
-                        <span class="result-list__ball">90</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="color-area d-none d-md-flex">
-                  <div class="top">
-                    <span>Next Draw</span>
-                    <h6>Wed, Oct 28, 2021</h6>
-                  </div>
-                  <div class="bottom">
-                    <span>Est. Jackpot </span>
-                    <h6>&#8358;116 M Win</h6>
-                  </div>
-                </div>
-              </div>
-
-              <div class="single-list">
-                <div class="light-area">
-                  <div
-                    class="
-                      light-area-top
-                      d-flex
-                      flex-column flex-md-row
-                      align-items-center
-                    "
-                  >
-                    <div
-                      class="
-                        left
-                        d-flex
-                        flex-column flex-md-row
-                        align-items-center
-                      "
-                    >
-                      <img src="assets/images/d3.png" alt="" />
-                      <h4>Euromillions</h4>
-                    </div>
-
-                    <div class="right d-flex flex-column align-items-md-end">
-                      <span>Draw took place on</span>
-                      <h6>Saturday April 20, 2021</h6>
-                    </div>
-                  </div>
-
-                  <div
-                    class="
-                      d-flex
-                      justify-content-center justify-content-md-start
-                    "
-                  >
-                    <div
-                      class="
-                        d-flex
-                        flex-column
-                        align-items-center align-items-md-start
-                      "
-                    >
-                      <p
-                        class="font-weight-bold mt-3 mb-1"
-                        style="font-size: 15px"
-                      >
-                        Winning Numbers:
-                      </p>
-                      <div class="d-flex align-items-center">
-                        <span class="result-list__ball mr-2">11</span>
-                        <span class="result-list__ball mr-2">88</span>
-                        <span class="result-list__ball mr-2">23</span>
-                        <span class="result-list__ball mr-2">9</span>
-                        <span class="result-list__ball">19</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="color-area d-none d-md-flex">
-                  <div class="top">
-                    <span>Next Draw</span>
-                    <h6>Wed, Oct 28, 2021</h6>
-                  </div>
-                  <div class="bottom">
-                    <span>Est. Jackpot </span>
-                    <h6>&#8358;116 M Win</h6>
-                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="text-center">
-              <a class="view-all" href="#">View All Result ></a>
+            <!-- ===== cart section starts here ===== -->
+            <div class="col-lg-3">
+              <div class="cart-summary">
+                <div class="top-area">
+                  <h4 class="title">Cart Summary</h4>
+                  <p class="text">
+                    You've got 30% of chance to win. Shop more tickets to get
+                    more chance
+                  </p>
+                </div>
+                <div class="middle-area">
+                  <div class="tikit">
+                    <span class="left">Filled out Tickets</span>
+                    <span class="right">3</span>
+                  </div>
+                  <div class="price">
+                    <span class="left"
+                      >Ticket Price
+                      <small
+                        >(8 tickets
+                        <i class="fas fa-times"></i> &#8358;4.99)</small
+                      >
+                    </span>
+                    <span class="right">&#8358;39.92</span>
+                  </div>
+                </div>
+                <div class="bottom-area">
+                  <div class="total-area">
+                    <span class="left">Total</span>
+                    <span class="right">&#8358;39.92</span>
+                  </div>
+                  <a href="#" class="custom-button2">Buy Tickets</a>
+                </div>
+              </div>
+            </div>
+            <!-- ===== cart section ends here ===== -->
+          </div>
+        </div>
+      </div>
+
+      <div class="frequent-number">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-9">
+              <div class="section-header">
+                <h2 class="title ep">Most Frequent Number</h2>
+                <p class="text">
+                  Check Your lotto online, find all the lotto winning numbers
+                  and see if you won the latest lotto jackpots
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="number-slider owl-carousel">
+                <div class="item">
+                  <div class="single-number">
+                    <ul>
+                      <li>
+                        <span>1</span>
+                      </li>
+                      <li>
+                        <span>2</span>
+                      </li>
+                      <li>
+                        <span>3</span>
+                      </li>
+                      <li>
+                        <span>4</span>
+                      </li>
+                      <li>
+                        <span>5</span>
+                      </li>
+                      <li>
+                        <span>6</span>
+                      </li>
+                    </ul>
+                    <!-- <input type="text" placeholder="Try These Numbers" /> -->
+                    <button class="custom-button1 mt-4">Play</button>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="single-number">
+                    <ul>
+                      <li>
+                        <span>1</span>
+                      </li>
+                      <li>
+                        <span>2</span>
+                      </li>
+                      <li>
+                        <span>3</span>
+                      </li>
+                      <li>
+                        <span>4</span>
+                      </li>
+                      <li>
+                        <span>5</span>
+                      </li>
+                      <li>
+                        <span>6</span>
+                      </li>
+                    </ul>
+
+                    <button class="custom-button1 mt-4">Play</button>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="single-number">
+                    <ul>
+                      <li>
+                        <span>1</span>
+                      </li>
+                      <li>
+                        <span>2</span>
+                      </li>
+                      <li>
+                        <span>3</span>
+                      </li>
+                      <li>
+                        <span>4</span>
+                      </li>
+                      <li>
+                        <span>5</span>
+                      </li>
+                      <li>
+                        <span>6</span>
+                      </li>
+                    </ul>
+
+                    <button class="custom-button1 mt-4">Play</button>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="single-number">
+                    <ul>
+                      <li>
+                        <span>1</span>
+                      </li>
+                      <li>
+                        <span>2</span>
+                      </li>
+                      <li>
+                        <span>3</span>
+                      </li>
+                      <li>
+                        <span>4</span>
+                      </li>
+                      <li>
+                        <span>5</span>
+                      </li>
+                      <li>
+                        <span>6</span>
+                      </li>
+                    </ul>
+
+                    <button class="custom-button1 mt-4">Play</button>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="single-number">
+                    <ul>
+                      <li>
+                        <span>1</span>
+                      </li>
+                      <li>
+                        <span>2</span>
+                      </li>
+                      <li>
+                        <span>3</span>
+                      </li>
+                      <li>
+                        <span>4</span>
+                      </li>
+                      <li>
+                        <span>5</span>
+                      </li>
+                      <li>
+                        <span>6</span>
+                      </li>
+                    </ul>
+
+                    <button class="custom-button1 mt-4">Play</button>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="single-number">
+                    <ul>
+                      <li>
+                        <span>1</span>
+                      </li>
+                      <li>
+                        <span>2</span>
+                      </li>
+                      <li>
+                        <span>3</span>
+                      </li>
+                      <li>
+                        <span>4</span>
+                      </li>
+                      <li>
+                        <span>5</span>
+                      </li>
+                      <li>
+                        <span>6</span>
+                      </li>
+                    </ul>
+
+                    <button class="custom-button1 mt-4">Play</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -3047,71 +2185,45 @@
     <script src="assets/js/amd.js"></script>
     <script src="assets/js/nice-select.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/jquery.unobtrusive-ajax.min.js"></script>
-    <script src="assets/js/jquery.validate.unobtrusive.min.js"></script>
-
-    <script src="assets/js/js_htmlfd6c?v=uSPg6jj0yCIekSJx7APcAd2PB8LozwfbdzvHYNtbwpA1"></script>
-    <script src="assets/js/js_lotto353f?v=GcJn4eaXDg6tiJAJZEIcpYvuZZ19ijWQtzKLnZN1QlU1"></script>
     <script>
-      const ballsContainer = document.getElementById("balls-container");
+      const singleLottery = (() => {
+        const selectedNormalBalls = [];
+        const selectedAgainstBalls = [];
 
-      const balls = [];
-      for (let index = 1; index <= 90; index++) {
-        balls.push(index);
-      }
+        const populateBalls = (number = 90) => {
+          // reset ballwrapper element on invocation
+          document.getElementById("normal-ball-wrapper").innerHTML = "";
 
-      ballsContainer.innerHTML = balls
-        .map(
-          (number) => `
-          <button
-          class="rounded-circle text-sm text-gab-primary-color font-weight-bold"
-            style="background-color: #eee;
-            height: 36px;
-            width: 36px;"
-          >
-            ${number}
-          </button>`
-        )
-        .join("");
+          for (let index = 1; index <= number; index++) {
+            $("#normal-ball-wrapper").append(`<li><span>${index}</span></li>`);
+          }
+        };
 
-      // const betTypes = ['Direct', 'Permutation', 'Banker', 'Against'];
-      // const directGames = ['Pick Drop 1']
+        const populateBetTypes = () => {
+          const betTypes = ["Direct", "Permutation", "Banker", "Against"];
 
-      const selectedBall = [];
+          betTypes.forEach((item) => {
+            $("#bet-types").append(`<button
+                        class="py-2 px-3 font-weight-bold bet-type"
+                        style="
+                          height: unset;
+                          border-radius: 40px;
+                          font-size: 14px;
+                        "
+                      >
+                        ${item}
+                      </button>`);
+          });
+        };
 
-      const betTypeContainer = document.getElementById("bet-type-container");
+        const selectBall = (ball, ballType = "normal") => {
+          console.log("ball", ball);
+        };
 
-      const betTypeChecker = (type) => {
-        switch (type) {
-          case "direct":
-            console.log("DIRECT");
-            break;
-          case "permutation":
-            console.log("PERMUTATION");
-            break;
-          case "banker":
-            console.log("BANKER");
-            break;
-          case "against":
-            console.log("AGAINST");
-            break;
+        return { populateBalls };
+      })();
 
-          default:
-            throw Error("Bet type does not exist");
-            break;
-        }
-      };
-
-      betTypeContainer.addEventListener("click", (event) => {
-        console.log("--====>>", event.target.innerText);
-
-        const item = event.target.innerText.toLowerCase().trim();
-        betTypeChecker(item);
-      });
-
-      // const bet = (() => {
-
-      // })()
+      singleLottery.populateBalls();
     </script>
   </body>
 </html>

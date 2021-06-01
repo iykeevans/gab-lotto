@@ -1,26 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Mirrored from pixner.net/fantra/fantra/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Apr 2021 12:57:53 GMT -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/all.min.css" />
-    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="assets/css/nice-select.css" />
-    <link rel="stylesheet" href="assets/css/bootstrap-popover-x.min.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="../assets/css/nice-select.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap-popover-x.min.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link
       rel="shortcut icon"
-      href="assets/images/favicon.png"
+      href="../assets/images/favic"
       type="image/x-icon"
     />
-    <title>Fantra - Online Lotto & Lottery HTML Template</title>
+
+    <style>
+      .result-table-head {
+        color: #595192;
+      }
+      .result-table-head__row {
+        background: #f7fbff;
+        font-size: 14px;
+        box-shadow: 0px 11px 19.2px 0.8px rgba(66, 58, 232, 0.1);
+        border: 1px solid #eee;
+      }
+
+      .result-table-body {
+      }
+
+      .result-table-body__row {
+        border-top: 1px solid #eee;
+        font-size: 16px;
+      }
+
+      .custom-input {
+        border: 1px solid #eae9f9;
+        background: #f7fbff;
+        border-radius: 10px;
+        padding: 0px 15px;
+        font-size: 15px;
+        height: 40px;
+        color: #001485;
+        font-weight: 600;
+      }
+
+      .custom-button--alt {
+        background-image: linear-gradient(0deg, #f4ba2e 0%, #fea036 100%);
+      }
+    </style>
+    <title>Gab Lotto - Online Lotto</title>
   </head>
 
   <body>
@@ -40,7 +74,35 @@
     <a href="#" class="scrollToTop">
       <i class="fas fa-angle-up"></i>
     </a>
+
     <!-- ==========Overlay========== -->
+    <div class="collapse" id="navbar1">
+      <div class="bg-dark p-2">
+        <div class="container">
+          <button
+            class="navbar-toggler close close-top-drawer"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbar1"
+            aria-label="Close"
+          >
+            <small>Close&nbsp;</small><span aria-hidden="true">×</span>
+          </button>
+          <h4>Latest Winning Numbers</h4>
+          <div id="outer">
+            <div class="div"></div>
+            <div class="div"></div>
+            <div class="div big"></div>
+            <div class="div"></div>
+            <div class="div"></div>
+            <div class="div"></div>
+            <div class="div"></div>
+            <div class="div"></div>
+            <div class="div"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- ==========Header-Section========== -->
     <header class="top-header">
@@ -68,7 +130,7 @@
             <div class="nav-item sapphire with-border">
               <a href="#" data-toggle="modal" data-target="#ticketModal"
                 ><img
-                  src="assets/images/enter%20tickets6e47.png?h=11&amp;w=14&amp;la=en&amp;hash=87213C90AC2FDE1C6B6A3C2587A0DF557778DA4A"
+                  src="../assets/images/enter%20tickets6e47.png?h=11&amp;w=14&amp;la=en&amp;hash=87213C90AC2FDE1C6B6A3C2587A0DF557778DA4A"
                   class="hidden-xs hidden-sm"
                   alt="enter tickets icon image"
                 />
@@ -110,11 +172,11 @@
           </svg>
         </button>
 
-        <a href="index.html" class="main-nav__logo">
+        <a href="/index.html" class="main-nav__logo">
           <img
-            src="assets/images/GAB-Lotto_Logo.png"
+            src="../assets/images/GAB-Lotto_Logo.png"
             alt="Gab Lotto Logo"
-            style="height: 100%"
+            class="h-100"
           />
         </a>
 
@@ -230,7 +292,7 @@
             <div class="log-reg-inner">
               <h2 class="title">Create an Account</h2>
               <div class="main-content">
-                <form action="#">
+                <form action="/dashboard/">
                   <div class="form-group d-flex flex-column">
                     <label class="mb-1">Your Email</label>
                     <input
@@ -332,7 +394,7 @@
             <div class="log-reg-inner">
               <h2 class="title">Welcome to Gab Lotto</h2>
               <div class="main-content">
-                <form action="#">
+                <form action="/dashboard/">
                   <div class="form-group d-flex flex-column">
                     <label class="mb-1">Phone Number</label>
                     <input
@@ -439,17 +501,20 @@
 
     <!-- ==========Breadcrumb-Section========== -->
     <section class="breadcrumb-area">
-      <img class="contact" src="assets/images/contact-b-icon.png" alt="" />
       <div class="container">
         <div class="content">
-          <h2 class="title">Contact</h2>
+          <h2 class="title">My Bets</h2>
           <ul class="breadcrumb-list extra-padding">
             <li>
-              <a href="index.html"> Home </a>
+              <a href="/index.html"> Home </a>
             </li>
 
             <li>
-              <a href="#">Contact</a>
+              <a href="/dashboard/">Dashboard</a>
+            </li>
+
+            <li>
+              <a href="/dashboard/bets.html">Bets</a>
             </li>
           </ul>
         </div>
@@ -460,82 +525,89 @@
     <!-- ==========Contact-Section========== -->
     <section class="contact">
       <div class="container">
-        <div class="row justify-content-around">
-          <div class="col-lg-7">
-            <div class="contact-box">
-              <h4 class="title">Get In Touch</h4>
-              <form action="#">
-                <div class="form-group d-flex flex-column">
-                  <label class="mb-0" style="font-size: 16px">Your Name</label>
-                  <input
-                    type="text"
-                    placeholder="Enter Your Name"
-                    style="height: 40px"
-                  />
-                </div>
-
-                <div class="form-group d-flex flex-column">
-                  <label class="mb-0" style="font-size: 16px">Your Email</label>
-                  <input
-                    type="email"
-                    placeholder="Enter Your Email"
-                    style="height: 40px"
-                  />
-                </div>
-
-                <div class="form-group last d-flex flex-column">
-                  <label class="mb-0" style="font-size: 16px"
-                    >Your Message</label
-                  >
-                  <textarea placeholder="Enter Your Message"></textarea>
-                </div>
-
-                <div class="custom-control custom-checkbox">
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="customCheck1"
-                  />
-                  <label class="custom-control-label" for="customCheck1"
-                    >I agree to receive emails, newsletters and promotional
-                    messages</label
-                  >
-                </div>
-                <button type="submit" class="custom-button1">
-                  Send Message
-                </button>
-              </form>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="right-area">
-              <div class="faq-block">
-                <h4 class="title">Have questions?</h4>
-                <p>
-                  If you have any questions or queries, our helpful support team
-                  will be more than happy to assist you.
-                </p>
-                <a href="#">
-                  Read F.A.Q <i class="fas fa-chevron-right"></i>
-                </a>
-              </div>
-              <div class="contact-info">
-                <div class="single-info">
-                  <img src="assets/images/eicom.png" alt="" />
-                  <div class="content">
-                    <h4>Email Us</h4>
-                    <p>info@Fantra.com</p>
+        <div class="row justify-content-md-center">
+          <div class="col-lg-11">
+            <div class="contact-box d-flex flex-column">
+              <div class="mb-5">
+                <div class="d-flex align-items-center">
+                  <div class="d-flex flex-column">
+                    <label for="" class="text-sm mb-0">From</label>
+                    <input type="date" name="" id="" class="custom-input" />
                   </div>
-                </div>
-                <div class="single-info">
-                  <img src="assets/images/picon.png" alt="" />
-                  <div class="content">
-                    <h4>Call Us</h4>
-                    <p>+1 (987) 435-32-11</p>
-                    <p>+1 (987) 453-31-11</p>
+
+                  <div class="d-flex flex-column ml-4">
+                    <label for="" class="text-sm mb-0">To</label>
+                    <input type="date" name="" id="" class="custom-input" />
                   </div>
+
+                  <button
+                    class="
+                      custom-button1
+                      text-capitalize
+                      font-weight-bold
+                      d-flex
+                      align-items-center
+                      ml-4
+                    "
+                    style="height: 40px"
+                  >
+                    Search
+                  </button>
+
+                  <button
+                    class="
+                      custom-button1
+                      ml-4
+                      text-capitalize
+                      font-weight-bold
+                      border-0
+                      d-flex
+                      align-items-center
+                    "
+                    style="background: var(--gab-primary-color); height: 40px"
+                  >
+                    Export To XL
+                  </button>
                 </div>
               </div>
+
+              <table class="result-table">
+                <thead class="result-table-head">
+                  <tr class="result-table-head__row">
+                    <th class="px-2 py-1">Draw Time</th>
+                    <th class="px-2 py-1">Game</th>
+                    <th class="px-2 py-1">Total Stake</th>
+                    <th class="px-2 py-1">Winning</th>
+                  </tr>
+                </thead>
+
+                <tbody class="result-table-body">
+                  <tr class="result-table-body__row">
+                    <td class="p-2">03 Mar 2021 12:35PM</td>
+                    <td class="p-2">Gab Padi</td>
+                    <td class="p-2">1,200</td>
+                    <td class="p-2">21,200</td>
+                  </tr>
+                  <tr class="result-table-body__row">
+                    <td class="p-2">03 Mar 2021 12:35PM</td>
+                    <td class="p-2">Gab Padi</td>
+                    <td class="p-2">1,200</td>
+                    <td class="p-2">21,200</td>
+                  </tr>
+                  <tr class="result-table-body__row">
+                    <td class="p-2">03 Mar 2021 12:35PM</td>
+                    <td class="p-2">Gab Padi</td>
+                    <td class="p-2">1,200</td>
+                    <td class="p-2">21,200</td>
+                  </tr>
+                  <tr class="result-table-body__row">
+                    <td class="p-2">03 Mar 2021 12:35PM</td>
+                    <td class="p-2">Gab Padi</td>
+                    <td class="p-2">1,200</td>
+                    <td class="p-2">21,200</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -552,10 +624,10 @@
               <div class="footer-top-area">
                 <div class="left">
                   <a href="#">
-                    <img src="assets/images/app_store_btn.png" alt="" />
+                    <img src="../assets/images/app_store_btn.png" alt="" />
                   </a>
                   <a href="#">
-                    <img src="assets/images/goole_play_btn.png" alt="" />
+                    <img src="../assets/images/goole_play_btn.png" alt="" />
                   </a>
                 </div>
                 <div class="right">
@@ -590,8 +662,8 @@
           <div class="row">
             <div class="col-lg-6 align-self-center">
               <div class="copyr-text">
-                <span> Copyright © 2020.All Rights Reserved By </span>
-                <a href="#">Fantra</a>
+                <span> Copyright © 2021.All Rights Reserved By </span>
+                <a href="#">Gab Lotto</a>
               </div>
             </div>
             <div class="col-lg-6 align-self-center">
@@ -624,18 +696,16 @@
     </footer>
     <!-- ==========Newslater-Section========== -->
     <!-- All js link starts hear -->
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
-    <script src="assets/js/modernizr-3.6.0.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/magnific-popup.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/countdown.min.js"></script>
-    <script src="assets/js/bootstrap-popover-x.min.js"></script>
-    <script src="assets/js/amd.js"></script>
-    <script src="assets/js/nice-select.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../assets/js/modernizr-3.6.0.min.js"></script>
+    <script src="../assets/js/plugins.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/magnific-popup.min.js"></script>
+    <script src="../assets/js/owl.carousel.min.js"></script>
+    <script src="../assets/js/countdown.min.js"></script>
+    <script src="../assets/js/bootstrap-popover-x.min.js"></script>
+    <script src="../assets/js/amd.js"></script>
+    <script src="../assets/js/nice-select.js"></script>
+    <script src="../assets/js/main.js"></script>
   </body>
-
-  <!-- Mirrored from pixner.net/fantra/fantra/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Apr 2021 12:57:54 GMT -->
 </html>
