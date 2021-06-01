@@ -50,6 +50,24 @@
         border-bottom: 2px solid var(--gab-secondary-color);
         font-weight: bold;
       }
+
+      .is-active--ball {
+        background-image: -o-linear-gradient(
+          4deg,
+          #ec038b 0%,
+          #fb6468 44%,
+          #fbb936 100%
+        ) !important;
+        background-image: linear-gradient(
+          86deg,
+          #ec038b 0%,
+          #fb6468 44%,
+          #fbb936 100%
+        ) !important;
+        -webkit-box-shadow: 0px 7px 7px 0px rgba(243, 42, 126, 0.23) !important;
+        box-shadow: 0px 7px 7px 0px rgba(243, 42, 126, 0.23) !important;
+        color: #fff !important;
+      }
     </style>
     <title>Gab lotto - Online Lotto</title>
   </head>
@@ -1797,7 +1815,11 @@
                     </div> -->
 
                     <!-- bet types -->
-                    <div class="d-flex justify-content-center" id="bet-types">
+                    <div
+                      class="d-flex justify-content-center"
+                      onclick="singleLottery.selectType(event)"
+                      id="bet-types"
+                    >
                       <button class="py-2 px-3 border-0 bet-type is-active">
                         Direct
                       </button>
@@ -1815,7 +1837,9 @@
                       </button>
                     </div>
 
-                    <!-- bet sub types -->
+                    <!-- **** bet sub types **** -->
+
+                    <!-- dirct bet types -->
                     <div
                       class="
                         d-flex
@@ -1823,11 +1847,13 @@
                         justify-content-center
                         mt-4
                       "
+                      id="direct-bet-types"
+                      onclick="singleLottery.selectType(event, true)"
                     >
                       <button
                         class="bet-sub-type pb-2 px-1 mr-3 is-active--underline"
                       >
-                        Pick Drop 1
+                        First Number Drop
                       </button>
 
                       <button class="bet-sub-type pb-2 px-1 mr-3">
@@ -1838,7 +1864,54 @@
                         Direct 3
                       </button>
 
-                      <button class="bet-sub-type pb-2 px-1">Direct 4</button>
+                      <button class="bet-sub-type pb-2 px-1 mr-3">
+                        Direct 4
+                      </button>
+
+                      <button class="bet-sub-type pb-2 px-1">Direct 5</button>
+                    </div>
+
+                    <!-- permutation bet types -->
+                    <div
+                      class="
+                        d-none
+                        align-items-center
+                        justify-content-center
+                        mt-4
+                      "
+                      id="permutation-bet-types"
+                      onclick="singleLottery.selectType(event, true)"
+                    >
+                      <button
+                        class="bet-sub-type pb-2 px-1 mr-3 is-active--underline"
+                      >
+                        Pem 2
+                      </button>
+
+                      <button class="bet-sub-type pb-2 px-1 mr-3">Pem 3</button>
+                    </div>
+
+                    <!-- against bet types -->
+                    <div
+                      class="
+                        d-none
+                        align-items-center
+                        justify-content-center
+                        mt-4
+                      "
+                      id="against-bet-types"
+                      onclick="singleLottery.selectType(event, true)"
+                    >
+                      <button
+                        class="bet-sub-type pb-2 px-1 mr-3 is-active--underline"
+                        id="against1"
+                      >
+                        Banker
+                      </button>
+
+                      <button class="bet-sub-type pb-2 px-1 mr-3" id="against2">
+                        Against
+                      </button>
                     </div>
                   </div>
 
@@ -1851,6 +1924,7 @@
                         display: grid;
                         grid-template-columns: repeat(15, 1fr);
                       "
+                      onclick="singleLottery.selectBall(event)"
                     ></ul>
 
                     <div class="separator d-none">
@@ -2187,8 +2261,24 @@
     <script src="assets/js/main.js"></script>
     <script>
       const singleLottery = (() => {
-        const selectedNormalBalls = [];
-        const selectedAgainstBalls = [];
+        let selectedNormalBalls = [];
+        let selectedAgainstBalls = [];
+        let betType = "direct";
+        let subBetType = "first number drop";
+
+        const gameMapper = {
+          "first number drop": 1,
+          "direct 2": 2,
+          "direct 3": 3,
+          "direct 4": 4,
+          "direct 5": 5,
+          "direct 6": 6,
+          "pem 2": 40,
+          "pem 3": 30,
+          banker: 1,
+          against1: 5,
+          against2: 40,
+        };
 
         const populateBalls = (number = 90) => {
           // reset ballwrapper element on invocation
@@ -2199,28 +2289,204 @@
           }
         };
 
-        const populateBetTypes = () => {
-          const betTypes = ["Direct", "Permutation", "Banker", "Against"];
-
-          betTypes.forEach((item) => {
-            $("#bet-types").append(`<button
-                        class="py-2 px-3 font-weight-bold bet-type"
-                        style="
-                          height: unset;
-                          border-radius: 40px;
-                          font-size: 14px;
-                        "
-                      >
-                        ${item}
-                      </button>`);
-          });
+        const removeCollectionCssClass = (childrenCollection, cssClass) => {
+          for (let index = 0; index < childrenCollection.length; index++) {
+            const element = childrenCollection[index];
+            element.classList.remove(cssClass);
+          }
         };
 
-        const selectBall = (ball, ballType = "normal") => {
-          console.log("ball", ball);
+        const setDefaultSubType = (betType) => {
+          switch (betType) {
+            case "direct":
+              setSubType("first number drop");
+              break;
+            case "permutation":
+              setSubType("pem 2");
+              break;
+            case "banker":
+              setSubType("banker");
+              break;
+            case "against":
+              setSubType("against1");
+              break;
+
+            default:
+              break;
+          }
         };
 
-        return { populateBalls };
+        const betTypeChecker = (target) => {
+          const directBetTypes = document.getElementById("direct-bet-types");
+          const permutationBetTypes = document.getElementById(
+            "permutation-bet-types"
+          );
+          const againstBetTypes = document.getElementById("against-bet-types");
+
+          const type = target.innerText.toLowerCase().trim();
+
+          // set betType
+          betType = type;
+
+          switch (type) {
+            case "direct":
+              directBetTypes.classList.remove("d-none");
+              directBetTypes.classList.add("d-flex");
+              permutationBetTypes.classList.remove("d-flex");
+              permutationBetTypes.classList.add("d-none");
+              againstBetTypes.classList.remove("d-flex");
+              againstBetTypes.classList.add("d-none");
+              break;
+            case "permutation":
+              directBetTypes.classList.remove("d-flex");
+              directBetTypes.classList.add("d-none");
+              permutationBetTypes.classList.remove("d-none");
+              permutationBetTypes.classList.add("d-flex");
+              againstBetTypes.classList.remove("d-flex");
+              againstBetTypes.classList.add("d-none");
+              break;
+            case "banker":
+              directBetTypes.classList.remove("d-flex");
+              directBetTypes.classList.add("d-none");
+              permutationBetTypes.classList.remove("d-flex");
+              permutationBetTypes.classList.add("d-none");
+              againstBetTypes.classList.remove("d-flex");
+              againstBetTypes.classList.add("d-none");
+              break;
+            case "against":
+              directBetTypes.classList.remove("d-flex");
+              directBetTypes.classList.add("d-none");
+              permutationBetTypes.classList.remove("d-flex");
+              permutationBetTypes.classList.add("d-none");
+              againstBetTypes.classList.remove("d-none");
+              againstBetTypes.classList.add("d-flex");
+              break;
+
+            default:
+              console.log("Wrong bet type");
+              break;
+          }
+        };
+
+        const selectType = (event, isSubtype = false) => {
+          const childrenCollection = event.target.parentElement.children;
+          const selectedType = event.target.innerText.toLowerCase().trim();
+          if (
+            isSubtype &&
+            (selectedType === "against" || selectedType === "banker")
+          ) {
+            console.log("trouble");
+          } else {
+            resetSelectedBalls();
+          }
+
+          removeCollectionCssClass(
+            childrenCollection,
+            !isSubtype ? "is-active" : "is-active--underline"
+          );
+
+          // set default subtype
+          !isSubtype &&
+            setDefaultSubType(event.target.innerText.toLowerCase().trim());
+
+          // avoid highlighting parent div based using id
+          if (
+            event.target.id !== "bet-types" &&
+            event.target.id !== "direct-bet-types" &&
+            event.target.id !== "permutation-bet-types" &&
+            event.target.id !== "banker-bet-types"
+          ) {
+            !isSubtype
+              ? event.target.classList.add("is-active")
+              : event.target.classList.add("is-active--underline");
+
+            !isSubtype
+              ? betTypeChecker(event.target)
+              : setSubType(
+                  event.target.id || event.target.innerText.toLowerCase().trim()
+                );
+          }
+        };
+
+        const resetSelectedBalls = () => {
+          selectedNormalBalls = [];
+          selectedAgainstBalls = [];
+          resetBallHighlighting();
+        };
+
+        const resetBallHighlighting = () => {
+          const normalBallWrapper = document.getElementById(
+            "normal-ball-wrapper"
+          );
+
+          const childrenCollection = normalBallWrapper.children;
+
+          for (let index = 0; index < childrenCollection.length; index++) {
+            const outerBall = childrenCollection[index];
+
+            outerBall.children[0].classList.remove("is-active--ball");
+            outerBall.children[0].classList.remove("bg-gab-secondary-color");
+          }
+        };
+
+        const setSubType = (selectedSubType) => {
+          subBetType = selectedSubType;
+        };
+
+        const selectBall = (event, ballType = "normal") => {
+          const ball = event.target.innerText;
+
+          if (
+            selectedNormalBalls.length === gameMapper[subBetType] &&
+            !selectedNormalBalls.includes(ball)
+          ) {
+            alert("number of allowed balls exceeded");
+          } else {
+            const result = selectedNormalBalls.find(
+              (item) => (item.ball || item) === ball
+            );
+            if (!result) {
+              // avoid highlighting parent based using tagname
+              if (event.target.tagName !== "LI") {
+                if (betType === "against") {
+                  event.target.classList.add(
+                    subBetType === "against1"
+                      ? "is-active--ball"
+                      : "bg-gab-secondary-color"
+                  );
+
+                  selectedNormalBalls.push({ ball, subBetType });
+                } else {
+                  event.target.classList.add("is-active--ball");
+                  selectedNormalBalls.push(ball);
+                }
+              }
+            } else {
+              // avoid unhighlighting parent based using tagname
+              if (event.target.tagName !== "LI") {
+                if (betType === "against") {
+                  if (result.subBetType === subBetType) {
+                    event.target.classList.remove(
+                      subBetType === "against1"
+                        ? "is-active--ball"
+                        : "bg-gab-secondary-color"
+                    );
+                    selectedNormalBalls = selectedNormalBalls.filter(
+                      (item) => item.ball !== ball
+                    );
+                  }
+                } else {
+                  event.target.classList.remove("is-active--ball");
+                  selectedNormalBalls = selectedNormalBalls.filter(
+                    (item) => item !== ball
+                  );
+                }
+              }
+            }
+          }
+        };
+
+        return { populateBalls, selectType, selectBall };
       })();
 
       singleLottery.populateBalls();
