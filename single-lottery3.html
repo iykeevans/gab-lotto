@@ -1955,28 +1955,22 @@
                     more chance
                   </p>
                 </div>
-                <div class="middle-area">
-                  <div class="tikit">
-                    <span class="left">Filled out Tickets</span>
-                    <span class="right">3</span>
-                  </div>
-                  <div class="price">
-                    <span class="left"
-                      >Ticket Price
-                      <small
-                        >(8 tickets
-                        <i class="fas fa-times"></i> &#8358;4.99)</small
-                      >
-                    </span>
-                    <span class="right">&#8358;39.92</span>
-                  </div>
-                </div>
+
+                <div id="cart-details"></div>
+
                 <div class="bottom-area">
                   <div class="total-area">
                     <span class="left">Total</span>
                     <span class="right">&#8358;39.92</span>
                   </div>
-                  <a href="#" class="custom-button2">Buy Tickets</a>
+
+                  <button
+                    class="custom-button2"
+                    type="button"
+                    onclick="singleLottery.addToCart()"
+                  >
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
             </div>
@@ -2486,10 +2480,105 @@
           }
         };
 
-        return { populateBalls, selectType, selectBall };
+        const addToCart = () => {
+          const cart = [];
+          const cartDetails = document.getElementById("cart-details");
+
+          const cartMarkup = () => `<div class="middle-area">
+            <div class="tikit">
+              <span class="left">
+                <span>5/90 (GAB PADI)</span> -
+                <span>PERM 4 SELECTION</span>
+              </span>
+            </div>
+
+            <div class="bg-white mb-3 d-flex align-items-center p-2">
+              <div
+                class="
+                  rounded-circle
+                  d-flex
+                  align-items-center
+                  justify-content-center
+                  mr-1
+                  text-xs
+                  is-active--ball
+                "
+                style="height: 28px; width: 28px"
+              >
+                1
+              </div>
+
+              <div
+                class="
+                  rounded-circle
+                  d-flex
+                  align-items-center
+                  justify-content-center
+                  mr-1
+                  text-xs
+                  is-active--ball
+                "
+                style="height: 28px; width: 28px"
+              >
+                2
+              </div>
+
+              <div
+                class="
+                  rounded-circle
+                  d-flex
+                  align-items-center
+                  justify-content-center
+                  text-xs
+                  is-active--ball
+                "
+                style="height: 28px; width: 28px"
+                >
+                  3
+                </div>
+              </div>
+
+              <div
+                class="d-flex align-items-center justify-content-between"
+              >
+                <div
+                  class="
+                    d-flex
+                    flex-column
+                    text-white
+                    justify-content-md-start
+                  "
+                >
+                  <span class="text-sm text-left">Stake</span>
+
+                  <span class="text-sm"> Bet Type </span>
+                </div>
+
+                <div class="right d-flex flex-column text-white">
+                  <span>
+                    <input type="text" class="text-sm" style="width: 100px" />
+                  </span>
+
+                  <span class="text-sm">
+                    <select name="" id="" style="width: 100px">
+                      <option value="machine">Machine</option>
+                      <option value="machine">Machine</option>
+                    </select>
+                  </span>
+                </div>
+              </div>
+            </div>`;
+
+          cart.push(cartMarkup());
+
+          cartDetails.innerHTML = cart.map((item) => cartMarkup());
+        };
+
+        return { populateBalls, selectType, selectBall, addToCart };
       })();
 
       singleLottery.populateBalls();
+      singleLottery.addToCart();
     </script>
   </body>
 </html>
