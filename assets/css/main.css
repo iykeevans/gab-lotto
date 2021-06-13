@@ -251,6 +251,10 @@ h3 {
   display: grid;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 /* HOME PAGE STYLES */
 .nav-collapse-menu {
   grid-template-columns: repeat(1, 1fr);
