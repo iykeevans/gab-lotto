@@ -33,81 +33,6 @@
         display: block !important;
         background-color: #2fccdcad !important;
       }
-
-      .banner {
-        height: 100%;
-      }
-
-      .banner--one {
-        background-color: var(--gab-primary-color);
-      }
-
-      .banner--two {
-        background-color: var(--gab-secondary-color);
-      }
-
-      .banner__title {
-        font-size: 1rem;
-      }
-
-      .banner__cta {
-        font-size: 1rem;
-      }
-
-      @media screen and (min-width: 768px) {
-        .nav-collapse-menu {
-          grid-template-columns: repeat(6, 1fr);
-          column-gap: 10px;
-          height: unset;
-        }
-
-        .main-nav__logo {
-          height: 100px;
-          width: auto;
-          position: unset;
-          left: unset;
-          transform: translateX(0);
-        }
-
-        .main-nav {
-          padding-left: 100px;
-          height: 180px;
-          max-width: 1388px;
-          margin: 0 auto;
-        }
-
-        .banner {
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position-x: -50px;
-          height: 100%;
-          padding: 0 50px 0 100px;
-        }
-
-        .banner--one {
-          background-image: url(./assets/images/Web-Banner2.jpg);
-        }
-
-        .banner--two {
-          background-image: url(./assets/images/Web-Banner.jpg);
-        }
-
-        .banner__title {
-          font-size: 2.25rem;
-        }
-
-        .banner__cta {
-          font-size: 5.625rem;
-        }
-
-        .banner__info {
-          font-size: 22px;
-        }
-
-        .draw-section {
-          margin-top: -80px;
-        }
-      }
     </style>
   </head>
 
@@ -1008,11 +933,11 @@
 
       <nav class="main-nav d-flex align-items-center justify-content-start">
         <button
-          class="d-md-none d-flex align-items-center"
-          style="border: 1px solid; border-radius: 0px; height: 30px"
-          onclick="toggleMobileNavigation()"
+          class="d-md-none d-flex align-items-center border-0 position-absolute"
+          style="right: 20px; z-index: 1001; background: transparent"
+          id="hamburger-button"
         >
-          <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+          <svg style="width: 36px; height: 36px" viewBox="0 0 24 24">
             <path
               fill="#000"
               d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"
@@ -1029,34 +954,69 @@
         </a>
 
         <div
-          class="main-nav__links text-uppercase d-none d-md-flex"
+          class="main-nav__links text-uppercase pl-5 p-md-0 d-none d-md-block"
           style="font-size: 16px"
         >
           <a
-            href="single-lottery3.html"
-            class="main-nav__link text-gab-primary-color mr-5 font-weight-bold"
+            href="single-lottery.html"
+            class="
+              main-nav__link
+              text-gab-primary-color
+              mr-md-5
+              font-weight-bold
+              mb-4 mb-md-0
+            "
             >play now</a
           >
+
           <a
             href="#"
-            class="main-nav__link text-gab-primary-color font-weight-bold mr-5"
+            class="
+              main-nav__link
+              text-gab-primary-color
+              font-weight-bold
+              mr-md-5
+              mb-4 mb-md-0
+            "
             >games</a
           >
+
           <a
             href="result.html"
-            class="main-nav__link text-gab-primary-color font-weight-bold mr-5"
+            class="
+              main-nav__link
+              text-gab-primary-color
+              font-weight-bold
+              mr-md-5
+              mb-4 mb-md-0
+            "
             >results</a
           >
+
           <a
             href="about.html"
-            class="main-nav__link text-gab-primary-color font-weight-bold mr-5"
+            class="
+              main-nav__link
+              text-gab-primary-color
+              font-weight-bold
+              mr-md-5
+              mb-4 mb-md-0
+            "
             >about us</a
           >
+
           <a
             href="media.html"
-            class="main-nav__link text-gab-primary-color font-weight-bold mr-5"
+            class="
+              main-nav__link
+              text-gab-primary-color
+              font-weight-bold
+              mr-md-5
+              mb-4 mb-md-0
+            "
             >media</a
           >
+
           <a
             href="contact.html"
             class="main-nav__link text-gab-primary-color font-weight-bold"
@@ -1064,54 +1024,6 @@
           >
         </div>
       </nav>
-
-      <!-- mobile navigation -->
-      <div
-        class="d-none"
-        id="mobile-navigation"
-        style="
-          background: #ccc;
-          height: 100vh;
-          width: 100vw;
-          position: fixed;
-          top: 0;
-          left: 0;
-          z-index: 100;
-        "
-      >
-        <div
-          class="d-flex flex-column px-4 pt-3"
-          style="width: 70%; background: white; height: 100%"
-        >
-          <button
-            class="
-              align-self-end
-              d-flex
-              justify-content-center
-              align-items-center
-              mb-4
-            "
-            style="height: 30px; width: 30px; border-radius: 0"
-            onclick="toggleMobileNavigation()"
-          >
-            <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
-              <path
-                fill="currentColor"
-                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-              />
-            </svg>
-          </button>
-
-          <a href="single-lottery1.html" class="mb-3 font-weight-medium"
-            >play now</a
-          >
-          <a href="#" class="mb-3">games</a>
-          <a href="result.html" class="mb-3">results</a>
-          <a href="about.html" class="mb-3">about us</a>
-          <a href="media.html" class="mb-3">media</a>
-          <a href="contact.html">contact</a>
-        </div>
-      </div>
     </header>
 
     <!-- Register Area -->
