@@ -20,14 +20,12 @@
       .result-table-head {
         color: #595192;
       }
+
       .result-table-head__row {
         background: #f7fbff;
         font-size: 14px;
         box-shadow: 0px 11px 19.2px 0.8px rgba(66, 58, 232, 0.1);
         border: 1px solid #eee;
-      }
-
-      .result-table-body {
       }
 
       .result-table-body__row {
@@ -48,6 +46,50 @@
 
       .custom-button--alt {
         background-image: linear-gradient(0deg, #f4ba2e 0%, #fea036 100%);
+      }
+
+      @media screen and (min-width: 768px) {
+        .table-col--wrapped {
+          width: 200px;
+        }
+      }
+
+      @media screen and (max-width: 800px) {
+        .table,
+        .table tr,
+        .table tbody,
+        .table td {
+          display: block;
+        }
+
+        .table__title {
+          position: absolute;
+          left: -9999px;
+          top: -9999px;
+        }
+
+        .table tr {
+          margin-bottom: 2em;
+          border: none;
+        }
+
+        .table td {
+          position: relative;
+          white-space: normal;
+          text-align: center;
+          border: 1px solid #e5e5e5;
+        }
+
+        .table td:before {
+          position: absolute;
+          top: 10px;
+          left: 5px;
+          width: 40%;
+          padding-left: 0.5em;
+          white-space: nowrap;
+          text-align: left;
+          content: attr(tableHeadData);
+        }
       }
     </style>
     <title>Gab Lotto - Online Lotto</title>
@@ -508,8 +550,14 @@
           <div class="col-lg-11">
             <div class="contact-box d-flex flex-column">
               <div class="mb-5">
-                <div class="d-flex justify-content-md-between">
-                  <div class="d-flex">
+                <div
+                  class="
+                    d-flex
+                    flex-column flex-md-row
+                    justify-content-md-between
+                  "
+                >
+                  <div class="d-flex flex-wrap">
                     <div class="d-flex flex-column">
                       <label for="" class="text-sm mb-0">Game Type</label>
                       <select name="" id="" class="custom-input">
@@ -519,19 +567,19 @@
                       </select>
                     </div>
 
-                    <div class="d-flex flex-column ml-4">
+                    <div class="d-flex flex-column ml-md-4 ml-3">
                       <label for="" class="text-sm mb-0">Games</label>
                       <select name="" id="" class="custom-input">
                         <option value="">All</option>
                       </select>
                     </div>
 
-                    <div class="d-flex flex-column ml-4">
+                    <div class="d-flex flex-column ml-md-4 ml-0">
                       <label for="" class="text-sm mb-0">From</label>
                       <input type="date" name="" id="" class="custom-input" />
                     </div>
 
-                    <div class="d-flex flex-column ml-4">
+                    <div class="d-flex flex-column ml-md-4 ml-3">
                       <label for="" class="text-sm mb-0">To</label>
                       <input type="date" name="" id="" class="custom-input" />
                     </div>
@@ -598,8 +646,8 @@
                 </div>
               </div>
 
-              <table class="result-table">
-                <thead class="result-table-head">
+              <table class="result-table table">
+                <thead class="result-table-head table__title">
                   <tr class="result-table-head__row">
                     <th class="px-2 py-1">Draw Close Time</th>
                     <th>Game Name</th>
@@ -615,7 +663,13 @@
                     <td class="p-2">Gab Padi</td>
                     <td class="p-2">102</td>
                     <td class="p-2">
-                      <div class="d-flex align-items-center">
+                      <div
+                        class="
+                          d-flex
+                          align-items-center
+                          justify-content-center justify-content-md-start
+                        "
+                      >
                         <span
                           class="
                             result-list__ball
@@ -676,8 +730,15 @@
                         >
                       </div>
                     </td>
+
                     <td class="p-2">
-                      <div class="d-flex align-items-center">
+                      <div
+                        class="
+                          d-flex
+                          align-items-center
+                          justify-content-center justify-content-md-start
+                        "
+                      >
                         <span
                           class="
                             result-list__ball
@@ -745,7 +806,13 @@
                     <td class="p-2">Jackpot</td>
                     <td class="p-2">102</td>
                     <td class="p-2" colspan="2">
-                      <div class="d-flex align-items-center">
+                      <div
+                        class="
+                          d-flex
+                          align-items-center
+                          justify-content-center justify-content-md-start
+                        "
+                      >
                         <span
                           class="
                             result-list__ball
@@ -829,7 +896,13 @@
                     <td class="p-2">Gab Cashman</td>
                     <td class="p-2">102</td>
                     <td class="p-2">
-                      <div class="d-flex align-items-center">
+                      <div
+                        class="
+                          d-flex
+                          align-items-center
+                          justify-content-center justify-content-md-start
+                        "
+                      >
                         <span
                           class="
                             result-list__ball
@@ -891,7 +964,13 @@
                       </div>
                     </td>
                     <td class="p-2">
-                      <div class="d-flex align-items-center">
+                      <div
+                        class="
+                          d-flex
+                          align-items-center
+                          justify-content-center justify-content-md-start
+                        "
+                      >
                         <span
                           class="
                             result-list__ball
@@ -958,10 +1037,14 @@
                     <td class="p-2">Mon, 24 May 2021 10:55:00</td>
                     <td class="p-2">Keno</td>
                     <td class="p-2">102</td>
-                    <td class="p-2" colspan="2" style="width: 200px">
+                    <td class="p-2 table-col--wrapped" colspan="2">
                       <div
-                        class="d-flex align-items-center"
-                        style="flex-wrap: wrap"
+                        class="
+                          d-flex
+                          align-items-center
+                          flex-wrap
+                          justify-content-center justify-content-md-start
+                        "
                       >
                         <span
                           class="
@@ -1202,68 +1285,6 @@
                         >
                       </div>
                     </td>
-                    <!-- <td class="p-2">
-                      <div class="d-flex align-items-center">
-                        <span
-                          class="
-                            result-list__ball
-                            d-flex
-                            align-items-center
-                            justify-content-center
-                            mr-2
-                          "
-                          style="font-size: 16px"
-                          >10</span
-                        >
-                        <span
-                          class="
-                            result-list__ball
-                            d-flex
-                            align-items-center
-                            justify-content-center
-                            mr-2
-                          "
-                          style="font-size: 16px"
-                          >22</span
-                        >
-
-                        <span
-                          class="
-                            result-list__ball
-                            d-flex
-                            align-items-center
-                            justify-content-center
-                            mr-2
-                          "
-                          style="font-size: 16px"
-                          >20</span
-                        >
-
-                        <span
-                          class="
-                            result-list__ball
-                            d-flex
-                            align-items-center
-                            justify-content-center
-                            mr-2
-                          "
-                          style="font-size: 16px"
-                          >31</span
-                        >
-
-                        <span
-                          class="
-                            result-list__ball
-                            d-flex
-                            align-items-center
-                            justify-content-center
-                            mr-2
-                          "
-                          style="font-size: 16px"
-                          >22</span
-                        >
-                      </div>
-                    </td> -->
                   </tr>
 
                   <tr class="result-table-body__row">
@@ -1271,7 +1292,13 @@
                     <td class="p-2">Gab Wazobia</td>
                     <td class="p-2">102</td>
                     <td class="p-2" colspan="2">
-                      <div class="d-flex align-items-center">
+                      <div
+                        class="
+                          d-flex
+                          align-items-center
+                          justify-content-center justify-content-md-start
+                        "
+                      >
                         <span
                           class="
                             result-list__ball
@@ -1308,7 +1335,6 @@
                         >
                       </div>
                     </td>
-                    <td></td>
                   </tr>
                 </tbody>
               </table>
