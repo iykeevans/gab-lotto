@@ -526,6 +526,11 @@
             </div>
           </div>
         </div>
+
+        <!--The div element for the map -->
+        <div class="col-md-12 mt-4">
+          <div id="map" style="height: 350px"></div>
+        </div>
       </div>
     </section>
     <!-- ==========Contact-Section========== -->
@@ -622,7 +627,28 @@
     <script src="assets/js/amd.js"></script>
     <script src="assets/js/nice-select.js"></script>
     <script src="assets/js/main.js"></script>
-  </body>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaGUeLfJzD5Ia8b5k1BpHXFFSHdlcxcjU&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
 
-  <!-- Mirrored from pixner.net/fantra/fantra/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Apr 2021 12:57:54 GMT -->
+    <script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of gab-lotto ,
+        const location = { lat: 6.49587586882771, lng: 3.357652000879329 };
+        // The map, centered at gab-lotto
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 19,
+          center: location,
+        });
+        // The marker, positioned at gab-lotto
+        const marker = new google.maps.Marker({
+          position: location,
+          map: map,
+        });
+      }
+    </script>
+  </body>
 </html>

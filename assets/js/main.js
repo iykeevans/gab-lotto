@@ -205,6 +205,40 @@
         },
       },
     });
+
+    // games-slider
+    $(".games-slider").owlCarousel({
+      loop: false,
+      responsiveClass: true,
+      nav: true,
+      dots: false,
+      navText: [
+        '<i class="fa fa-angle-left"></i>',
+        '<i class="fa fa-angle-right"></i>',
+      ],
+      autoplay: false,
+      margin: 0,
+      autoplayTimeout: 2000,
+      autoplayHoverPause: true,
+      smartSpeed: 2000,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        576: {
+          items: 1,
+        },
+        768: {
+          items: 2,
+        },
+        992: {
+          items: 3,
+        },
+        1200: {
+          items: 4,
+        },
+      },
+    });
   });
 
   // Preloader Js

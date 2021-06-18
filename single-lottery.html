@@ -91,6 +91,10 @@
         grid-template-columns: repeat(8, 1fr);
       }
 
+      /* .previous-numbers__machine-balls {
+        background: --var();
+      } */
+
       @media screen and (min-width: 768px) {
         .single-lottery__ball-wrapper {
           width: 90%;
@@ -1355,16 +1359,108 @@
     <section class="breadcrumb-area">
       <div class="container">
         <div class="content">
-          <h2 class="title">GAB PADI</h2>
-          <ul class="breadcrumb-list extra-padding">
-            <li>
-              <a href="index.html"> Home </a>
-            </li>
+          <div class="row">
+            <div class="col-md-5">
+              <h2 class="title">GAB PADI</h2>
 
-            <li>
-              <a href="#">Gab padi</a>
-            </li>
-          </ul>
+              <ul class="breadcrumb-list extra-padding">
+                <li>
+                  <a href="index.html"> Home </a>
+                </li>
+
+                <li>
+                  <a href="#">Gab padi</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-md-7">
+              <div
+                class="d-flex align-items-center"
+                onclick="singleLottery.selectGame(event)"
+                style="overflow-x: auto"
+                id="games-wrapper"
+              >
+                <button
+                  class="
+                    single-lottery__games single-lottery__games--active
+                    border-0
+                    mr-3
+                  "
+                >
+                  <img
+                    src="assets/images/d1.png"
+                    alt="gab padi"
+                    class="h-100"
+                  />
+                </button>
+
+                <button class="single-lottery__games border-0 mr-3">
+                  <img
+                    src="assets/images/d2.png"
+                    alt="gab gold"
+                    class="h-100"
+                  />
+                </button>
+
+                <button class="single-lottery__games border-0 mr-3">
+                  <img
+                    src="assets/images/d3.png"
+                    alt="gab cashman"
+                    class="h-100"
+                  />
+                </button>
+
+                <button class="single-lottery__games border-0 mr-3">
+                  <img
+                    src="assets/images/d3.png"
+                    alt="gab cashman"
+                    class="h-100"
+                  />
+                </button>
+
+                <button class="single-lottery__games border-0 mr-3">
+                  <img
+                    src="assets/images/d3.png"
+                    alt="gab cashman"
+                    class="h-100"
+                  />
+                </button>
+
+                <button class="single-lottery__games border-0 mr-3">
+                  <img
+                    src="assets/images/d3.png"
+                    alt="gab cashman"
+                    class="h-100"
+                  />
+                </button>
+
+                <button class="single-lottery__games border-0 mr-3">
+                  <img
+                    src="assets/images/d3.png"
+                    alt="gab cashman"
+                    class="h-100"
+                  />
+                </button>
+
+                <button class="single-lottery__games border-0 mr-3">
+                  <img
+                    src="assets/images/d3.png"
+                    alt="gab cashman"
+                    class="h-100"
+                  />
+                </button>
+
+                <button class="single-lottery__games border-0 mr-3">
+                  <img
+                    src="assets/images/d3.png"
+                    alt="gab cashman"
+                    class="h-100"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1379,96 +1475,7 @@
               <div class="d-flex justify-content-center">
                 <div class="single-pick w-100 pb-5">
                   <div class="header-area py-4">
-                    <div class="font-weight-bold text-left mb-2">GAMES</div>
-
-                    <div
-                      class="d-flex align-items-center"
-                      style="overflow-x: auto"
-                      onclick="singleLottery.selectGame(event)"
-                      id="games-wrapper"
-                    >
-                      <button
-                        class="
-                          single-lottery__games single-lottery__games--active
-                          mr-3
-                          border-0
-                        "
-                      >
-                        <img
-                          src="assets/images/d1.png"
-                          alt="gab padi"
-                          class="h-100"
-                        />
-                      </button>
-
-                      <button class="single-lottery__games mr-3 border-0">
-                        <img
-                          src="assets/images/d2.png"
-                          alt="gab gold"
-                          class="h-100"
-                        />
-                      </button>
-
-                      <button class="single-lottery__games mr-3 border-0">
-                        <img
-                          src="assets/images/d3.png"
-                          alt="gab cashman"
-                          class="h-100"
-                        />
-                      </button>
-
-                      <button class="single-lottery__games mr-3 border-0">
-                        <img
-                          src="assets/images/d3.png"
-                          alt="gab cashman"
-                          class="h-100"
-                        />
-                      </button>
-
-                      <button class="single-lottery__games mr-3 border-0">
-                        <img
-                          src="assets/images/d3.png"
-                          alt="gab cashman"
-                          class="h-100"
-                        />
-                      </button>
-
-                      <button class="single-lottery__games mr-3 border-0">
-                        <img
-                          src="assets/images/d3.png"
-                          alt="gab cashman"
-                          class="h-100"
-                        />
-                      </button>
-
-                      <button class="single-lottery__games mr-3 border-0">
-                        <img
-                          src="assets/images/d3.png"
-                          alt="gab cashman"
-                          class="h-100"
-                        />
-                      </button>
-
-                      <button class="single-lottery__games mr-3 border-0">
-                        <img
-                          src="assets/images/d3.png"
-                          alt="gab cashman"
-                          class="h-100"
-                        />
-                      </button>
-
-                      <button class="single-lottery__games mr-3 border-0">
-                        <img
-                          src="assets/images/d3.png"
-                          alt="gab cashman"
-                          class="h-100"
-                        />
-                      </button>
-                    </div>
-
-                    <div class="text-left mt-2 mb-4" style="font-size: 14px">
-                      14.11.2021 03:10 PM
-                    </div>
+                    <!-- <div class="font-weight-bold text-left mb-2">GAMES</div> -->
 
                     <!-- bet types -->
                     <div
@@ -1648,7 +1655,7 @@
           <div class="row justify-content-center">
             <div class="col-lg-9">
               <div class="section-header">
-                <h2 class="title ep">Most Frequent Number</h2>
+                <h2 class="title ep">Previous Numbers</h2>
                 <p class="text">
                   Check Your lotto online, find all the lotto winning numbers
                   and see if you won the latest lotto jackpots
@@ -1661,33 +1668,7 @@
               <div class="number-slider owl-carousel">
                 <div class="item">
                   <div class="single-number">
-                    <ul>
-                      <li>
-                        <span>1</span>
-                      </li>
-                      <li>
-                        <span>2</span>
-                      </li>
-                      <li>
-                        <span>3</span>
-                      </li>
-                      <li>
-                        <span>4</span>
-                      </li>
-                      <li>
-                        <span>5</span>
-                      </li>
-                      <li>
-                        <span>6</span>
-                      </li>
-                    </ul>
-                    <!-- <input type="text" placeholder="Try These Numbers" /> -->
-                    <button class="custom-button1 mt-4">Play</button>
-                  </div>
-                </div>
-
-                <div class="item">
-                  <div class="single-number">
+                    <div>Winning Numbers</div>
                     <ul>
                       <li>
                         <span>1</span>
@@ -1709,11 +1690,47 @@
                       </li>
                     </ul>
 
+                    <div class="mt-4">Machine</div>
+                    <ul>
+                      <li>
+                        <span style="background: var(--gab-primary-color)"
+                          >1</span
+                        >
+                      </li>
+                      <li>
+                        <span style="background: var(--gab-primary-color)"
+                          >2</span
+                        >
+                      </li>
+                      <li>
+                        <span style="background: var(--gab-primary-color)"
+                          >3</span
+                        >
+                      </li>
+                      <li>
+                        <span style="background: var(--gab-primary-color)"
+                          >4</span
+                        >
+                      </li>
+                      <li>
+                        <span style="background: var(--gab-primary-color)"
+                          >5</span
+                        >
+                      </li>
+                      <li>
+                        <span style="background: var(--gab-primary-color)"
+                          >6</span
+                        >
+                      </li>
+                    </ul>
+
                     <button class="custom-button1 mt-4">Play</button>
                   </div>
                 </div>
+
                 <div class="item">
                   <div class="single-number">
+                    <div>Winning Numbers</div>
                     <ul>
                       <li>
                         <span>1</span>
@@ -1735,11 +1752,47 @@
                       </li>
                     </ul>
 
+                    <div class="mt-4">Machine</div>
+                    <ul>
+                      <li>
+                        <span style="background: var(--gab-primary-color)"
+                          >1</span
+                        >
+                      </li>
+                      <li>
+                        <span style="background: var(--gab-primary-color)"
+                          >2</span
+                        >
+                      </li>
+                      <li>
+                        <span style="background: var(--gab-primary-color)"
+                          >3</span
+                        >
+                      </li>
+                      <li>
+                        <span style="background: var(--gab-primary-color)"
+                          >4</span
+                        >
+                      </li>
+                      <li>
+                        <span style="background: var(--gab-primary-color)"
+                          >5</span
+                        >
+                      </li>
+                      <li>
+                        <span style="background: var(--gab-primary-color)"
+                          >6</span
+                        >
+                      </li>
+                    </ul>
+
                     <button class="custom-button1 mt-4">Play</button>
                   </div>
                 </div>
+
                 <div class="item">
                   <div class="single-number">
+                    <div>Winning Numbers</div>
                     <ul>
                       <li>
                         <span>1</span>
@@ -1761,56 +1814,37 @@
                       </li>
                     </ul>
 
-                    <button class="custom-button1 mt-4">Play</button>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="single-number">
+                    <div class="mt-4">Machine</div>
                     <ul>
                       <li>
-                        <span>1</span>
+                        <span style="background: var(--gab-primary-color)"
+                          >1</span
+                        >
                       </li>
                       <li>
-                        <span>2</span>
+                        <span style="background: var(--gab-primary-color)"
+                          >2</span
+                        >
                       </li>
                       <li>
-                        <span>3</span>
+                        <span style="background: var(--gab-primary-color)"
+                          >3</span
+                        >
                       </li>
                       <li>
-                        <span>4</span>
+                        <span style="background: var(--gab-primary-color)"
+                          >4</span
+                        >
                       </li>
                       <li>
-                        <span>5</span>
+                        <span style="background: var(--gab-primary-color)"
+                          >5</span
+                        >
                       </li>
                       <li>
-                        <span>6</span>
-                      </li>
-                    </ul>
-
-                    <button class="custom-button1 mt-4">Play</button>
-                  </div>
-                </div>
-
-                <div class="item">
-                  <div class="single-number">
-                    <ul>
-                      <li>
-                        <span>1</span>
-                      </li>
-                      <li>
-                        <span>2</span>
-                      </li>
-                      <li>
-                        <span>3</span>
-                      </li>
-                      <li>
-                        <span>4</span>
-                      </li>
-                      <li>
-                        <span>5</span>
-                      </li>
-                      <li>
-                        <span>6</span>
+                        <span style="background: var(--gab-primary-color)"
+                          >6</span
+                        >
                       </li>
                     </ul>
 
@@ -2227,18 +2261,26 @@
             <div
               class="d-flex align-items-center justify-content-between"
             >
-              <div
-                class="
-                  d-flex
-                  flex-column
-                  text-white
-                  justify-content-md-start
-                "
-              >
-                <span class="text-sm text-left">Stake</span>
+              <div class="d-flex align-items-center">
+                <svg style="width:24px;height:24px;" viewBox="0 0 24 24">
+                  <path fill="white" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z" />
+                </svg>
 
-                <span class="text-sm"> Bet Type </span>
+                <div
+                  class="
+                  ml-2
+                    d-flex
+                    flex-column
+                    text-white
+                    justify-content-md-start
+                  "
+                >
+                  <span class="text-sm text-left">Stake</span>
+
+                  <span class="text-sm"> Bet Type </span>
+                </div>
               </div>
+              
 
               <div class="right d-flex flex-column text-white">
                 <span>
