@@ -212,7 +212,7 @@ h3 {
 }
 
 .bg-gab-primary-color {
-  background-color: var(--gab-primary-color);
+  background-color: var(--gab-primary-color) !important;
 }
 
 .bg-gab-secondary-color {
