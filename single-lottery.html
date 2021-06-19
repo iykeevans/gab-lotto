@@ -1631,6 +1631,20 @@
                   </p>
                 </div>
 
+                <div
+                  class="text-sm d-none"
+                  id="cart-remove"
+                  style="background: #595192"
+                >
+                  <button
+                    class="border-0 text-white text-left"
+                    style="background-color: transparent"
+                    onclick="singleLottery.resetCart()"
+                  >
+                    Remove all
+                  </button>
+                </div>
+
                 <div id="cart-details"></div>
 
                 <div class="bottom-area d-none" id="cart-action-area">
@@ -2222,7 +2236,8 @@
             return;
           }
 
-          const cartMarkup = () => `<div class="middle-area">
+          const cartMarkup =
+            () => `<div class="middle-area" id="cart-${cartCount}">
             <div class="tikit">
               <span class="left">
                 <span>5/90 (${currentGame.toUpperCase()})</span> -
@@ -2262,9 +2277,12 @@
               class="d-flex align-items-center justify-content-between"
             >
               <div class="d-flex align-items-center">
-                <svg style="width:24px;height:24px;" viewBox="0 0 24 24">
-                  <path fill="white" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z" />
-                </svg>
+                <button class="border-0" style="background: transparent;" onclick="singleLottery.removeFromCart(${cartCount})">
+                  <svg style="width:24px;height:24px;" viewBox="0 0 24 24">
+                    <path fill="white" d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z" />
+                  </svg>
+                </button>
+                
 
                 <div
                   class="
@@ -2297,7 +2315,8 @@
             </div>
           </div>`;
 
-          $("#cart-details").append(cartMarkup());
+          $("#cart-details").append(cartMarkup(cartCount));
+          $("#cart-remove").removeClass("d-none");
           cartCount++;
 
           if (!cartCount) {
@@ -2309,6 +2328,31 @@
           cartDescription.innerText = `${cartCount} Games Added`;
         };
 
+        const removeFromCart = (id) => {
+          const cartDescription = document.getElementById("cart-description");
+
+          $(`#cart-${id}`).remove();
+          cartCount--;
+
+          if (cartCount) {
+            cartDescription.innerText = `${cartCount} Games Added`;
+          } else {
+            cartDescription.innerText = `Cart is Empty`;
+            $("#cart-remove").addClass("d-none");
+            $("#cart-action-area").addClass("d-none");
+          }
+        };
+
+        const resetCart = () => {
+          const cartDescription = document.getElementById("cart-description");
+
+          $("#cart-details").empty();
+          $("#cart-remove").addClass("d-none");
+          $("#cart-action-area").addClass("d-none");
+          cartCount = 0;
+          cartDescription.innerText = `Cart is Empty`;
+        };
+
         return {
           populateBalls,
           selectType,
@@ -2316,6 +2360,8 @@
           addToCart,
           selectGame,
           resetSelectedBalls,
+          removeFromCart,
+          resetCart,
         };
       })();
 
