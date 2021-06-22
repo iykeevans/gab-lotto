@@ -2070,12 +2070,23 @@ input[type=submit] {
   width: 100%;
 }
 .lottery-result .result-box {
-  border-radius: 10px;
+  /* border-radius: 10px;
   -webkit-box-shadow: 0px 13px 120px 0px rgba(45, 70, 222, 0.2);
           box-shadow: 0px 13px 120px 0px rgba(45, 70, 222, 0.2);
-  background: #fff;
-  padding: 50px 30px 30px;
+  background: #fff; */
+  /* padding: 50px 30px 30px; */
 }
+
+@media screen and (min-width: 768px) {
+  .lottery-result .result-box {
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 13px 120px 0px rgba(45, 70, 222, 0.2);
+            box-shadow: 0px 13px 120px 0px rgba(45, 70, 222, 0.2);
+    background: #fff; 
+    padding: 50px 30px 30px;
+  }
+}
+
 .lottery-result .result-box .box-header {
   margin-bottom: 38px;
   display: block;

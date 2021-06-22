@@ -44,6 +44,19 @@
         font-size: 1rem;
       }
 
+      .dropdown__menu {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(15px);
+      }
+
+      .dropdown:hover > .dropdown__menu {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.3s ease;
+      }
+
       @media screen and (min-width: 768px) {
         .banner {
           background-size: cover;
@@ -998,7 +1011,7 @@
         </a>
 
         <div
-          class="main-nav__links text-uppercase pl-5 p-md-0 d-none d-md-block"
+          class="main-nav__links text-uppercase pl-5 p-md-0 d-none d-md-flex"
           style="font-size: 16px"
         >
           <a
@@ -1013,17 +1026,70 @@
             >play now</a
           >
 
-          <a
-            href="#"
+          <div
             class="
-              main-nav__link
-              text-gab-primary-color
-              font-weight-bold
               mr-md-5
               mb-4 mb-md-0
+              position-relative
+              menu-item-has-children
+              dropdown
             "
-            >games</a
           >
+            <a
+              href="#"
+              class="
+                main-nav__link
+                has-menu
+                text-gab-primary-color
+                font-weight-bold
+              "
+            >
+              games
+            </a>
+
+            <div
+              class="
+                dropdown__menu
+                position-absolute
+                row
+                py-md-3
+                px-md-3
+                rounded
+                bg-white
+              "
+              style="
+                min-width: 50vw;
+                z-index: 1000;
+                box-shadow: 0px 0px 11.7px 1.3px rgba(0, 0, 0, 0.08);
+              "
+            >
+              <div class="col-md-4 d-flex flex-column">
+                <div class="font-weight-bold mb-md-2">Play Now</div>
+                <a href="#" class="text-sm">Instant</a>
+                <a href="#" class="text-sm">Mega Millions</a>
+                <a href="#" class="text-sm">Power Ball</a>
+                <a href="#" class="text-sm">Cash 4 Life</a>
+              </div>
+
+              <div class="col-md-4 d-flex flex-column">
+                <div class="font-weight-bold mb-md-2">Draw Games</div>
+                <a href="#" class="text-sm">Keno</a>
+                <a href="#" class="text-sm">Mega Millions</a>
+                <a href="#" class="text-sm">Power Ball</a>
+                <a href="#" class="text-sm">Pick 4</a>
+                <a href="#" class="text-sm">Pick 3</a>
+                <a href="#" class="text-sm">Pick 2</a>
+                <a href="#" class="text-sm">Raffle</a>
+              </div>
+
+              <div class="col-md-4 d-flex flex-column">
+                <div class="font-weight-bold mb-md-2">Promotion</div>
+                <a href="#" class="text-sm">Win A Spin</a>
+                <a href="#" class="text-sm">Extra Chance</a>
+                <a href="#" class="text-sm">Power Ball</a>
+              </div>
+            </div>
+          </div>
 
           <a
             href="result.html"
@@ -2854,7 +2920,11 @@
 
     <!-- ==========Lottery-Result-Section========== -->
     <section class="lottery-result">
-      <img class="bg-image" src="assets/images/result-background.jpg" alt="" />
+      <img
+        class="bg-image d-none d-md-block"
+        src="assets/images/result-background.jpg"
+        alt=""
+      />
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-9">
@@ -2870,7 +2940,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row mx-0">
           <div class="col-lg-12">
             <div class="result-box">
               <h4 class="box-header">Lottery Winning Numbers</h4>
