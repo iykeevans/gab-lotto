@@ -42,6 +42,7 @@
         height: 40px;
         color: #001485;
         font-weight: 600;
+        min-width: 38px;
       }
 
       .custom-button--alt {
@@ -51,6 +52,10 @@
       @media screen and (min-width: 768px) {
         .table-col--wrapped {
           width: 200px;
+        }
+
+        .custom-input {
+          width: 48px;
         }
       }
 
@@ -549,90 +554,79 @@
         <div class="row justify-content-md-center">
           <div class="col-lg-11">
             <div class="contact-box d-flex flex-column">
-              <div class="mb-5">
-                <div
-                  class="
-                    d-flex
-                    flex-column flex-md-row
-                    justify-content-md-between
-                  "
-                >
-                  <div class="d-flex flex-wrap">
-                    <div class="d-flex flex-column">
-                      <label for="" class="text-sm mb-0">Game Type</label>
-                      <select name="" id="" class="custom-input">
-                        <option value="" disabled>Select Game</option>
-                        <option value="">5/90</option>
-                        <option value="">6/80</option>
-                      </select>
+              <div class="row">
+                <div class="col-md-8 mb-3 mb-md-0">
+                  <div class="row">
+                    <div
+                      class="
+                        col-md-4
+                        d-flex
+                        flex-column flex-md-row
+                        mb-3 mb-md-0
+                      "
+                    >
+                      <div class="d-flex flex-column mb-3 mb-md-0">
+                        <label for="" class="text-sm mb-0">Game Type</label>
+                        <select name="" id="" class="custom-input">
+                          <option value="" disabled>Select Game</option>
+                          <option value="">5/90</option>
+                          <option value="">6/80</option>
+                        </select>
+                      </div>
+
+                      <div class="d-flex flex-column ml-md-4 ml-0">
+                        <label for="" class="text-sm mb-0">Games</label>
+                        <select name="" id="" class="custom-input">
+                          <option value="">All</option>
+                        </select>
+                      </div>
                     </div>
 
-                    <div class="d-flex flex-column ml-md-4 ml-3">
-                      <label for="" class="text-sm mb-0">Games</label>
-                      <select name="" id="" class="custom-input">
-                        <option value="">All</option>
-                      </select>
-                    </div>
+                    <div class="col-md-8 d-flex flex-column flex-md-row">
+                      <div class="d-flex flex-column ml-md-4 ml-0 mb-3 mb-md-0">
+                        <label for="" class="text-sm mb-0">From</label>
+                        <input type="date" name="" id="" class="custom-input" />
+                      </div>
 
-                    <div class="d-flex flex-column ml-md-4 ml-0">
-                      <label for="" class="text-sm mb-0">From</label>
-                      <input type="date" name="" id="" class="custom-input" />
-                    </div>
-
-                    <div class="d-flex flex-column ml-md-4 ml-3">
-                      <label for="" class="text-sm mb-0">To</label>
-                      <input type="date" name="" id="" class="custom-input" />
+                      <div class="d-flex flex-column ml-md-4 ml-0">
+                        <label for="" class="text-sm mb-0">To</label>
+                        <input type="date" name="" id="" class="custom-input" />
+                      </div>
                     </div>
                   </div>
+                </div>
 
+                <div class="col-md-4">
                   <div class="d-flex flex-column">
                     <label for="" class="text-sm mb-0"
                       >Forecast Your Numbers</label
                     >
 
                     <div class="d-flex">
-                      <input
-                        type="text"
-                        class="custom-input"
-                        style="width: 48px"
-                      />
-                      <input
-                        type="text"
-                        class="custom-input ml-2"
-                        style="width: 48px"
-                      />
-                      <input
-                        type="text"
-                        class="custom-input ml-2"
-                        style="width: 48px"
-                      />
-                      <input
-                        type="text"
-                        class="custom-input ml-2"
-                        style="width: 48px"
-                      />
-                      <input
-                        type="text"
-                        class="custom-input ml-2"
-                        style="width: 48px"
-                      />
-                      <input
-                        type="text"
-                        class="custom-input ml-2"
-                        style="width: 48px"
-                      />
+                      <input type="text" class="custom-input" />
+                      <input type="text" class="custom-input ml-2" />
+                      <input type="text" class="custom-input ml-2" />
+                      <input type="text" class="custom-input ml-2" />
+                      <input type="text" class="custom-input ml-2" />
+                      <input type="text" class="custom-input ml-2" />
                     </div>
                   </div>
                 </div>
 
-                <div class="d-flex">
+                <div class="d-flex mb-5 mb-md-0">
                   <button
-                    class="custom-button1 text-capitalize font-weight-bold"
+                    class="
+                      custom-button1
+                      text-capitalize
+                      font-weight-bold
+                      text-sm
+                    "
                   >
                     Search
                   </button>
                   <button
                     class="
+                      text-sm
                       custom-button1
                       ml-4
                       text-capitalize
@@ -1340,14 +1334,14 @@
               </table>
 
               <div class="col-lg-12 text-center mt-5">
-                <ul class="pagination">
+                <ul class="pagination d-flex align-items-center">
                   <li>
                     <i class="fas fa-chevron-left"></i>
                   </li>
                   <li class="active">01</li>
                   <li>02</li>
                   <li>03</li>
-                  <li>04</li>
+
                   <li>
                     <i class="fas fa-chevron-right"></i>
                   </li>
