@@ -326,11 +326,11 @@ h3 {
   color: var(--gab-accent-color);
 }
 
-/* .ball {
+.gab-ball {
   background-color: #eee;
   height: 46px;
   width: 46px;
-} */
+}
 
 .result-list__ball {
   width: 36px;
