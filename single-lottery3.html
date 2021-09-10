@@ -30,45 +30,6 @@
         font-weight: bold;
       }
 
-      .bet-sub-type {
-        border-bottom: 0;
-        border-top: 0;
-        border-right: 0;
-        border-left: 0;
-        background-color: transparent;
-        border-radius: 0;
-        height: unset;
-        font-size: 14px;
-      }
-
-      .is-active {
-        background-color: var(--gab-secondary-color);
-        font-weight: bold;
-      }
-
-      .is-active--underline {
-        border-bottom: 2px solid var(--gab-secondary-color);
-        font-weight: bold;
-      }
-
-      .is-active--ball {
-        background-image: -o-linear-gradient(
-          4deg,
-          #ec038b 0%,
-          #fb6468 44%,
-          #fbb936 100%
-        ) !important;
-        background-image: linear-gradient(
-          86deg,
-          #ec038b 0%,
-          #fb6468 44%,
-          #fbb936 100%
-        ) !important;
-        -webkit-box-shadow: 0px 7px 7px 0px rgba(243, 42, 126, 0.23) !important;
-        box-shadow: 0px 7px 7px 0px rgba(243, 42, 126, 0.23) !important;
-        color: #fff !important;
-      }
-
       .grid {
         display: grid;
         grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -1458,6 +1419,7 @@
             </button>
           </div>
 
+          <!-- selected game Image -->
           <div class="d-flex align-items-center mb-md-0 mb-4">
             <div
               class="
@@ -1485,10 +1447,12 @@
                 src="assets/images/d3.png"
                 alt="gab lotto"
                 class="bet-type-image-wrapper__image"
+                id="game-image"
               />
             </div>
           </div>
 
+          <!-- time capsule starts here -->
           <div
             class="
               lotto-time-capsule
@@ -1502,7 +1466,7 @@
             "
           >
             <section>
-              <div class="text-base text-center" class="mb-3">Lorem Ipsum</div>
+              <div class="text-base text-center" class="mb-3">Next Draw</div>
 
               <div class="d-flex justify-content-center py-3 py-md-0">
                 <div class="d-flex flex-column align-items-center">
@@ -1591,27 +1555,33 @@
                 justify-content-between
               "
             >
-              <div class="text-base">Lorem Ipsum</div>
-              <div class="text-base">Lorem Ipsum</div>
+              <div class="text-base">Previous Draws</div>
+              <div class="text-base">Price Structure</div>
             </section>
           </div>
+          <!-- time capsule ends here -->
 
-          <div
+          <select
             class="
               bg-gab-primary-color
               text-white text-center
               ml-5
               text-base
               py-1
+              px-4
               d-none d-md-block
             "
-            style="border-radius: 40px; width: 150px"
+            style="border-radius: 40px; width: 150px; height: 40px"
+            onchange="singleLottery.selectGame(event)"
+            id="game"
           >
-            Gab Padi
-          </div>
+            <option value="gab padi" selected>Gab Padi</option>
+            <option value="gab gold">Gab Gold</option>
+            <option value="gab cashman">Gab Cashman</option>
+          </select>
         </div>
 
-        <div class="col-span-8" style="height: 95vh; overflow-y: auto">
+        <div class="col-span-8" style="overflow-y: auto">
           <div
             class="
               lotto-sections__header
@@ -1629,12 +1599,24 @@
                 CHANGE BET TYPE
               </div>
 
-              <div
-                class="bg-white text-base pl-3 py-1"
-                style="width: 200px; border-radius: 40px"
+              <select
+                class="text-center text-base py-1 px-2 d-none d-md-block"
+                style="border-radius: 40px; width: 150px; height: 40px"
+                onchange="singleLottery.selectGameType(event)"
+                id="game-type"
               >
-                NAP 2
-              </div>
+                <option value="direct" selected>Direct</option>
+                <option value="permutation">Permutation</option>
+                <option value="banker">Banker</option>
+                <option value="against">Against</option>
+              </select>
+
+              <select
+                class="text-center text-base py-1 px-2 ml-3"
+                style="border-radius: 40px; width: 150px; height: 40px"
+                onchange="singleLottery.selectSubGameType(event)"
+                id="sub-game-type"
+              ></select>
             </div>
 
             <div class="d-flex flex-md-row flex-column align-items-md-center">
@@ -1652,14 +1634,15 @@
                   "
                   style="height: unset; border-radius: 40px"
                 >
-                  Lorem
+                  Auto Pick
                 </button>
 
                 <button
                   class="py-2 px-3 ml-md-3 md:text-base text-sm"
-                  style="height: unset; border-radius: 40px"
+                  style="height: unset; border-radius: 40px; color: red"
+                  onclick="singleLottery.resetSelectedBalls()"
                 >
-                  Lorem
+                  clear
                 </button>
 
                 <button
@@ -1672,14 +1655,33 @@
                     text-sm
                   "
                   style="height: unset; border-radius: 40px"
+                  onclick="singleLottery.addToCart()"
                 >
-                  Lorem
+                  Add to slip
                 </button>
               </div>
             </div>
           </div>
 
           <section class="py-4 px-4 bg-white" id="ball-wrapper"></section>
+
+          <div class="bg-white d-none d-md-flex px-4 pb-5">
+            <div class="w-50">
+              <h4>LATEST LOTTERY RESULT</h4>
+              <img
+                src="./assets/images/ticket-dummy-image.jpeg"
+                alt="dummy-image"
+              />
+            </div>
+
+            <div class="w-50">
+              <h4>LATEST LOTTERY RESULT</h4>
+              <img
+                src="./assets/images/ticket-dummy-image.jpeg"
+                alt="dummy-image"
+              />
+            </div>
+          </div>
         </div>
 
         <div class="col-span-4" style="height: 95vh; overflow-y: auto">
@@ -1693,7 +1695,7 @@
               class="bg-gab-secondary-color py-2 text-base w-75"
               style="height: unset; border-radius: 40px"
             >
-              Lorem
+              leave Blank
             </button>
           </section>
 
@@ -1728,7 +1730,9 @@
               </div>
             </div>
 
-            <div class="mt-4 pt-4" style="border-top: 1px solid #ccc">
+            <!-- selected games starts here -->
+            <div id="cart-main"></div>
+            <!-- <div class="mt-4 pt-4" style="border-top: 1px solid #ccc">
               <div class="d-flex justify-content-between mb-2">
                 <span class="w-75 text-base"
                   >Perm 2: 50, 25, 53, 02, 8, 80, 01, 88, 14, 17</span
@@ -1767,7 +1771,8 @@
                   : <input type="text" style="width: 150px" />
                 </div>
               </div>
-            </div>
+            </div> -->
+            <!-- selected games ends here -->
 
             <div class="d-flex mt-4 text-base">
               <span class="w-50">Total Stake</span>
@@ -1883,10 +1888,11 @@
     <script src="assets/js/main.js"></script>
     <script>
       const singleLottery = (() => {
-        let selectedNormalBalls = [];
-        let selectedAgainstBalls = [];
-        let betType = "direct";
-        let subBetType = "first number drop";
+        let selectedBalls = [];
+        let gameType = "direct";
+        let game = "gab padi";
+        let subGameType = "";
+        let cartCount = 0;
 
         const gameMapper = {
           "first number drop": 1,
@@ -1902,313 +1908,195 @@
           against2: 40,
         };
 
+        const gameImageMapper = {
+          "gab padi": "assets/images/d1.png",
+          "gab gold": "assets/images/d2.png",
+          "gab cashman": "assets/images/d3.png",
+        };
+
+        const subGameOptions = {
+          direct: [
+            "First Number Drop",
+            "Direct 2",
+            "Direct 3",
+            "Direct 4",
+            "Direct 5",
+          ],
+          permutation: ["Pem 2", "Pem 3"],
+          banker: [],
+          against: ["banker", "against"],
+        };
+
         const populateBalls = (number = 90) => {
           // reset ballwrapper element on invocation
           document.getElementById("ball-wrapper").innerHTML = "";
 
           for (let index = 1; index <= number; index++) {
             $("#ball-wrapper").append(
-              `<button class="mr-md-4 mr-2 mb-md-4 mb-2 text-base lotto-ball" style="width: 38px; height: 38px; border-radius: 100%;">${index}</button>`
+              `<button class="mr-md-4 mr-2 mb-md-4 mb-2 text-base lotto-ball" style="width: 38px; height: 38px; border-radius: 100%;" onclick="singleLottery.selectBall(${index}, event)">${index}</button>`
             );
           }
         };
 
-        const removeCollectionCssClass = (childrenCollection, cssClass) => {
-          for (let index = 0; index < childrenCollection.length; index++) {
-            const element = childrenCollection[index];
-            element.classList.remove(cssClass);
-          }
-        };
+        const populateSubGameOptions = (gameType) => {
+          // empty select node
+          $("#sub-game-type").empty();
 
-        const setDefaultSubType = (betType) => {
-          switch (betType) {
-            case "direct":
-              setSubType("first number drop");
-              break;
-            case "permutation":
-              setSubType("pem 2");
-              break;
-            case "banker":
-              setSubType("banker");
-              break;
-            case "against":
-              setSubType("against1");
-              break;
-
-            default:
-              break;
-          }
-        };
-
-        const betTypeChecker = (target) => {
-          const directBetTypes = document.getElementById("direct-bet-types");
-          const permutationBetTypes = document.getElementById(
-            "permutation-bet-types"
+          // add default option
+          $("#sub-game-type").append(
+            `<option value="" disabled selected>Select Option</option>`
           );
-          const againstBetTypes = document.getElementById("against-bet-types");
 
-          const type = target.innerText.toLowerCase().trim();
-
-          // set betType
-          betType = type;
-
-          switch (type) {
-            case "direct":
-              directBetTypes.classList.remove("d-none");
-              directBetTypes.classList.add("d-flex");
-              permutationBetTypes.classList.remove("d-flex");
-              permutationBetTypes.classList.add("d-none");
-              againstBetTypes.classList.remove("d-flex");
-              againstBetTypes.classList.add("d-none");
-              break;
-            case "permutation":
-              directBetTypes.classList.remove("d-flex");
-              directBetTypes.classList.add("d-none");
-              permutationBetTypes.classList.remove("d-none");
-              permutationBetTypes.classList.add("d-flex");
-              againstBetTypes.classList.remove("d-flex");
-              againstBetTypes.classList.add("d-none");
-              break;
-            case "banker":
-              directBetTypes.classList.remove("d-flex");
-              directBetTypes.classList.add("d-none");
-              permutationBetTypes.classList.remove("d-flex");
-              permutationBetTypes.classList.add("d-none");
-              againstBetTypes.classList.remove("d-flex");
-              againstBetTypes.classList.add("d-none");
-              break;
-            case "against":
-              directBetTypes.classList.remove("d-flex");
-              directBetTypes.classList.add("d-none");
-              permutationBetTypes.classList.remove("d-flex");
-              permutationBetTypes.classList.add("d-none");
-              againstBetTypes.classList.remove("d-none");
-              againstBetTypes.classList.add("d-flex");
-              break;
-
-            default:
-              console.log("Wrong bet type");
-              break;
-          }
-        };
-
-        const selectType = (event, isSubtype = false) => {
-          const childrenCollection = event.target.parentElement.children;
-          const selectedType = event.target.innerText.toLowerCase().trim();
-          if (
-            isSubtype &&
-            (selectedType === "against" || selectedType === "banker")
-          ) {
-            console.log("trouble");
+          if (!gameType || gameType === "banker") {
+            $("#sub-game-type").removeClass("d-block");
+            $("#sub-game-type").addClass("d-none");
           } else {
-            resetSelectedBalls();
-          }
+            $("#sub-game-type").removeClass("d-none");
+            $("#sub-game-type").addClass("d-block");
 
-          removeCollectionCssClass(
-            childrenCollection,
-            !isSubtype ? "is-active" : "is-active--underline"
-          );
-
-          // set default subtype
-          !isSubtype &&
-            setDefaultSubType(event.target.innerText.toLowerCase().trim());
-
-          // avoid highlighting parent div based using id
-          if (
-            event.target.id !== "bet-types" &&
-            event.target.id !== "direct-bet-types" &&
-            event.target.id !== "permutation-bet-types" &&
-            event.target.id !== "banker-bet-types"
-          ) {
-            !isSubtype
-              ? event.target.classList.add("is-active")
-              : event.target.classList.add("is-active--underline");
-
-            !isSubtype
-              ? betTypeChecker(event.target)
-              : setSubType(
-                  event.target.id || event.target.innerText.toLowerCase().trim()
-                );
+            subGameOptions[gameType].forEach((item) => {
+              $("#sub-game-type").append(
+                `<option value="${item.toLowerCase()}">${item}</option>`
+              );
+            });
           }
         };
 
         const resetSelectedBalls = () => {
-          selectedNormalBalls = [];
-          selectedAgainstBalls = [];
-          resetBallHighlighting();
-        };
+          selectedBalls = [];
 
-        const resetBallHighlighting = () => {
-          const normalBallWrapper = document.getElementById(
-            "normal-ball-wrapper"
+          const ballWrapper = document.getElementById("ball-wrapper");
+
+          ballWrapper.childNodes.forEach((child) =>
+            child.classList.remove("bg-gab-secondary-color")
           );
 
-          const childrenCollection = normalBallWrapper.children;
+          subGameType = "";
+        };
 
-          for (let index = 0; index < childrenCollection.length; index++) {
-            const outerBall = childrenCollection[index];
+        const selectGameType = (event) => {
+          resetSelectedBalls();
+          const selectedGameType = event ? event.target.value : "direct";
+          gameType = selectedGameType;
+          document.getElementById("game-type").value = gameType;
 
-            outerBall.children[0].classList.remove("is-active--ball");
-            outerBall.children[0].classList.remove("bg-gab-secondary-color");
+          populateSubGameOptions(selectedGameType);
+        };
+
+        const selectSubGameType = (event) => {
+          const selectedSubGameType = event ? event.target.value : "";
+          subGameType = selectedSubGameType;
+          console.log(subGameType);
+        };
+
+        const selectBall = (ball, event) => {
+          // const ball = event.target.innerText;
+          if (!gameType) {
+            alert("Select a game type");
+            return;
           }
-        };
 
-        const setSubType = (selectedSubType) => {
-          subBetType = selectedSubType;
-        };
+          if (gameType !== "banker" && !subGameType) {
+            alert("Select a sub game type");
+            return;
+          }
 
-        const selectBall = (event, ballType = "normal") => {
-          const ball = event.target.innerText;
-
-          if (
-            selectedNormalBalls.length === gameMapper[subBetType] &&
-            !selectedNormalBalls.includes(ball)
-          ) {
+          if (selectedBalls.length === gameMapper[subGameType]) {
             alert("number of allowed balls exceeded");
-          } else {
-            const result = selectedNormalBalls.find(
-              (item) => (item.ball || item) === ball
-            );
-            if (!result) {
-              // avoid highlighting parent based using tagname
-              if (event.target.tagName !== "LI") {
-                if (betType === "against") {
-                  event.target.classList.add(
-                    subBetType === "against1"
-                      ? "is-active--ball"
-                      : "bg-gab-secondary-color"
-                  );
-
-                  selectedNormalBalls.push({ ball, subBetType });
-                } else {
-                  event.target.classList.add("is-active--ball");
-                  selectedNormalBalls.push(ball);
-                }
-              }
-            } else {
-              // avoid unhighlighting parent based using tagname
-              if (event.target.tagName !== "LI") {
-                if (betType === "against") {
-                  if (result.subBetType === subBetType) {
-                    event.target.classList.remove(
-                      subBetType === "against1"
-                        ? "is-active--ball"
-                        : "bg-gab-secondary-color"
-                    );
-                    selectedNormalBalls = selectedNormalBalls.filter(
-                      (item) => item.ball !== ball
-                    );
-                  }
-                } else {
-                  event.target.classList.remove("is-active--ball");
-                  selectedNormalBalls = selectedNormalBalls.filter(
-                    (item) => item !== ball
-                  );
-                }
-              }
-            }
+            return;
           }
+
+          selectedBalls.push(ball);
+
+          // highlight selected ball
+          event.target.classList.add("bg-gab-secondary-color");
+
+          console.log(ball);
+          console.log(event);
         };
 
         const addToCart = () => {
-          const cart = [];
-          const cartDetails = document.getElementById("cart-details");
+          if (!selectedBalls.length) {
+            alert("select a ball");
+            return;
+          }
 
-          const cartMarkup = () => `<div class="middle-area">
-            <div class="tikit">
-              <span class="left">
-                <span>5/90 (GAB PADI)</span> -
-                <span>PERM 4 SELECTION</span>
-              </span>
-            </div>
-
-            <div class="bg-white mb-3 d-flex align-items-center p-2">
-              <div
-                class="
-                  rounded-circle
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-1
-                  text-xs
-                  is-active--ball
-                "
-                style="height: 28px; width: 28px"
-              >
-                1
-              </div>
-
-              <div
-                class="
-                  rounded-circle
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  mr-1
-                  text-xs
-                  is-active--ball
-                "
-                style="height: 28px; width: 28px"
-              >
-                2
-              </div>
-
-              <div
-                class="
-                  rounded-circle
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  text-xs
-                  is-active--ball
-                "
-                style="height: 28px; width: 28px"
+          const cartMarkup = (
+            cartCount
+          ) => `<div class="mt-4 pt-4" style="border-top: 1px solid #ccc" id="cart-${cartCount}">
+              <div class="d-flex justify-content-between mb-2">
+                <span class="w-75 text-base"
+                  >${subGameType || gameType}: ${selectedBalls.join()}</span
                 >
-                  3
+
+                <svg
+                  class="cursor-pointer"
+                  style="width: 24px; height: 24px"
+                  viewBox="0 0 24 24"
+                  onclick="singleLottery.removeFromCart(${cartCount})"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"
+                  />
+                </svg>
+              </div>
+
+              <div class="d-flex mb-2 text-base">
+                <span class="w-50">Total line</span>
+                <span class="w-50">: 150</span>
+              </div>
+
+              <div class="d-flex mb-2 text-base">
+                <span class="w-50">Bet Selection</span>
+                <div class="w-50">
+                  :
+                  <select name="" id="" style="width: 150px">
+                    <option value="">WIN</option>
+                  </select>
                 </div>
               </div>
 
-              <div
-                class="d-flex align-items-center justify-content-between"
-              >
-                <div
-                  class="
-                    d-flex
-                    flex-column
-                    text-white
-                    justify-content-md-start
-                  "
-                >
-                  <span class="text-sm text-left">Stake</span>
-
-                  <span class="text-sm"> Bet Type </span>
-                </div>
-
-                <div class="right d-flex flex-column text-white">
-                  <span>
-                    <input type="text" class="text-sm" style="width: 100px" />
-                  </span>
-
-                  <span class="text-sm">
-                    <select name="" id="" style="width: 100px">
-                      <option value="machine">Machine</option>
-                      <option value="machine">Machine</option>
-                    </select>
-                  </span>
+              <div class="d-flex text-base">
+                <span class="w-50">Stake Per Line</span>
+                <div class="w-50">
+                  : <input type="text" style="width: 150px" />
                 </div>
               </div>
             </div>`;
 
-          cart.push(cartMarkup());
-
-          cartDetails.innerHTML = cart.map((item) => cartMarkup());
+          $("#cart-main").append(cartMarkup(cartCount));
+          cartCount++;
         };
 
-        return { populateBalls, selectType, selectBall, addToCart };
+        const removeFromCart = (id) => {
+          $(`#cart-${id}`).remove();
+          cartCount--;
+        };
+
+        const selectGame = (event) => {
+          const selectedGame = event ? event.target.value : "gab padi";
+
+          game = selectedGame;
+          document.getElementById("game").value = game;
+          document.getElementById("game-image").src = gameImageMapper[game];
+        };
+
+        return {
+          populateBalls,
+          selectGameType,
+          selectSubGameType,
+          selectBall,
+          addToCart,
+          removeFromCart,
+          resetSelectedBalls,
+          selectGame,
+        };
       })();
 
       singleLottery.populateBalls();
-      singleLottery.addToCart();
+      singleLottery.selectGameType();
+      singleLottery.selectGame();
     </script>
   </body>
 </html>
