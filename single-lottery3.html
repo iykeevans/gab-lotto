@@ -49,9 +49,6 @@
       .text-base {
         font-size: 16px;
       }
-      .lotto-ball:hover {
-        background-color: var(--gab-secondary-color);
-      }
 
       .lottery-info__header {
         background: #e6e6e6;
@@ -75,7 +72,16 @@
         background: #e6e6e6;
       }
 
+      .game-selector {
+        border-radius: 40px;
+        width: 120px;
+        height: 40px;
+      }
+
       @media screen and (min-width: 768px) {
+        .lotto-ball:hover {
+          background-color: var(--gab-secondary-color);
+        }
         .bet-type-image-wrapper {
           height: 120px;
           width: 180px;
@@ -116,6 +122,10 @@
         }
         .w-md-50 {
           width: 50%;
+        }
+
+        .game-selector {
+          width: 150px;
         }
       }
     </style>
@@ -1421,18 +1431,24 @@
 
           <!-- selected game Image -->
           <div class="d-flex align-items-center mb-md-0 mb-4">
-            <div
+            <select
               class="
                 bg-gab-primary-color
-                text-white text-center text-base
-                py-1
-                d-md-none
+                text-white text-center
                 mr-5
+                text-base
+                py-1
+                px-4
+                d-md-none
               "
-              style="border-radius: 40px; width: 150px"
+              style="border-radius: 40px; width: 150px; height: 40px"
+              onchange="singleLottery.selectGame(event)"
+              id="game"
             >
-              Gab Padi
-            </div>
+              <option value="gab padi" selected>Gab Padi</option>
+              <option value="gab gold">Gab Gold</option>
+              <option value="gab cashman">Gab Cashman</option>
+            </select>
 
             <div
               class="
@@ -1598,25 +1614,24 @@
               <div class="w-50 md:text-base text-xs font-weight-bold">
                 CHANGE BET TYPE
               </div>
+              <div class="d-flex align-items-center">
+                <select
+                  class="game-selector text-center text-base py-1 px-2"
+                  onchange="singleLottery.selectGameType(event)"
+                  id="game-type"
+                >
+                  <option value="direct" selected>Direct</option>
+                  <option value="permutation">Permutation</option>
+                  <option value="banker">Banker</option>
+                  <option value="against">Against</option>
+                </select>
 
-              <select
-                class="text-center text-base py-1 px-2 d-none d-md-block"
-                style="border-radius: 40px; width: 150px; height: 40px"
-                onchange="singleLottery.selectGameType(event)"
-                id="game-type"
-              >
-                <option value="direct" selected>Direct</option>
-                <option value="permutation">Permutation</option>
-                <option value="banker">Banker</option>
-                <option value="against">Against</option>
-              </select>
-
-              <select
-                class="text-center text-base py-1 px-2 ml-3"
-                style="border-radius: 40px; width: 150px; height: 40px"
-                onchange="singleLottery.selectSubGameType(event)"
-                id="sub-game-type"
-              ></select>
+                <select
+                  class="game-selector text-center text-base py-1 px-2 ml-3"
+                  onchange="singleLottery.selectSubGameType(event)"
+                  id="sub-game-type"
+                ></select>
+              </div>
             </div>
 
             <div class="d-flex flex-md-row flex-column align-items-md-center">
@@ -1653,6 +1668,7 @@
                     ml-md-3
                     md:text-base
                     text-sm
+                    mt-2 mt-md-0
                   "
                   style="height: unset; border-radius: 40px"
                   onclick="singleLottery.addToCart()"
