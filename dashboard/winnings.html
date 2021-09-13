@@ -53,6 +53,27 @@
       .custom-button--alt {
         background-image: linear-gradient(0deg, #f4ba2e 0%, #fea036 100%);
       }
+
+      .avatar-circle {
+        height: 100px;
+        width: 100px;
+        background-color: #eee;
+        border-radius: 100%;
+      }
+
+      .side-nav-links {
+        color: #525252;
+        font-size: 16px;
+      }
+      .side-nav-links:hover {
+        color: var(--gab-primary-color);
+      }
+
+      @media screen and (min-width: 768px) {
+        .side-nav-seperator {
+          border-right: 1px solid #eee;
+        }
+      }
     </style>
     <title>Gab Lotto - Online Lotto</title>
   </head>
@@ -528,100 +549,152 @@
         <div class="row justify-content-md-center">
           <div class="col-lg-11">
             <div class="contact-box d-flex flex-column">
-              <div class="mb-5">
-                <div class="d-flex align-items-center">
-                  <div class="d-flex flex-column">
-                    <label for="" class="text-sm mb-0">From</label>
-                    <input type="date" name="" id="" class="custom-input" />
+              <div class="row">
+                <div class="side-nav-seperator col-md-3 mb-md-0 mb-5">
+                  <div class="d-flex flex-column align-items-md-center">
+                    <div class="avatar-circle mb-5"></div>
+
+                    <ul>
+                      <li class="mb-2">
+                        <a href="./bets.html" class="side-nav-links"
+                          >Bet History</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a href="./deposit.html" class="side-nav-links"
+                          >Deposit</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a href="./withdrawals.html" class="side-nav-links"
+                          >Withdraw</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a href="./winnings.html" class="font-weight-bold"
+                          >Winnings</a
+                        >
+                      </li>
+                      <li>
+                        <a href="./index.html" class="side-nav-links"
+                          >My Account Info</a
+                        >
+                      </li>
+                    </ul>
                   </div>
-
-                  <div class="d-flex flex-column ml-4">
-                    <label for="" class="text-sm mb-0">To</label>
-                    <input type="date" name="" id="" class="custom-input" />
-                  </div>
-
-                  <button
-                    class="
-                      custom-button1
-                      text-capitalize
-                      font-weight-bold
-                      d-flex
-                      align-items-center
-                      ml-4
-                    "
-                    style="height: 40px"
-                  >
-                    Search
-                  </button>
-
-                  <button
-                    class="
-                      custom-button1
-                      ml-4
-                      text-capitalize
-                      font-weight-bold
-                      border-0
-                      d-flex
-                      align-items-center
-                    "
-                    style="background: var(--gab-primary-color); height: 40px"
-                  >
-                    Export To XL
-                  </button>
                 </div>
-              </div>
 
-              <table class="result-table">
-                <thead class="result-table-head">
-                  <tr class="result-table-head__row">
-                    <th class="px-2 py-1">Draw Time</th>
-                    <th class="px-2 py-1">Game</th>
-                    <th class="px-2 py-1">Total Stake</th>
-                    <th class="px-2 py-1">Winning</th>
-                  </tr>
-                </thead>
+                <div class="col-md-9 pl-md-5">
+                  <div class="d-flex flex-column">
+                    <div class="mb-5">
+                      <div class="d-flex align-items-center">
+                        <div class="d-flex flex-column">
+                          <label for="" class="text-sm mb-0">From</label>
+                          <input
+                            type="date"
+                            name=""
+                            id=""
+                            class="custom-input"
+                          />
+                        </div>
 
-                <tbody class="result-table-body">
-                  <tr class="result-table-body__row">
-                    <td class="p-2">03 Mar 2021 12:35PM</td>
-                    <td class="p-2">Gab Padi</td>
-                    <td class="p-2">1,200</td>
-                    <td class="p-2">21,200</td>
-                  </tr>
-                  <tr class="result-table-body__row">
-                    <td class="p-2">03 Mar 2021 12:35PM</td>
-                    <td class="p-2">Gab Padi</td>
-                    <td class="p-2">1,200</td>
-                    <td class="p-2">21,200</td>
-                  </tr>
-                  <tr class="result-table-body__row">
-                    <td class="p-2">03 Mar 2021 12:35PM</td>
-                    <td class="p-2">Gab Padi</td>
-                    <td class="p-2">1,200</td>
-                    <td class="p-2">21,200</td>
-                  </tr>
-                  <tr class="result-table-body__row">
-                    <td class="p-2">03 Mar 2021 12:35PM</td>
-                    <td class="p-2">Gab Padi</td>
-                    <td class="p-2">1,200</td>
-                    <td class="p-2">21,200</td>
-                  </tr>
-                </tbody>
-              </table>
+                        <div class="d-flex flex-column ml-4">
+                          <label for="" class="text-sm mb-0">To</label>
+                          <input
+                            type="date"
+                            name=""
+                            id=""
+                            class="custom-input"
+                          />
+                        </div>
 
-              <div class="col-lg-12 text-center mt-5">
-                <ul class="pagination">
-                  <li>
-                    <i class="fas fa-chevron-left"></i>
-                  </li>
-                  <li class="active">01</li>
-                  <li>02</li>
-                  <li>03</li>
-                  <li>04</li>
-                  <li>
-                    <i class="fas fa-chevron-right"></i>
-                  </li>
-                </ul>
+                        <button
+                          class="
+                            custom-button1
+                            text-capitalize
+                            font-weight-bold
+                            d-flex
+                            align-items-center
+                            ml-4
+                          "
+                          style="height: 40px"
+                        >
+                          Search
+                        </button>
+
+                        <button
+                          class="
+                            custom-button1
+                            ml-4
+                            text-capitalize
+                            font-weight-bold
+                            border-0
+                            d-flex
+                            align-items-center
+                          "
+                          style="
+                            background: var(--gab-primary-color);
+                            height: 40px;
+                          "
+                        >
+                          Export To XL
+                        </button>
+                      </div>
+                    </div>
+
+                    <table class="result-table">
+                      <thead class="result-table-head">
+                        <tr class="result-table-head__row">
+                          <th class="px-2 py-1">Draw Time</th>
+                          <th class="px-2 py-1">Game</th>
+                          <th class="px-2 py-1">Total Stake</th>
+                          <th class="px-2 py-1">Winning</th>
+                        </tr>
+                      </thead>
+
+                      <tbody class="result-table-body">
+                        <tr class="result-table-body__row">
+                          <td class="p-2">03 Mar 2021 12:35PM</td>
+                          <td class="p-2">Gab Padi</td>
+                          <td class="p-2">1,200</td>
+                          <td class="p-2">21,200</td>
+                        </tr>
+                        <tr class="result-table-body__row">
+                          <td class="p-2">03 Mar 2021 12:35PM</td>
+                          <td class="p-2">Gab Padi</td>
+                          <td class="p-2">1,200</td>
+                          <td class="p-2">21,200</td>
+                        </tr>
+                        <tr class="result-table-body__row">
+                          <td class="p-2">03 Mar 2021 12:35PM</td>
+                          <td class="p-2">Gab Padi</td>
+                          <td class="p-2">1,200</td>
+                          <td class="p-2">21,200</td>
+                        </tr>
+                        <tr class="result-table-body__row">
+                          <td class="p-2">03 Mar 2021 12:35PM</td>
+                          <td class="p-2">Gab Padi</td>
+                          <td class="p-2">1,200</td>
+                          <td class="p-2">21,200</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <div class="col-lg-12 text-center mt-5">
+                      <ul class="pagination">
+                        <li>
+                          <i class="fas fa-chevron-left"></i>
+                        </li>
+                        <li class="active">01</li>
+                        <li>02</li>
+                        <li>03</li>
+                        <li>
+                          <i class="fas fa-chevron-right"></i>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
