@@ -167,20 +167,34 @@
           </div>
           <div class="nav-right b-blue"></div>
 
-          <div id="wp-login-link" class="nav-item">
-            <span class="wp-item"
-              ><a href="#" data-toggle="modal" data-target="#loginModal"
-                >Login</a
-              >
-              <i class="glyphicon glyphicon-chevron-right hidden-xs"></i
+          <div class="nav-item">
+            <span class="wp-item" style="color: yellow; font-weight: bolder"
+              >&#8358; 800.00 <i class="glyphicon glyphicon-refresh"></i
             ></span>
+            &nbsp;&nbsp;|
           </div>
-          <div id="wp-register-link" class="nav-item hidden-xs">
-            <span class="wp-item"
-              ><a href="#" data-toggle="modal" data-target="#registerModal"
-                >Register</a
-              ></span
-            >
+
+          <div class="nav-item hidden-xs">
+            <a href="./deposit.html" class="wp-item">Deposit</a>&nbsp;&nbsp;|
+          </div>
+
+          <div class="nav-item hidden-xs">
+            <a href="./bets.html" class="wp-item">My Bets</a>&nbsp;&nbsp;|
+          </div>
+
+          <div class="dropdown">
+            <button class="dropbtn wp-item">
+              Account
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="./bets.html">My Bets</a>
+              <a href="./deposit.html">Deposit</a>
+              <a href="./withdrawals.html">Withdrawal</a>
+              <a href="./winnings.html">Winnings</a>
+
+              <a href="./index.html">My Account info.</a>
+            </div>
           </div>
         </nav>
       </div>
@@ -292,238 +306,6 @@
         </div>
       </div>
     </header>
-
-    <!-- Register Area -->
-    <div
-      class="modal fade log-reg-modal-wrapper"
-      id="registerModal"
-      tabindex="-1"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-              role="button"
-            >
-              <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
-                <path
-                  fill="currentColor"
-                  d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"
-                />
-              </svg>
-            </div>
-            <div class="log-reg-inner">
-              <h2 class="title">Create an Account</h2>
-              <div class="main-content">
-                <form action="/dashboard/">
-                  <div class="form-group d-flex flex-column">
-                    <label class="mb-1">Your Email</label>
-                    <input
-                      type="email"
-                      class="my-form-control"
-                      placeholder="Enter Your Email"
-                    />
-                  </div>
-
-                  <div class="form-group d-flex flex-column">
-                    <label class="mb-1">User Id</label>
-                    <input
-                      type="text"
-                      class="my-form-control"
-                      placeholder="Enter Your User Id"
-                    />
-                  </div>
-
-                  <div class="form-group d-flex flex-column">
-                    <label class="mb-1">Phone Number</label>
-                    <input
-                      type="text"
-                      class="my-form-control"
-                      placeholder="Phone Number"
-                    />
-                  </div>
-
-                  <div class="custom-control custom-checkbox">
-                    <input
-                      type="checkbox"
-                      class="custom-control-input"
-                      id="customCheck1"
-                    />
-                    <label class="custom-control-label" for="customCheck1">
-                      I agree to the
-                      <a href="#">Terms, Privacy Policy and Fees</a>
-                    </label>
-                  </div>
-
-                  <div class="button-wrapper">
-                    <button type="submit" class="custom-button2">
-                      Register Now
-                    </button>
-
-                    <p class="or-signup mt-4">
-                      Already have an account?
-                      <a href="#" data-toggle="modal" data-target="#loginModal">
-                        Login
-                      </a>
-                    </p>
-                  </div>
-                  <div class="or">
-                    <p>OR</p>
-                  </div>
-                  <div class="socials">
-                    <a href="#">
-                      <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#">
-                      <i class="fab fa-google"></i>
-                    </a>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Register Area -->
-
-    <!-- Login Modal Start -->
-    <div
-      class="modal fade log-reg-modal-wrapper log"
-      id="loginModal"
-      tabindex="-1"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-              role="button"
-            >
-              <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
-                <path
-                  fill="currentColor"
-                  d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"
-                />
-              </svg>
-            </div>
-
-            <div class="log-reg-inner">
-              <h2 class="title">Welcome to Gab Lotto</h2>
-              <div class="main-content">
-                <form action="/dashboard/">
-                  <div class="form-group d-flex flex-column">
-                    <label class="mb-1">Phone Number</label>
-                    <input
-                      type="email"
-                      class="my-form-control"
-                      placeholder="Enter Your Phone Number"
-                    />
-                  </div>
-
-                  <div class="form-group d-flex flex-column">
-                    <label class="mb-1">Pin Code</label>
-                    <input
-                      type="text"
-                      class="my-form-control"
-                      placeholder="4 Digit Pin Code"
-                    />
-                  </div>
-
-                  <p class="f-pass text-center">
-                    Forgot your pin code? <a href="#">recover pin code</a>
-                  </p>
-
-                  <div class="button-wrapper">
-                    <button type="submit" class="custom-button2">
-                      Sign In
-                    </button>
-                  </div>
-                  <div class="or log">
-                    <p>OR</p>
-                  </div>
-                  <div class="or-content">
-                    <p>Sign up with your email</p>
-                    <a href="#" class="or-btn"
-                      ><img src="assets/images/google.png" alt="" /> Sign Up
-                      with Google</a
-                    >
-                    <p class="or-signup">
-                      Don't have an account?
-                      <a
-                        href="#"
-                        data-toggle="modal"
-                        data-target="#registerModal"
-                      >
-                        Sign up here
-                      </a>
-                    </p>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Login Modal End -->
-
-    <!-- Ticket Modal Start -->
-    <div
-      class="modal fade log-reg-modal-wrapper log"
-      id="ticketModal"
-      tabindex="-1"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-              role="button"
-            >
-              <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
-                <path
-                  fill="currentColor"
-                  d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"
-                />
-              </svg>
-            </div>
-
-            <div class="log-reg-inner">
-              <h2 class="title">Welcome to Gab Lotto</h2>
-              <div class="main-content">
-                <form action="#" class="d-flex flex-column">
-                  <div class="form-group">
-                    <label>Ticket Number</label>
-                    <input
-                      type="email"
-                      class="my-form-control w-100"
-                      placeholder="Enter Your Ticket No"
-                    />
-                  </div>
-                  <button class="custom-button1">Check</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Ticket Modal End -->
-
     <!-- ==========Header-Section End========== -->
 
     <!-- ==========Breadcrumb-Section========== -->
