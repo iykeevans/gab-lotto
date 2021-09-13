@@ -21,37 +21,25 @@
     />
 
     <style>
-      .result-table-head {
-        color: #595192;
-      }
-      .result-table-head__row {
-        background: #f7fbff;
-        font-size: 14px;
-        box-shadow: 0px 11px 19.2px 0.8px rgba(66, 58, 232, 0.1);
-        border: 1px solid #eee;
+      .avatar-circle {
+        height: 100px;
+        width: 100px;
+        background-color: #eee;
+        border-radius: 100%;
       }
 
-      .result-table-body {
-      }
-
-      .result-table-body__row {
-        border-top: 1px solid #eee;
+      .side-nav-links {
+        color: #525252;
         font-size: 16px;
       }
-
-      .custom-input {
-        border: 1px solid #eae9f9;
-        background: #f7fbff;
-        border-radius: 10px;
-        padding: 0px 15px;
-        font-size: 15px;
-        height: 40px;
-        color: #001485;
-        font-weight: 600;
+      .side-nav-links:hover {
+        color: var(--gab-primary-color);
       }
 
-      .custom-button--alt {
-        background-image: linear-gradient(0deg, #f4ba2e 0%, #fea036 100%);
+      @media screen and (min-width: 768px) {
+        .side-nav-seperator {
+          border-right: 1px solid #eee;
+        }
       }
     </style>
     <title>Gab Lotto - Online Lotto</title>
@@ -524,259 +512,107 @@
         <div class="row justify-content-md-center">
           <div class="col-lg-11">
             <div class="contact-box d-flex flex-column">
-              <div class="d-flex flex-column mb-4">
-                <span class="mb-2"
-                  >Current Balance:
-                  <span class="font-weight-bold">₦10,000</span></span
-                >
-                <span style="font-size: 16px"
-                  >Withdrawable Balance:
-                  <span class="font-weight-bold">₦5000</span></span
-                >
+              <div class="row">
+                <div class="side-nav-seperator col-md-3 mb-md-0 mb-5">
+                  <div class="d-flex flex-column align-items-md-center">
+                    <div class="avatar-circle mb-5"></div>
+
+                    <ul>
+                      <li class="mb-2">
+                        <a href="./bets.html" class="side-nav-links"
+                          >Bet History</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a href="./deposit.html" class="side-nav-links"
+                          >Deposit</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a href="./withdrawals.html" class="side-nav-links"
+                          >Withdraw</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a href="./winnings.html" class="side-nav-links"
+                          >Winnings</a
+                        >
+                      </li>
+                      <li>
+                        <a href="./index.html" class="font-weight-bold"
+                          >My Account Info</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-md-9 pl-md-5">
+                  <div class="row">
+                    <div class="form-group d-flex flex-column">
+                      <label class="mb-0" style="font-size: 16px"
+                        >First Name</label
+                      >
+                      <input
+                        type="text"
+                        placeholder="John"
+                        style="height: 40px"
+                      />
+                    </div>
+
+                    <div class="form-group d-flex flex-column ml-md-5">
+                      <label class="mb-0" style="font-size: 16px"
+                        >Last Name</label
+                      >
+                      <input
+                        type="text"
+                        placeholder="Doe"
+                        style="height: 40px"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group d-flex flex-column">
+                      <label class="mb-0" style="font-size: 16px">Email</label>
+                      <input
+                        type="text"
+                        placeholder="John"
+                        style="height: 40px"
+                      />
+                    </div>
+
+                    <div class="form-group d-flex flex-column ml-md-5">
+                      <label class="mb-0" style="font-size: 16px"
+                        >Date of birth</label
+                      >
+                      <input type="text" style="height: 40px" />
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group d-flex flex-column">
+                      <label class="mb-0" style="font-size: 16px">Gender</label>
+                      <!-- <input
+                        type="text"
+                        placeholder="John"
+                        style="height: 40px"
+                      /> -->
+                      <select name="" id="" style="height: 40px; width: 285px">
+                        <option value="">Male</option>
+                        <option value="">Female</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <button
+                    class="bg-gab-primary-color text-white px-5 mt-4"
+                    style="height: 40px"
+                  >
+                    Save
+                  </button>
+                </div>
               </div>
-
-              <!-- last winning bet -->
-              <div
-                class="
-                  d-flex
-                  align-items-center
-                  justify-content-between
-                  bg-gab-secondary-color
-                  px-3
-                  py-1
-                "
-              >
-                <span style="font-size: 16px">Last Winning</span>
-
-                <a
-                  href="/dashboard/winnings.html"
-                  class="border-0 text-gab-primary-color"
-                  style="background: transparent; font-size: 16px"
-                >
-                  View All
-                </a>
-              </div>
-
-              <table class="result-table">
-                <thead class="result-table-head">
-                  <tr class="result-table-head__row">
-                    <th class="px-2 py-1">Draw Time</th>
-                    <th class="px-2 py-1">Game</th>
-                    <th class="px-2 py-1">Total Stake</th>
-                    <th class="px-2 py-1">Winning</th>
-                  </tr>
-                </thead>
-
-                <tbody class="result-table-body">
-                  <tr class="result-table-body__row">
-                    <td class="p-2">03 Mar 2021 12:35PM</td>
-                    <td class="p-2">Gab Padi</td>
-                    <td class="p-2">1,200</td>
-                    <td class="p-2">21,200</td>
-                  </tr>
-                  <tr class="result-table-body__row">
-                    <td class="p-2">03 Mar 2021 12:35PM</td>
-                    <td class="p-2">Gab Padi</td>
-                    <td class="p-2">1,200</td>
-                    <td class="p-2">21,200</td>
-                  </tr>
-                  <tr class="result-table-body__row">
-                    <td class="p-2">03 Mar 2021 12:35PM</td>
-                    <td class="p-2">Gab Padi</td>
-                    <td class="p-2">1,200</td>
-                    <td class="p-2">21,200</td>
-                  </tr>
-                  <tr class="result-table-body__row">
-                    <td class="p-2">03 Mar 2021 12:35PM</td>
-                    <td class="p-2">Gab Padi</td>
-                    <td class="p-2">1,200</td>
-                    <td class="p-2">21,200</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <!-- my bets -->
-              <div
-                class="
-                  d-flex
-                  align-items-center
-                  justify-content-between
-                  bg-gab-secondary-color
-                  px-3
-                  py-1
-                  mt-5
-                "
-              >
-                <span style="font-size: 16px">My Bets</span>
-
-                <a
-                  href="/dashboard/bets.html"
-                  class="border-0 text-gab-primary-color"
-                  style="background: transparent; font-size: 16px"
-                >
-                  View All
-                </a>
-              </div>
-
-              <table class="result-table">
-                <thead class="result-table-head">
-                  <tr class="result-table-head__row">
-                    <th class="px-2 py-1">Draw Time</th>
-                    <th class="px-2 py-1">Game</th>
-                    <th class="px-2 py-1">Total Stake</th>
-                    <th class="px-2 py-1">Winning</th>
-                  </tr>
-                </thead>
-
-                <tbody class="result-table-body">
-                  <tr class="result-table-body__row">
-                    <td class="p-2">03 Mar 2021 12:35PM</td>
-                    <td class="p-2">Gab Padi</td>
-                    <td class="p-2">1,200</td>
-                    <td class="p-2">21,200</td>
-                  </tr>
-                  <tr class="result-table-body__row">
-                    <td class="p-2">03 Mar 2021 12:35PM</td>
-                    <td class="p-2">Gab Padi</td>
-                    <td class="p-2">1,200</td>
-                    <td class="p-2">21,200</td>
-                  </tr>
-                  <tr class="result-table-body__row">
-                    <td class="p-2">03 Mar 2021 12:35PM</td>
-                    <td class="p-2">Gab Padi</td>
-                    <td class="p-2">1,200</td>
-                    <td class="p-2">21,200</td>
-                  </tr>
-                  <tr class="result-table-body__row">
-                    <td class="p-2">03 Mar 2021 12:35PM</td>
-                    <td class="p-2">Gab Padi</td>
-                    <td class="p-2">1,200</td>
-                    <td class="p-2">21,200</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <!-- my deposits -->
-              <div
-                class="
-                  d-flex
-                  align-items-center
-                  justify-content-between
-                  bg-gab-secondary-color
-                  px-3
-                  py-1
-                  mt-5
-                "
-              >
-                <span style="font-size: 16px">My Deposits</span>
-
-                <a
-                  class="border-0 text-gab-primary-color"
-                  style="background: transparent; font-size: 16px"
-                  href="/dashboard/deposit.html"
-                >
-                  View All
-                </a>
-              </div>
-
-              <table class="result-table">
-                <thead class="result-table-head">
-                  <tr class="result-table-head__row">
-                    <th class="px-2 py-1">Draw Time</th>
-                    <th class="px-2 py-1">Game</th>
-                    <th class="px-2 py-1">Total Stake</th>
-                    <th class="px-2 py-1">Winning</th>
-                  </tr>
-                </thead>
-
-                <tbody class="result-table-body">
-                  <tr class="result-table-body__row">
-                    <td class="p-2">03 Mar 2021 12:35PM</td>
-                    <td class="p-2">Gab Padi</td>
-                    <td class="p-2">1,200</td>
-                    <td class="p-2">21,200</td>
-                  </tr>
-                  <tr class="result-table-body__row">
-                    <td class="p-2">03 Mar 2021 12:35PM</td>
-                    <td class="p-2">Gab Padi</td>
-                    <td class="p-2">1,200</td>
-                    <td class="p-2">21,200</td>
-                  </tr>
-                  <tr class="result-table-body__row">
-                    <td class="p-2">03 Mar 2021 12:35PM</td>
-                    <td class="p-2">Gab Padi</td>
-                    <td class="p-2">1,200</td>
-                    <td class="p-2">21,200</td>
-                  </tr>
-                  <tr class="result-table-body__row">
-                    <td class="p-2">03 Mar 2021 12:35PM</td>
-                    <td class="p-2">Gab Padi</td>
-                    <td class="p-2">1,200</td>
-                    <td class="p-2">21,200</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <!-- my withdrawals -->
-              <div
-                class="
-                  d-flex
-                  align-items-center
-                  justify-content-between
-                  bg-gab-secondary-color
-                  px-3
-                  py-1
-                  mt-5
-                "
-              >
-                <span style="font-size: 16px">My Withdrawals</span>
-
-                <a
-                  href="/dashboard/withdrawals.html"
-                  class="border-0 text-gab-primary-color"
-                  style="background: transparent; font-size: 16px"
-                >
-                  View All
-                </a>
-              </div>
-
-              <table class="result-table">
-                <thead class="result-table-head">
-                  <tr class="result-table-head__row">
-                    <th class="px-2 py-1">Draw Time</th>
-                    <th class="px-2 py-1">Game</th>
-                    <th class="px-2 py-1">Total Stake</th>
-                    <th class="px-2 py-1">Winning</th>
-                  </tr>
-                </thead>
-
-                <tbody class="result-table-body">
-                  <tr class="result-table-body__row">
-                    <td class="p-2">03 Mar 2021 12:35PM</td>
-                    <td class="p-2">Gab Padi</td>
-                    <td class="p-2">1,200</td>
-                    <td class="p-2">21,200</td>
-                  </tr>
-                  <tr class="result-table-body__row">
-                    <td class="p-2">03 Mar 2021 12:35PM</td>
-                    <td class="p-2">Gab Padi</td>
-                    <td class="p-2">1,200</td>
-                    <td class="p-2">21,200</td>
-                  </tr>
-                  <tr class="result-table-body__row">
-                    <td class="p-2">03 Mar 2021 12:35PM</td>
-                    <td class="p-2">Gab Padi</td>
-                    <td class="p-2">1,200</td>
-                    <td class="p-2">21,200</td>
-                  </tr>
-                  <tr class="result-table-body__row">
-                    <td class="p-2">03 Mar 2021 12:35PM</td>
-                    <td class="p-2">Gab Padi</td>
-                    <td class="p-2">1,200</td>
-                    <td class="p-2">21,200</td>
-                  </tr>
-                </tbody>
-              </table>
             </div>
           </div>
         </div>
